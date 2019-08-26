@@ -15,7 +15,7 @@ jean_michel = User.new(
 )
 
 # jean_michel.remote_profile_picture_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1566833617/jean-michel_odtwjo.jpg"
-jean_michel.save!
+# jean_michel.save!
 
 francoise_marie = User.new(
   first_name: 'Francoise',
