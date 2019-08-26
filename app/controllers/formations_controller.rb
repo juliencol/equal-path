@@ -1,0 +1,2 @@
+class FormationsController < ApplicationController
+end
