@@ -3,6 +3,7 @@ puts 'Cleaning database...'
 User.destroy_all
 Formation.destroy_all
 Job.destroy_all
+Skill.destroy_all
 
 puts 'Creating 3 Users...'
 
@@ -148,5 +149,76 @@ ens = Formation.new(
 )
 
 ens.save!
+
+puts "Creating few skill"
+
+skills = %w(Ruby PHP Pearl Python HTML CSS C C# Java JavaScript)
+skills.each do |skill|
+  Skill.create(
+    name: skill
+    )
+end
+
+# JobFormation.create(
+#   job: developer,
+#   formation: le_wagon
+#   )
+
+# JobFormation.create(
+#   job: responsable_micro,
+#   formation: le_wagon
+#   )
+
+# JobFormation.create(
+#   job: expert_securite,
+#   formation: le_wagon
+#   )
+
+# JobFormation.create(
+#   job: developer,
+#   formation: epita
+#   )
+
+# JobFormation.create(
+#   job: responsable_micro,
+#   formation: epita
+#   )
+
+# JobFormation.create(
+#   job: expert_securite,
+#   formation: epita
+#   )
+
+# JobFormation.create(
+#   job: developer,
+#   formation: ens
+#   )
+
+# JobFormation.create(
+#   job: responsable_micro,
+#   formation: ens
+#   )
+
+# JobFormation.create(
+#   job: expert_securite,
+#   formation: ens
+#   )
+
+
+# FormationSkill.create(
+#   formation: le_wagon,
+#   skill: "IT"
+#   )
+
+# FormationSkill.create(
+#   formation: ens,
+#   skill: "IT"
+#   )
+
+# FormationSkill.create(
+#   formation: epita,
+#   skill: "IT"
+#   )
+
 
 puts 'Your database has been updated successfully and happily by PRK!'
