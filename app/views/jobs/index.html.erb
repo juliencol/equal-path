@@ -1,6 +1,9 @@
-<% @jobs.each do |job| %>
-  <%= job.title %>
-  <%= job.short_description %>
-  <%= job.job_photo  %>
-  <%= job.field  %>
-<% end  %>
+<div class="main-container">
+  <% @jobs.each do |job| %>
+    <%= job.title %>
+    <%= job.short_description %>
+    <%= job.job_photo  %>
+    <%= job.field  %>
+  <% end  %>
+</div>
+
