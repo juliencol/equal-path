@@ -1,0 +1,14 @@
+<div class="main-container">
+  <div>
+    <h1>Jobs bookmarked</h1>
+    <% @jobs.each do |job| %>
+      <%= job.title %>
+    <% end %>
+  </div>
+  <div>
+    <h1>Formations bookmarked</h1>
+    <% @formations.each do |formation| %>
+      <%= formation.title %>
+    <% end %>
+  </div>
+</div>
