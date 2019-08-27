@@ -4,6 +4,9 @@ User.destroy_all
 Formation.destroy_all
 Job.destroy_all
 Skill.destroy_all
+JobSkill.destroy_all
+FormationSkill.destroy_all
+UserSkill.destroy_all
 
 puts 'Creating 3 Users...'
 
@@ -15,7 +18,7 @@ jean_michel = User.new(
   password: "password",
 )
 
-jean_michel.remote_profile_picture_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1566833617/jean-michel_odtwjo.jpg"
+# jean_michel.remote_profile_picture_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1566833617/jean-michel_odtwjo.jpg"
 jean_michel.save!
 
 francoise_marie = User.new(
@@ -26,7 +29,7 @@ francoise_marie = User.new(
   password: "password",
 )
 
-francoise_marie.remote_profile_picture_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1566833865/francoise_marie_dz0pf9.jpg"
+# francoise_marie.remote_profile_picture_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1566833865/francoise_marie_dz0pf9.jpg"
 francoise_marie.save!
 
 jacques_martin = User.new(
@@ -37,7 +40,7 @@ jacques_martin = User.new(
   password: "password",
 )
 
-jacques_martin.remote_profile_picture_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1566834082/jacques_martin_bpy4sv.jpg"
+# jacques_martin.remote_profile_picture_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1566834082/jacques_martin_bpy4sv.jpg"
 jacques_martin.save!
 
 puts "Creating 3 jobs..."
@@ -132,7 +135,6 @@ le_wagon = Formation.new(
    qui vous apprend à coder entièrement vos applications web.",
   field: "IT",
 )
-
 le_wagon.save!
 
 ens = Formation.new(
@@ -145,80 +147,61 @@ ens = Formation.new(
   fonction de son projet professionnel : ouvert à l’international, il valorise
   la pluridisciplinarité et conduit vers les métiers de l’enseignement et de la recherche,
   mais aussi vers d’autres débouchés, notamment dans l’administration publique ou l’entreprise.",
-  field: "IT",
+  field: "IT"
 )
-
 ens.save!
 
-puts "Creating few skill"
+ecole_42 = Formation.new(
+  title: " Ecole 42 ",
+  duration: " Pas de limite",
+  location: "96 Boulevard Bessières, 75017 Paris",
+  website_url: "https://www.42.fr/",
+  description: "L'épreuve de la Piscine va décider de ton admission définitive à 42. Pas de natation, mais une immersion dans le grand bain du code qui nous permet d'identifier les plus motivés et de confirmer l'aptitude des étudiant(e)s « admissibles » pour le développement informatique. La Piscine est en réalité une chance : un mois passé dans les locaux de 42 pour vraiment découvrir l'école, sa méthode unique d'apprentissage et avant tout ce qu'est vraiment la programmation.
+  Tous les jours pendant quatre semaines et même le week‐end, tu auras des exercices ou des projets d'informatique à faire, à rendre et à évaluer, tout en faisant connaissance avec les autres candidats à 42. Le programme de la Piscine part de zéro et ne te demande aucune connaissance préalable… mis à part savoir se servir d'une souris et d'un clavier.",
+  field: " IT "
+  )
+ecole_42.save!
 
-skills = %w(Ruby PHP Pearl Python HTML CSS C C# Java JavaScript)
+puts "Creating few skills"
+
+skills = %w(Ruby PHP Pearl Python HTML CSS C C# Java JavaScript  autonome siteweb leadership anglais analytique SQL)
+skills.push("langage informatique", "site web", "travail en équipe", "code informatique")
 skills.each do |skill|
   Skill.create(
     name: skill
     )
 end
 
-# JobFormation.create(
-#   job: developer,
-#   formation: le_wagon
-#   )
+puts "creating job_skills"
 
-# JobFormation.create(
-#   job: responsable_micro,
-#   formation: le_wagon
-#   )
+JobSkill.create!( job: developer, skill: Skill.find_by_name("Ruby"))
+JobSkill.create!(job: developer, skill: Skill.find_by_name("JavaScript"))
+JobSkill.create!(job: developer, skill: Skill.find_by_name("HTML"))
+JobSkill.create!(job: developer, skill: Skill.find_by_name("CSS"))
+JobSkill.create!(job: developer, skill: Skill.find_by_name("langage informatique"))
+JobSkill.create!(job: developer, skill: Skill.find_by_name("autonome"))
 
-# JobFormation.create(
-#   job: expert_securite,
-#   formation: le_wagon
-#   )
-
-# JobFormation.create(
-#   job: developer,
-#   formation: epita
-#   )
-
-# JobFormation.create(
-#   job: responsable_micro,
-#   formation: epita
-#   )
-
-# JobFormation.create(
-#   job: expert_securite,
-#   formation: epita
-#   )
-
-# JobFormation.create(
-#   job: developer,
-#   formation: ens
-#   )
-
-# JobFormation.create(
-#   job: responsable_micro,
-#   formation: ens
-#   )
-
-# JobFormation.create(
-#   job: expert_securite,
-#   formation: ens
-#   )
+puts "end"
 
 
-# FormationSkill.create(
-#   formation: le_wagon,
-#   skill: "IT"
-#   )
+puts "creating formation_skills"
 
-# FormationSkill.create(
-#   formation: ens,
-#   skill: "IT"
-#   )
+FormationSkill.create!(formation: le_wagon, skill: Skill.find_by_name("Ruby"))
+FormationSkill.create!(formation: le_wagon, skill: Skill.find_by_name("JavaScript"))
+FormationSkill.create!(formation: le_wagon, skill: Skill.find_by_name("site web"))
+FormationSkill.create!(formation: le_wagon, skill: Skill.find_by_name("HTML"))
+FormationSkill.create!(formation: le_wagon, skill: Skill.find_by_name("CSS"))
+FormationSkill.create!(formation: le_wagon, skill: Skill.find_by_name("SQL"))
 
-# FormationSkill.create(
-#   formation: epita,
-#   skill: "IT"
-#   )
+
+
+puts "creating user_skills"
+UserSkill.create!(user: jean_michel, skill: Skill.find_by_name("autonome"))
+UserSkill.create!(user: jean_michel, skill: Skill.find_by_name("analytique"))
+UserSkill.create!(user: jean_michel, skill: Skill.find_by_name("travail en équipe"))
+UserSkill.create!(user: jean_michel, skill: Skill.find_by_name("leadership"))
+UserSkill.create!(user: jean_michel, skill: Skill.find_by_name("anglais"))
+
 
 
 puts 'Your database has been updated successfully and happily by PRK!'
