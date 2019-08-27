@@ -6,4 +6,6 @@ class User < ApplicationRecord
 
   has_many :jobs, through: :users_jobs
   has_many :skills, through: :users_skills
+
+  mount_uploader :profile_picture, ProfilePictureUploader
 end
