@@ -1,6 +1,24 @@
-<% @jobs.each do |job| %>
-<%= job.title %>
-<%= job.short_description %>
-<%= job.job_photo  %>
-<%= job.field  %>
-<% end  %>
+
+<%= form_tag movies_path, method: :get do %>
+  <%= text_field_tag :query,
+    params[:query],
+    class: "form-control",
+    placeholder: "Find a job"
+  %>
+  <%= submit_tag "Search", class: "btn btn-primary" %>
+<% end %>
+
+<div class="main-container">
+  <div class="card-product">
+    <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+    <div class="card-product-infos">
+    <% @jobs.each do |job| %>
+    <%= job.title %>
+    <%= job.short_description %>
+    <%= job.job_photo  %>
+    <%= job.field  %>
+    <% end  %>
+
+    </div>
+  </div>
+</div>
