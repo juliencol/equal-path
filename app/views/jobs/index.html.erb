@@ -1,9 +1,25 @@
 <div class="main-container">
+   <%= form_tag jobs_path, method: :get do %>
+    <%= text_field_tag :query,
+      params[:query],
+      class: "form-control",
+      placeholder: "Find a job"
+    %>
+    <%= submit_tag "Search", class: "btn btn-primary" %>
+  <% end %>
+
   <% @jobs.each do |job| %>
-    <%= job.title %>
-    <%= job.short_description %>
-    <%= job.job_photo  %>
-    <%= job.field  %>
-  <% end  %>
+    <div class="card-product">
+      <img src=<%= job.job_photo %> />
+        <div class="card-product-infos">
+          <h2> <%= job.title %> </h2>
+          <p> <%= job.short_description %> </p>
+          <p> <%= job.field %> </p>
+
+         </div>
+    </div>
+    <% end  %>
+
 </div>
+
 
