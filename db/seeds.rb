@@ -1,3 +1,4 @@
+
 puts 'Cleaning database...'
 User.destroy_all
 Formation.destroy_all

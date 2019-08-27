@@ -1,2 +1,41 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div id="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://slack-imgs.com?c=1&o1=ro&url=https%3A%2F%2Fburst.shopifycdn.com%2Fphotos%2Fhands-typing-laptop-keyboard.jpg%3Fwidth%3D925%26format%3Dpjpg%26exif%3D0%26iptc%3D0);">
+  <div class="container text-center">
+    <h1 class="mb-3">Equal Path</h1>
+    <p class="mt-3">Discover new opportunities.</p>
+    <a id="arrow" class="mt-3"><%= cl_image_tag("Arrows/arrow_wvldpy",
+          width: 50, height: 50, crop: :fill) %></a>
+  </div>
+</div>
+
+<div class="container d-flex flex-column">
+  <h1 class="mb-3">Step 1</h1>
+  <div class="d-flex">
+    <div class="mr-3">
+      <p>Create your profile</p>
+    </div>
+    <div class="ml-3">
+      <img src="https://organicthemes.com/wp-content/uploads/2013/03/profile-v3-wordpress-theme.jpg" alt="">
+    </div>
+  </div>
+  <h1 class="mb-3">Step 2</h1>
+  <div class="d-flex">
+    <div class="mr-3">
+      <img src="https://organicthemes.com/wp-content/uploads/2013/03/profile-v3-wordpress-theme.jpg" alt="">
+    </div>
+    <div class="ml-3">
+      <p>Enter your skills</p>
+    </div>
+  </div>
+  <h1 class="mb-3">Step 3</h1>
+  <div class="d-flex">
+    <div class="mr-3">
+      <p>Find your dream job</p>
+    </div>
+    <div class="ml-3">
+      <img src="https://organicthemes.com/wp-content/uploads/2013/03/profile-v3-wordpress-theme.jpg" alt="">
+    </div>
+  </div>
+  <%= link_to "Start now", new_user_registration_path, class: "btn btn-primary mt-5 mb-5" %>
+</div>
+
+
