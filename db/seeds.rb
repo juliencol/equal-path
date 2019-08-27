@@ -12,7 +12,6 @@ jean_michel = User.new(
   age: 23,
   email: "jean@michel.com",
   password: "password",
-  profile_picture: "https://res.cloudinary.com/dovu27lye/image/upload/v1566833617/jean-michel_odtwjo.jpg"
 )
 
 jean_michel.remote_profile_picture_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1566833617/jean-michel_odtwjo.jpg"
@@ -24,7 +23,6 @@ francoise_marie = User.new(
   age: 25,
   email: "francoise@marie.com",
   password: "password",
-  profile_picture: "https://res.cloudinary.com/dovu27lye/image/upload/v1566833865/francoise_marie_dz0pf9.jpg"
 )
 
 francoise_marie.remote_profile_picture_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1566833865/francoise_marie_dz0pf9.jpg"
@@ -36,7 +34,6 @@ jacques_martin = User.new(
   age: 22,
   email: "jacques@martin.com",
   password: "password",
-  profile_picture: "https://res.cloudinary.com/dovu27lye/image/upload/v1566834082/jacques_martin_bpy4sv.jpg"
 )
 
 jacques_martin.remote_profile_picture_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1566834082/jacques_martin_bpy4sv.jpg"
@@ -58,7 +55,7 @@ developer = Job.new(
     Le dévelop-peur prend en charge la formation des utilisateurs de l'application
     et peut même rédiger un guide d'utilisateur. Par la suite, il intervient pour effectuer
     la maintenance ou faire évoluer les programmes.",
-  job_photo: "https://res.cloudinary.com/dovu27lye/image/upload/v1566836640/developer_lgdkpz.jpg",
+  # job_photo: "https://res.cloudinary.com/dovu27lye/image/upload/v1566836640/developer_lgdkpz.jpg",
   field: "IT",
 )
 
@@ -81,7 +78,6 @@ responsable_micro = Job.new(
   capables d'une forte réactivité en cas de problème, mobiles et disponibles.
   Des qualités relationnelles sont également requises, ainsi que le sens de
   l'écoute et de la pédagogie.",
-  job_photo: "https://res.cloudinary.com/dovu27lye/image/upload/v1566895944/responsable_micro_dkylqi.jpg",
   field: "IT",
 )
 
@@ -102,7 +98,6 @@ expert_securite = Job.new(
     d'intrusion de hackers. Ensuite, il met en place tout un système de protection :
     mots de passe, cryptologie, pare-feu, antivirus, etc. Les parades ne manquent pas
     pour réduire les risques.",
-  job_photo: "https://res.cloudinary.com/dovu27lye/image/upload/v1566896566/expert_securite_fngvcq.jpg",
   field: "IT",
 )
 
