@@ -1,14 +1,38 @@
+<!-- This is the dashboard page -->
+
 <div class="main-container">
-  <div>
-    <h1>Jobs bookmarked</h1>
+  <h1 class="text-center">Dashboard de <%= current_user.first_name %> <%= current_user.last_name %></h1>
+  <ul class="list-inline tabs-underlined">
+    <li>
+        <a href="#" id="jobs-btn" class="tab-underlined active">Métiers favoris</a>
+    </li>
+    <li>
+        <a href="#" id="formations-btn"class="tab-underlined">Formations favorites</a>
+    </li>
+  </ul>
+
+  <div id="fav-jobs" class="container mt-5">
     <% @jobs.each do |job| %>
-      <%= job.title %>
+      <div class="card-product">
+        <img src=<%= job.job_photo %> />
+        <div class="card-product-infos">
+          <h2><%= job.title %> (<%= job.field %>)</h2>
+          <p><%= job.short_description %></p>
+        </div>
+      </div>
+      <p><%= link_to 'Enlever des favoris', job_remove_from_fav_path(job), method: :post, data: { confirm: 'Are you sure?' } %></p>
     <% end %>
   </div>
-  <div>
-    <h1>Formations bookmarked</h1>
+
+  <div id="fav-formations" class="container mt-5 d-none">
     <% @formations.each do |formation| %>
-      <%= formation.title %>
+      <div class="card-product">
+        <div class="card-product-infos">
+          <h2><%= formation.title %></h2>
+          <p><%= formation.description %></p>
+          <p><%= formation.field %></p>
+        </div>
+      </div>
     <% end %>
   </div>
 </div>

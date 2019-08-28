@@ -12,4 +12,16 @@ class JobsController < ApplicationController
   def show
     @job = Job.find(params[:id])
   end
+
+  def bookmark
+    job = Job.find(params[:job_id])
+    job.bookmarked ? job.update(bookmarked: false) : job.update(bookmarked: true)
+    redirect_to jobs_path
+  end
+
+  def remove_from_fav
+    job = Job.find(params[:job_id])
+    job.update(bookmarked: false)
+    redirect_to users_path
+  end
 end
