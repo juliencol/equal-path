@@ -18,4 +18,10 @@ class JobsController < ApplicationController
     job.bookmarked ? job.update(bookmarked: false) : job.update(bookmarked: true)
     redirect_to jobs_path
   end
+
+  def remove_from_fav
+    job = Job.find(params[:job_id])
+    job.update(bookmarked: false)
+    redirect_to users_path
+  end
 end
