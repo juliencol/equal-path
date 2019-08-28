@@ -1,45 +1,36 @@
 <div id="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://slack-imgs.com?c=1&o1=ro&url=https%3A%2F%2Fburst.shopifycdn.com%2Fphotos%2Fhands-typing-laptop-keyboard.jpg%3Fwidth%3D925%26format%3Dpjpg%26exif%3D0%26iptc%3D0);">
   <div class="container text-center">
     <h1 class="mb-3">Equal Path</h1>
-    <p class="mt-3">Discover new opportunities.</p>
+    <p class="mt-3">Découvrez de nouvelles opportunitées.</p>
     <a href="#starting" id="arrow" class="mt-3"><%= cl_image_tag("Arrows/arrow_wvldpy",
           width: 50, height: 50, crop: :fill) %></a>
-
-
-
   </div>
 </div>
 
 <div id="starting">
-  <div class="container d-flex flex-column">
-    <h1 class="mb-3">Step 1</h1>
-    <div class="d-flex">
-      <div class="mr-3">
-        <p>Create your profile</p>
-      </div>
-      <div class="ml-3">
-        <img src="https://organicthemes.com/wp-content/uploads/2013/03/profile-v3-wordpress-theme.jpg" alt="">
-      </div>
+  <div class="main-container m-20 d-flex flex-column">
+
+    <div class="order-1" style="margin-left: 200px; margin-bottom: 50px">
+      <h1>Première Etape</h1>
+      <img src="https://organicthemes.com/wp-content/uploads/2013/03/profile-v3-wordpress-theme.jpg" alt="">
+      <p>Creez votre profil</p>
     </div>
-    <h1 class="mb-3">Step 2</h1>
-    <div class="d-flex">
-      <div class="mr-3">
-        <img src="https://organicthemes.com/wp-content/uploads/2013/03/profile-v3-wordpress-theme.jpg" alt="">
-      </div>
-      <div class="ml-3">
-        <p>Enter your skills</p>
-      </div>
+
+    <div class="order-2 align-self-end" style="margin-right: 200px; margin-bottom: 50px; margin-top: 50px">
+      <h1>Deuxième Etape</h1>
+      <img src="https://organicthemes.com/wp-content/uploads/2013/03/profile-v3-wordpress-theme.jpg" alt="">
+      <p>Mentionner vos compétences</p>
     </div>
-    <h1 class="mb-3">Step 3</h1>
-    <div class="d-flex">
-      <div class="mr-3">
-        <p>Find your dream job</p>
-      </div>
-      <div class="ml-3">
-        <img src="https://organicthemes.com/wp-content/uploads/2013/03/profile-v3-wordpress-theme.jpg" alt="">
-      </div>
+
+    <div class="order-3" style="margin-left: 200px;  margin-bottom: 50px; margin-top: 50px">
+      <h1>Troisième Etape</h1>
+      <img src="https://organicthemes.com/wp-content/uploads/2013/03/profile-v3-wordpress-theme.jpg" alt="">
+      <p>Trouvez le Job de vos rèves</p>
     </div>
-    <%= link_to "Start now", jobs_path, class: "btn btn-primary mt-5 mb-5" %>
+
+    <div class="order-4 align-self-end" style="margin-right: 200px;">
+      <%= link_to "Start now", jobs_path, class: "btn btn-primary mt-5 mb-5" %>
+    </div>
   </div>
 </div>
 
