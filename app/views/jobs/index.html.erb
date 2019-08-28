@@ -8,19 +8,36 @@
     <%= submit_tag "Search", class: "btn btn-primary" %>
   <% end %>
 
-  <% @jobs.each do |job| %>
-    <div class="card-product">
-      <img src=<%= job.job_photo %> />
-        <div class="card-product-infos">
-          <h2><%= job.title %></h2>
-          <p><%= job.short_description %></p>
-          <p><%= job.field %></p>
+  <div class="container mt-5">
+    <% @jobs.each do |job| %>
+      <div class="card-product">
+        <div>
+          <% if job.bookmarked %>
+            <%= link_to job_bookmark_path(job), method: :post do %>
+              <i class="fas fa-star" id="star"></i>
+            <% end %>
+          <% else %>
+            <%= link_to job_bookmark_path(job), method: :post do %>
+              <i class="far fa-star" id="star"></i>
+            <% end %>
+          <% end %>
         </div>
-        <% job.skills.each do |job_skill| %>
-          <%= job_skill.name %>
-        <% end %>
-    </div>
-  <% end  %>
+        <img src=<%= job.job_photo %> />
+          <div class="card-product-infos">
+            <h2><%= job.title %> (<%= job.field %>)</h2>
+            <p><%= job.short_description %></p>
+            <div class="d-flex align-items-center">
+              <p><strong>Skills required:</strong></p>
+              <% if job.skills == [] %>
+                <p class="ml-3">none</p>
+              <% else %>
+                <% job.skills.each do |job_skill| %>
+                  <p class="ml-3"><%= job_skill.name %></p>
+                <% end %>
+              <% end %>
+            </div>
+          </div>
+      </div>
+    <% end  %>
+  </div>
 </div>
-
-
