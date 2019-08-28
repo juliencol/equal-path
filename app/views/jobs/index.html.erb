@@ -1,3 +1,4 @@
+
 <div class="main-container">
    <%= form_tag jobs_path, method: :get do %>
     <%= text_field_tag :query,
@@ -37,6 +38,7 @@
               <% end %>
             </div>
           </div>
+          <%= link_to "", job_path(job), class: "transparent-link" %>
       </div>
     <% end  %>
   </div>
