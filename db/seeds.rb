@@ -183,6 +183,12 @@ JobSkill.create!(job: developer, skill: Skill.find_by_name("autonome"))
 
 puts "end"
 
+puts "creating job_formations"
+
+JobFormation.create!(job: developer, formation: le_wagon)
+JobFormation.create!(job: developer, formation: epita)
+JobFormation.create!(job: developer, formation: ecole_42)
+
 
 puts "creating formation_skills"
 
