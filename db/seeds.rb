@@ -68,11 +68,9 @@ developer = Job.new(
     Le dévelop-peur prend en charge la formation des utilisateurs de l'application
     et peut même rédiger un guide d'utilisateur. Par la suite, il intervient pour effectuer
     la maintenance ou faire évoluer les programmes.",
-  # job_photo: "https://res.cloudinary.com/dovu27lye/image/upload/v1566836640/developer_lgdkpz.jpg",
   field: "IT",
 )
-
-developer.remote_job_photo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1566836640/developer_lgdkpz.jpg"
+developer.remote_job_photo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1566990467/tim-van-der-kuip-CPs2X8JYmS8-unsplash_1_zggwdi.jpg"
 developer.save!
 
 responsable_micro = Job.new(

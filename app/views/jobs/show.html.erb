@@ -1,24 +1,47 @@
-<div class="main-container">
-  <h1 class= "text-center"> <%= @job.title %></h1>
-    <p> <%= @job.long_description %></p>
-
-
-<h3> Ce métier demande certaines compétences comme ... </h3>
-    <% @job.skills.each do |skill| %>
-     <p> <%= skill.name %> </p>
-    <% end %>
-<h3> Les formations : </h3>
-<% @job.formations.each do |formation| %>
-     <p> <%= formation.location %> </p>
-    <% end %>
-
-<h3> Mentors: </h3>
-<% @job.users.each do |user| %>
-     <p> <%= user.first_name %> </p>
-    <% end %>
-
-    <% @job.skills.each do |skill| %>
-    <%= skill.name %>
-    <% end %>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= cl_image_path @job.job_photo %>);">
+  <div class="container">
+    <h1 class = "text-center"> <%= @job.title %></h1>
+  </div>
 </div>
+
+<div class="main-container">
+  <div class="row">
+    <table class = "col-10">
+      <tr>
+         <td class= "pl-5 pb- 5">
+          <p> <strong> Le métier </strong></p>
+         </td>
+         <td class= "pl-5 pb- 5">
+          <%= @job.long_description %>
+         </td>
+      </tr>
+      <tr>
+       <td class= "pl-5 pb- 5">
+         <p><strong> Les compétences </strong></p>
+       </td>
+       <td class= "pl-5">
+        <% @job.skills.each do |skill| %>
+          <%=skill.name %> ,
+        <% end %>
+       </td>
+      </tr>
+    </table>
+  </div>
+  <% @job.formations.each do |formation|%>
+    <div class="card-product">
+    <!-- mettre une image  -->
+      <div class="card-product-infos">
+        <h2><%= formation.title %></h2>
+        <p> <%= formation.location%></p>
+        <p> <%= formation.duration%></p>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+
+
+
+
+
 
