@@ -7,6 +7,17 @@
   align-items: center;
   margin-bottom: 10px;
   border-radius: 10px;
+  position: relative;
+}
+
+.transparent-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  height: 120px;
+  width: 100%;
+  z-index: 2;
 }
 
 .card-product img {
