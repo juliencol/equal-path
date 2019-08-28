@@ -18,7 +18,7 @@ jean_michel = User.new(
   password: "password",
 )
 
-# jean_michel.remote_profile_picture_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1566833617/jean-michel_odtwjo.jpg"
+jean_michel.remote_profile_picture_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567008119/sophie_hmlyot.jpg"
 jean_michel.save!
 
 lola = User.new(
