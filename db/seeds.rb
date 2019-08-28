@@ -11,8 +11,8 @@ UserSkill.destroy_all
 puts 'Creating 3 Users...'
 
 jean_michel = User.new(
-  first_name: 'Jean',
-  last_name: 'Michel',
+  first_name: 'Jean Michel',
+  last_name: 'Patelin',
   age: 23,
   email: "jean@michel.com",
   password: "password",
@@ -21,20 +21,20 @@ jean_michel = User.new(
 # jean_michel.remote_profile_picture_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1566833617/jean-michel_odtwjo.jpg"
 jean_michel.save!
 
-francoise_marie = User.new(
-  first_name: 'Francoise',
-  last_name: 'Marie',
+lola = User.new(
+  first_name: 'Lola',
+  last_name: 'Riou',
   age: 25,
-  email: "francoise@marie.com",
+  email: "lola@riou.com",
   password: "password",
 )
 
 # francoise_marie.remote_profile_picture_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1566833865/francoise_marie_dz0pf9.jpg"
-francoise_marie.save!
+lola.save!
 
 jacques_martin = User.new(
-  first_name: 'Jacques',
-  last_name: 'Martin',
+  first_name: 'Jacques - Martin',
+  last_name: 'Du Lac',
   age: 22,
   email: "jacques@martin.com",
   password: "password",
@@ -42,6 +42,15 @@ jacques_martin = User.new(
 
 # jacques_martin.remote_profile_picture_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1566834082/jacques_martin_bpy4sv.jpg"
 jacques_martin.save!
+
+sophie = User.new(
+  first_name: 'Sophie',
+  last_name: 'Dourtin',
+  age: 25,
+  email: "sophie@dourtin.com",
+  password: "password",
+  )
+ sophie.save!
 
 puts "Creating 3 jobs..."
 
@@ -208,6 +217,10 @@ UserSkill.create!(user: jean_michel, skill: Skill.find_by_name("travail en équi
 UserSkill.create!(user: jean_michel, skill: Skill.find_by_name("leadership"))
 UserSkill.create!(user: jean_michel, skill: Skill.find_by_name("anglais"))
 
+puts "creating user_jobs"
+UserJob.create!(user: sophie, job: developer)
+UserJob.create!(user:lola, job: developer)
+UserJob.create!(user: jacques_martin, job: developer)
 
 
 puts 'Your database has been updated successfully and happily by PRK!'
