@@ -12,14 +12,15 @@
     <div class="card-product">
       <img src=<%= job.job_photo %> />
         <div class="card-product-infos">
-          <h2> <%= job.title %> </h2>
-          <p> <%= job.short_description %> </p>
-          <p> <%= job.field %> </p>
-
-         </div>
+          <h2><%= job.title %></h2>
+          <p><%= job.short_description %></p>
+          <p><%= job.field %></p>
+        </div>
+        <% job.skills.each do |job_skill| %>
+          <%= job_skill.name %>
+        <% end %>
     </div>
-    <% end  %>
-
+  <% end  %>
 </div>
 
 
