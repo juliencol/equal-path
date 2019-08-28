@@ -18,7 +18,7 @@ jean_michel = User.new(
   password: "password",
 )
 
-# jean_michel.remote_profile_picture_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1566833617/jean-michel_odtwjo.jpg"
+jean_michel.remote_profile_picture_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1566833617/jean-michel_odtwjo.jpg"
 jean_michel.save!
 
 lola = User.new(
@@ -29,7 +29,7 @@ lola = User.new(
   password: "password",
 )
 
-# francoise_marie.remote_profile_picture_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1566833865/francoise_marie_dz0pf9.jpg"
+lola.remote_profile_picture_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1566833865/francoise_marie_dz0pf9.jpg"
 lola.save!
 
 jacques_martin = User.new(
@@ -40,7 +40,7 @@ jacques_martin = User.new(
   password: "password",
 )
 
-# jacques_martin.remote_profile_picture_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1566834082/jacques_martin_bpy4sv.jpg"
+jacques_martin.remote_profile_picture_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1566834082/jacques_martin_bpy4sv.jpg"
 jacques_martin.save!
 
 sophie = User.new(
@@ -50,6 +50,8 @@ sophie = User.new(
   email: "sophie@dourtin.com",
   password: "password",
   )
+sophie.remote_profile_picture_url = "Pierrick 18 h 02
+https://res.cloudinary.com/dovu27lye/image/upload/v1567008119/sophie_hmlyot.jpg"
  sophie.save!
 
 puts "Creating 5 jobs..."
