@@ -2,10 +2,14 @@
   <h1 class= "text-center"> <%= @job.title %></h1>
     <p> <%= @job.long_description %></p>
 
+<h3> Ce métier demande certaines compétences comme ... </h3>
     <% @job.skills.each do |skill| %>
-    <%= skill.name %>
+     <p> <%= skill.name %> </p>
     <% end %>
-
+<h3> Les formations : </h3>
+<% @job.formations.each do |formation| %>
+     <p> <%= formation.title %> </p>
+    <% end %>
 
 </div>
 
