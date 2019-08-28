@@ -3,4 +3,6 @@ class Formation < ApplicationRecord
   has_many :formation_skills, dependent: :destroy
   has_many :jobs, through: :job_formations
   has_many :skills, through: :formation_skills
+
+  mount_uploader :logo, LogoUploader
 end
