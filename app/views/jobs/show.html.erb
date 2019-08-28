@@ -1,0 +1,11 @@
+<div class="main-container">
+  <h1 class= "text-center"> <%= @job.title %></h1>
+    <p> <%= @job.long_description %></p>
+
+    <% @job.skills.each do |skill| %>
+    <%= skill.name %>
+    <% end %>
+
+
+</div>
+
