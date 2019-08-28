@@ -1,5 +1,5 @@
 class Skill < ApplicationRecord
-  has_many :user_skills
+  has_many :user_skills, dependent: :destroy
   has_many :job_skills, dependent: :destroy
   has_many :formation_skills, dependent: :destroy
   has_many :users, through: :user_skills
