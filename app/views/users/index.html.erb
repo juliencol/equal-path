@@ -1,12 +1,13 @@
 <div class="main-container">
+  <h1>Dashboard of <%= current_user.first_name %> <%= current_user.last_name %></h1>
   <div>
-    <h1>Jobs bookmarked</h1>
+    <h2>Jobs bookmarked</h2>
     <% @jobs.each do |job| %>
       <%= job.title %>
     <% end %>
   </div>
   <div>
-    <h1>Formations bookmarked</h1>
+    <h2>Formations bookmarked</h2>
     <% @formations.each do |formation| %>
       <%= formation.title %>
     <% end %>
