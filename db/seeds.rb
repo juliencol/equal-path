@@ -18,6 +18,7 @@ jean_michel = User.new(
   password: "password",
 )
 
+
 jean_michel.remote_profile_picture_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1566899585/l2a8gm0csgv1yin1pyb2.jpg"
 jean_michel.save!
 
@@ -53,6 +54,7 @@ sophie = User.new(
 
 sophie.remote_profile_picture_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567008119/sophie_hmlyot.jpg"
 sophie.save!
+
 
 puts "Creating 5 jobs..."
 
