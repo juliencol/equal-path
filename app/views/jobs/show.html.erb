@@ -27,17 +27,24 @@
       </tr>
     </table>
   </div>
-  <% @job.formations.each do |formation|%>
-    <div class="card-product">
-    <!-- mettre une image  -->
-      <div class="card-product-infos">
-        <h2><%= formation.title %></h2>
-        <p> <%= formation.location%></p>
-        <p> <%= formation.duration%></p>
-      </div>
+
+ <h2> FORMATIONS</h2>
+  <div class="main-container">
+    <div class="row">
+      <% @job.formations.each do |formation|%>
+        <div class="card-product col-6 mr-4">
+          <%=cl_image_tag formation.logo %>
+          <div class="card-product-infos">
+            <h2><%= formation.title %></h2>
+            <p> <em>Lieux : </em><%= formation.location%></p>
+            <p> <em> Durée : </em><%= formation.duration%></p>
+          </div>
+        </div>
+      <% end %>
     </div>
-  <% end %>
+  </div>
 </div>
+
 
 
 
