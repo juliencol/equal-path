@@ -8,7 +8,7 @@ JobSkill.destroy_all
 FormationSkill.destroy_all
 UserSkill.destroy_all
 
-puts 'Creating 3 Users...'
+puts 'Creating 4 Users...'
 
 jean_michel = User.new(
   first_name: 'Jean Michel',
@@ -18,7 +18,7 @@ jean_michel = User.new(
   password: "password",
 )
 
-jean_michel.remote_profile_picture_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567008119/sophie_hmlyot.jpg"
+jean_michel.remote_profile_picture_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1566899585/l2a8gm0csgv1yin1pyb2.jpg"
 jean_michel.save!
 
 lola = User.new(
@@ -29,7 +29,7 @@ lola = User.new(
   password: "password",
 )
 
-# francoise_marie.remote_profile_picture_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1566833865/francoise_marie_dz0pf9.jpg"
+lola.remote_profile_picture_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1566899587/akgyakzoqm2keklronzv.jpg"
 lola.save!
 
 jacques_martin = User.new(
@@ -40,7 +40,7 @@ jacques_martin = User.new(
   password: "password",
 )
 
-# jacques_martin.remote_profile_picture_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1566834082/jacques_martin_bpy4sv.jpg"
+jacques_martin.remote_profile_picture_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1566834082/jacques_martin_bpy4sv.jpg"
 jacques_martin.save!
 
 sophie = User.new(
@@ -50,7 +50,9 @@ sophie = User.new(
   email: "sophie@dourtin.com",
   password: "password",
   )
- sophie.save!
+
+sophie.remote_profile_picture_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567008119/sophie_hmlyot.jpg"
+sophie.save!
 
 puts "Creating 5 jobs..."
 
