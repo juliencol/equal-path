@@ -1,4 +1,3 @@
-
 <div class="main-container">
    <%= form_tag jobs_path, method: :get do %>
     <%= text_field_tag :query,
@@ -33,7 +32,17 @@
                 <p class="ml-3">none</p>
               <% else %>
                 <% job.skills.each do |job_skill| %>
-                  <p class="ml-3"><%= job_skill.name %></p>
+                  <p class="ml-3 skill-name" data-toggle="modal" data-target=<%="#exampleModal-#{job_skill.id}"%>>
+                    <%= job_skill.name %>
+                  </p>
+                  <div class="modal fade skill-modal" id=<%="exampleModal-#{job_skill.id}"%> tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <h2 class="modal-title text-center mt-5" id="exampleModalLabel"><%= job_skill.name %></h2>
+                        <p class="m-5"><%= job_skill.description %></p>
+                      </div>
+                    </div>
+                  </div>
                 <% end %>
               <% end %>
             </div>
@@ -43,3 +52,4 @@
     <% end  %>
   </div>
 </div>
+

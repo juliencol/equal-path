@@ -13,7 +13,7 @@
 .transparent-link {
   position: absolute;
   top: 0;
-  left: 0;
+  left: 100px;
   bottom: 0;
   height: 120px;
   width: 100%;
@@ -54,3 +54,19 @@
   font-size: 50px;
   color: gold;
 }
+
+.skill-name {
+  z-index: 3;
+}
+
+.skill-modal {
+  h2 {
+    font-size: 32px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+}
+
+

@@ -173,13 +173,18 @@ ecole_42.save!
 
 puts "Creating few skills"
 
-skills = %w(Ruby PHP Pearl Python HTML CSS C C# Java JavaScript  autonome siteweb leadership anglais analytique SQL)
+skills = %w(PHP Pearl Python HTML CSS C C# Java JavaScript  autonome siteweb leadership anglais analytique SQL)
 skills.push("langage informatique", "site web", "travail en équipe", "code informatique")
 skills.each do |skill|
   Skill.create(
     name: skill
     )
 end
+
+Skill.create(
+  name: "Ruby",
+  description: "Ruby est un langage de programmation libre. Il est interprété, orienté objet et multi-paradigme. Le langage a été standardisé au Japon en 2011 (JIS X 3017:2011)4, et en 2012 par l'Organisation internationale de normalisation (ISO 30170:2012)5."
+)
 
 puts "creating job_skills"
 
