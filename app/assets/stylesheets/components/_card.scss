@@ -7,7 +7,6 @@
   align-items: center;
   margin-bottom: 10px;
   border-radius: 10px;
-
 }
 
 .card-product img {
@@ -31,5 +30,16 @@
 }
 
 .card-product .card-product-infos {
+  display: flex;
+  flex-direction: column;
   padding: 16px;
+}
+
+#star {
+  position: relative;
+  top: 0;
+  right: 0;
+  padding: 0 20px;
+  font-size: 50px;
+  color: gold;
 }

@@ -1,15 +1,30 @@
+<!-- This is the dashboard page -->
+
 <div class="main-container">
   <h1>Dashboard of <%= current_user.first_name %> <%= current_user.last_name %></h1>
   <div>
-    <h2>Jobs bookmarked</h2>
+    <h2>Favorite Jobs</h2>
     <% @jobs.each do |job| %>
-      <%= job.title %>
+      <div class="card-product">
+        <img src=<%= job.job_photo %> />
+        <div class="card-product-infos">
+          <h2><%= job.title %></h2>
+          <p><%= job.short_description %></p>
+          <p><%= job.field %></p>
+        </div>
+      </div>
     <% end %>
   </div>
   <div>
-    <h2>Formations bookmarked</h2>
+    <h2>Favorite Formations</h2>
     <% @formations.each do |formation| %>
-      <%= formation.title %>
+      <div class="card-product">
+        <div class="card-product-infos">
+          <h2><%= formation.title %></h2>
+          <p><%= formation.description %></p>
+          <p><%= formation.field %></p>
+        </div>
+      </div>
     <% end %>
   </div>
 </div>
