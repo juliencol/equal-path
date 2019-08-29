@@ -41,8 +41,7 @@ jacques_martin = User.new(
   password: "password",
 )
 
-jacques_martin.remote_profile_picture_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1566834082/jacques_martin_bpy4sv.jpg"
-jacques_martin.save!
+jacques_martin.remote_profile_picture_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567075488/jacques_martin_ifi7rz.jpg"
 
 sophie = User.new(
   first_name: 'Sophie',
@@ -170,6 +169,66 @@ architecte_d_interieur = Job.new(
 architecte_d_interieur.remote_job_photo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567004706/interior_design_ueppdd.jpg"
 architecte_d_interieur.save!
 
+product_manager = Job.new(
+  title: "Product Manager",
+  short_description: "Le Product Manager est le Chef de Produit. Un cadre marketing que tous les personnels techniques
+  doivent impérativement consulter avant de bouger leur petit doigt. Ce professionnel de l’informatique gère
+   la vie d’un produit depuis sa conception jusqu’à sa consommation. Le tout, en concert avec les équipes techniques
+   et commerciales au sein de son entreprise",
+   long_description: "La mission principale du chef de produit consiste avant tout à répondre aux besoins des clients
+   (voire à les créer), en accompagnant un produit :
+– en amont dans sa conception (ou sélection), puisque le produit n’est lancé qu’après la réalisation d’une analyse marketing complète (analyse des 4P : Product, Promotion, Price, Place). Elaborer un plan marketing, c’est avoir une excellente connaissance du marché, de la concurrence et des ventes réalisées au cours des saisons précédentes, mais c’est aussi être capable d’anticiper en appréhendant les habitudes de consommation des clients.
+Concrètement, le Chef de produit connaît précisément les besoins et les envies de notre chère ménagère de moins de 50 ans.
+ Il définit la cible, évalue les conditions de distribution (quantités, prix, délais, etc.). Il est à même de donner un brief pour
+ créer un slogan publicitaire accrocheur (voire, le fait lui-même), et sait négocier un emplacement pour la mise en rayon de son produit.
+ Il est également responsable de la gestion des budgets, des prévisions et des estimations, ainsi que du suivi des ventes et de leur progression.
+– en aval pour la commercialisation du produit : il coordonne les actions de promotion et de communication ; ainsi, c’est à lui
+que revient la responsabilité de choisir le moyen le plus adapté pour communiquer autour du produit : campagne d’affichage ou télévisée,
+promotion sur lieu de vente ou pub on-line, etc.
+Et ce n’est qu’une fois sa stratégie mise en place que le Chef de produit adapte ses actions en fonction du comportement des consommateurs et
+ de ses concurrents (baisse des prix par exemple).
+Le Chef de produit joue donc un rôle d’interface entre les différents prestataires (internes et externes) qui entrent en jeu dans la commercialisation
+d’un produit : équipes de production, fournisseurs, publicitaires, force de vente…
+Sa performance est évaluée sur les résultats qu’il obtient en fonction des objectifs fixés. Une fois ces résultats obtenus, il est en charge d’émettre des
+recommandations et des préconisations concernant le suivi des ventes.",
+field: "Business"
+  )
+product_manager.remote_job_photo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567070392/Product-Manager_lcscao.jpg"
+product_manager.save!
+
+
+business_dev = Job.new(
+  title: "Business Develoeper",
+  short_description: "e business developer a pour mission de défricher les marchés et générer des nouveaux leads commerciaux « from scratch »
+   (sans portefeuille) ou via de « l’upselling » sur la base d’un nombre limité de comptes. Dans un environnement digital, il doit posséder une bonne culture générale sur les aspects techniques des produits qu’il commercialise : adserving / e-publicité (SEM, SEO, affiliation, …), emailing (technique de routage, délivrabilité, compréhension du paramétrage…),
+  site web / mobile (conception / user expérience, contraintes liées aux langages HTML/Flash…), etc.",
+  long_description: "L’équivalent d’un directeur du développement, d’un responsable marketing ou d’un directeur commercial ? Pas tout à fait. « C’est une fonction bien plus large, qu’on retrouve désormais dans de très nombreuses entreprises du Web et start-up, mais aussi dans des sociétés plus traditionnelles, explique Olivier Fécherolles,
+directeur de la stratégie et du développement de Viadeo. Elle fait partie des métiers d’avenir, même si trop peu de gens et d’entreprises la connaissent alors qu’elle est au carrefour de différentes compétences incontournables tant pour les grandes entreprises que pour les PME
+Le Business Developer a pour mission de trouver de nouveaux leviers de croissance d'une entreprise, il doit apporter des solutions, projets... pour développer le chiffre d'affaire de manière directe (nouveaux clients ou produits) ou de manière indirecte (marketing, communication).
+En lien avec les équipes commerciales, marketing, financière, juridique, il doit coordonner les idées et équipes afin de créer de nouvelles activités au sein d'une entreprise.",
+)
+business_dev.remote_job_photo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567070393/cowomen-pd5FVvQ9-aY-unsplash_yrbbg5.jpg"
+business_dev.save!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 puts "Creating 3 formations..."
 
 
@@ -255,6 +314,85 @@ ecole_d_archi = Formation.new(
 ecole_boulle.remote_logo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567005003/Logo_ENSAPB_qpf5jf.png"
 ecole_d_archi.save!
 
+rocket_school = Formation.new(
+  title: "Rocket School Business",
+  duration: "3 ans ou 5 ans",
+  location: " Paris : 9 RUE DOMRÉMY, 75013 PARIS
+  Lyon : 90 COURS LAFAYETTE",
+  website_url: "https://rocket-school.com/",
+  description: "La Rocket School permet à ses étudiants d’apprendre et de se préparer à une activité professionnelle riche et d’avenir.
+L’essor du numérique offre des opportunités d’évolution sans précédent en France et à l’international. Les métiers de la vente et du
+marketing sont complètement transformés et les postes qui y correspondent sont très prisés des entreprises. Cependant, peu nombreuses
+sont les formations qui y préparent vraiment.
+La Rocket School appuie sur l’innovation pédagogique et sur un processus de recrutement spécifique pour donner toutes les chances à ses
+étudiants d’exceller dans ces nouveaux métiers du numérique."
+  )
+rocket_school.remote_logo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567074414/download_xvwrrz.png"
+rocket_school.save!
+
+iconoclass = Formation.new(
+  title: "Iconoclass",
+  duration: "1 an",
+  location: "25 rue du Petit Musc, 75004 Paris",
+  website_url: "https://www.iconoclass.eu",
+  description: " Pas besoin de passer par Parcoursup, IconoClass une école privée que tu peux rejoindre dès 18 ans et sans limite d'âge"
+  )
+iconoclass.remote_logo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567074414/download_xvwrrz.png"
+iconoclass.save!
+
+esce = Formation.new(
+  title: "ESCE Master",
+  duration: "3 à 5 ans",
+  location: "10 Rue Sextius Michel, 75015 Paris",
+  website_url: "https://www.esce.fr",
+  description: " Programme en anglais : International Marketing Product Management specialization prepares future marketing managers for
+  the challenges of both the digital and global environment. Innovation and practiced-based, the program immerses students to real situations
+  through engagement with partner corporations and start-ups. With the fundamentals of
+  understanding the craft of becoming a solid product manager through its diverse course offerings, sudents should not only attain the necessary
+  skills of operations, but should have the opportunity to impress professionals and to broaden their options through networking opportunities.",
+  )
+esce.remote_logo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567074413/download-2_ks41tm.png"
+esce.save!
+
+thiga = Formation.new(
+  title: "Thiga Academy",
+  duration: "2 jours",
+  location: "23 rue Taitbout 75009 Paris",
+  website_url: "https://thiga.academy",
+  description: "Cette formation s’adresse aux professionnels du numérique qui veulent découvrir le Product Management.
+Après une introduction au Design Thinking et au Lean Startup, vous apprendrez à construire la vision initiale d’un produit puis à la challenger grâce
+à des techniques de tests utilisateurs et de prototypage rapide.
+Dans un second temps, vous déterminerez le périmètre de votre MVP et verrez comment mesurer sa performance grace au framework AARRR.",
+)
+thiga.remote_logo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567074356/images_prvjqj.png"
+thiga.save!
+
+lion =Formation.new(
+  title: "Lion",
+  duration: "8 jours (samedi)",
+  location: "10 rue de Charonne, 75011 PARIS",
+  website_url: "https://joinlion.co",
+  description: "Que tu sois polytechinicien, autoditacte, ex bcg, développeur, apprenti charpentier... Lion a des choses à t’apporter. Tous les aspects importants
+des startups sont traités : mindset, money, ops, sales, growth, dev, product … À toi de choisir chaque samedi celui que tu veux découvrir ou approfondir.
+La clef : la curiosité et l’envie de se dépasser. C’est en testant que tu sauras le modèle qui est fait pour toi !",
+ )
+lion.remote_logo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567074356/images_prvjqj.png"
+lion.save!
+
+openclassroom = Formation.new(
+  title: "OpenClassRoom",
+  duration: "A votre rythme, environ 12 mois",
+  location: "Chez vous",
+  website_url: "https://openclassrooms.com/fr/paths/163-product-manager",
+  description: "À l'issue de votre formation et de la validation de vos compétences par le jury du diplôme, vous pourrez obtenir le diplôme Manager de Projet Web et Digital
+  enregistré au Répertoire National des Certifications Professionnelles.
+Ce diplôme est de niveau Bac+5, c'est-à-dire de niveau 7 sur le Cadre Européen des Certifications (European Qualifications Framework) et de niveau Bac+5 sur le cadre français.
+Si vous avez des questions à propos de son équivalence pour poursuivre vos études, contactez votre université ou école dans laquelle vous voulez continuer après le diplôme.
+Si vous avez déjà au moins 1 an d'expérience professionnelle dans ce métier, vous pouvez obtenir plus rapidement ce diplôme grâce à une Validation des Acquis de l'Expérience (VAE)",
+)
+openclassroom.remote_logo_url= "https://res.cloudinary.com/dovu27lye/image/upload/v1567074440/QZiRAhUq_kdasbd.jpg"
+openclassroom.save!
+
 puts "Creating few skills"
 
 
@@ -262,6 +400,8 @@ skills = %w(PHP Pearl Python HTML CSS C C# Java JavaScript  autonome siteweb lea
 skills.push("langage informatique", "site web", "travail en équipe", "code informatique")
 skills.push("physique du batiment", "techniques des matériaux", "règles dans le domaine de l'urbanisme", "mémoire visuelle", "conception", "dessin", "logiciels de dessin", "formules géométriques", "formules mathématiques")
 skills.push("adaptation", "design", "décoration intérieure", "ingéniosité", "coordination")
+skills.push("gestion de projet", "web design", "web marketing", "informatique")
+skills.push("négociation", "sens relationnel", "esprit d'analyse", "esprit entrepreneur", "strategie")
 skills.each do |skill|
   Skill.create(
     name: skill
