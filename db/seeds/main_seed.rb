@@ -233,7 +233,7 @@ puts "Creating 3 formations..."
 
 
 epita = Formation.new(
-  title: "EPITA - Ecole pour l'informatique et les techniques avancées",
+  title: "EPITA",
   duration: "3 ans",
   location: "14-16 rue Voltaire 94270 Le Kremlin-Bicètre",
   website_url: "https://www.epita.fr",
