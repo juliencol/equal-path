@@ -1,6 +1,14 @@
+.card-prod {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 16px;
+  justify-content: center;
+  margin-top: 50px;
+}
+
 .card-product {
   overflow: hidden;
-  height: 120px;
+  height: 200px;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
@@ -8,6 +16,7 @@
   margin-bottom: 10px;
   border-radius: 10px;
   position: relative;
+  grid-template-columns: 1fr 1fr;
 }
 
 .transparent-link {
@@ -22,7 +31,7 @@
 
 .card-product img {
   height: 100%;
-  width: 181px;
+  width: 30%;
   object-fit: cover;
 }
 
@@ -47,11 +56,10 @@
 }
 
 #star {
-  position: relative;
-  top: 0;
-  right: 0;
-  padding: 0 20px;
-  font-size: 50px;
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  font-size: 30px;
   color: gold;
 }
 
