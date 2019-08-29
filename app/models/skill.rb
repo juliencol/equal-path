@@ -6,4 +6,5 @@ class Skill < ApplicationRecord
   has_many :jobs, through: :job_skills
   has_many :formations, through: :formation_skills
 
+  mount_uploader :logo, LogoUploader
 end

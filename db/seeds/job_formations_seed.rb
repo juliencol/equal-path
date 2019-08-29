@@ -7,6 +7,7 @@ puts "Creating job_formations..."
 JobFormation.create!(job: DEVELOPPEUR, formation: LE_WAGON)
 JobFormation.create!(job: DEVELOPPEUR, formation: EPITA)
 JobFormation.create!(job: DEVELOPPEUR, formation: ECOLE_42)
+JobFormation.create!(job: DEVELOPPEUR, formation: ISEP)
 
 JobFormation.create!(job: EXPERT_SECURITE, formation: LE_WAGON)
 JobFormation.create!(job: EXPERT_SECURITE, formation: EPITA)

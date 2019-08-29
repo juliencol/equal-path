@@ -164,6 +164,13 @@ Si vous avez déjà au moins 1 an d'expérience professionnelle dans ce métier,
 OPEN_CLASSROOM.remote_logo_url= "https://res.cloudinary.com/dovu27lye/image/upload/v1567074440/QZiRAhUq_kdasbd.jpg"
 OPEN_CLASSROOM.save!
 
+ISEP = Formation.new(
+  title: "ISEP",
+  duration: "5 ans",
+  location: "28 Rue Notre Dame des Champs, 75006 Paris",
+  website_url: "https://www.isep.fr/",
+  description: "L’ISEP forme les ingénieurs d’aujourd’hui et de demain, dans les domaines clés du numérique : Informatique & Cybersécurité – Électronique & Robotique – Télécommunications & Internet des Objets (IoT) – Imagerie &  Santé – Intelligence Artificielle"
+)
 
-
-
+ISEP.remote_logo_url = "https://res.cloudinary.com/isep/image/upload/v1567088965/iseplogo_gcz1bg.png"
+ISEP.save!

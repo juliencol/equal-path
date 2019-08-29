@@ -3,14 +3,12 @@ require_relative 'users_seed'
 UserSkill.destroy_all
 puts "Creating user_skills..."
 
-UserSkill.create!(user: JEAN_MICHEL, skill: Skill.find_by_name("autonome"))
-UserSkill.create!(user: JEAN_MICHEL, skill: Skill.find_by_name("analytique"))
-UserSkill.create!(user: JEAN_MICHEL, skill: Skill.find_by_name("travail en équipe"))
-UserSkill.create!(user: JEAN_MICHEL, skill: Skill.find_by_name("leadership"))
-UserSkill.create!(user: JEAN_MICHEL, skill: Skill.find_by_name("anglais"))
+UserSkill.create!(user: JEAN_MICHEL, skill: AUTONOME)
+UserSkill.create!(user: JEAN_MICHEL, skill: ANALYTIQUE)
+UserSkill.create!(user: JEAN_MICHEL, skill: LEADERSHIP)
+UserSkill.create!(user: JEAN_MICHEL, skill: ANGLAIS)
 
-UserSkill.create!(user: JACQUES_MARTIN, skill: Skill.find_by_name("autonome"))
-UserSkill.create!(user: JACQUES_MARTIN, skill: Skill.find_by_name("analytique"))
-UserSkill.create!(user: JACQUES_MARTIN, skill: Skill.find_by_name("travail en équipe"))
-UserSkill.create!(user: JACQUES_MARTIN, skill: Skill.find_by_name("leadership"))
-UserSkill.create!(user: JACQUES_MARTIN, skill: Skill.find_by_name("anglais"))
+UserSkill.create!(user: JACQUES_MARTIN, skill: AUTONOME)
+UserSkill.create!(user: JACQUES_MARTIN, skill: ANALYTIQUE)
+UserSkill.create!(user: JACQUES_MARTIN, skill: LEADERSHIP)
+UserSkill.create!(user: JACQUES_MARTIN, skill: ANGLAIS)
