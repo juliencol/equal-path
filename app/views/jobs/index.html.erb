@@ -1,33 +1,22 @@
-<section class="search-sec">
-  <div class="main-container">
+<section class="search">
+  <div class="search-container">
     <form action="/jobs" method="get" novalidate="novalidate">
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="row">
-            <input type="text" name="query">
-            <div class="col-lg-3 col-md-3 col-sm-12 p-0">
-              <select class="select2" name="skill" multiple>
-                <% Skill.all.each do |skill| %>
-                  <option value=<%=skill.name%>>
-                    <%= skill.name %>
-                  </option>
-                <% end %>
-              </select>
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-12 p-0">
-              <select class="form-control search-slt" id="exampleFormControlSelect1" name="field">
-                <option>IT</option>
-              </select>
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-12 p-0">
-              <%= submit_tag :search %>
-            </div>
-          </div>
-        </div>
-      </div>
+      <input type="text" name="query">
+        <select class="select2" name="skill" multiple>
+          <% Skill.all.each do |skill| %>
+            <option value=<%=skill.name%>>
+              <%= skill.name %>
+            </option>
+          <% end %>
+        </select>
+        <select class="select2" name="skill" multiple>
+          <option>IT</option>
+        </select>
+        <%= submit_tag :search %>
     </form>
   </div>
 </section>
+
   <div class="cards-container">
     <div class="card-prod">
       <% @jobs.each do |job| %>
