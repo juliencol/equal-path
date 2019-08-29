@@ -1,18 +1,19 @@
 <section class="search">
   <div class="search-container">
+    <h2>Entrez ou selectionner des compétences </h2>
     <form action="/jobs" method="get" novalidate="novalidate">
       <input type="text" name="query">
-        <select class="select2" name="skill" multiple>
-          <% Skill.all.each do |skill| %>
-            <option value=<%=skill.name%>>
-              <%= skill.name %>
-            </option>
-          <% end %>
-        </select>
-        <select class="select2" name="skill" multiple>
-          <option>IT</option>
-        </select>
-        <%= submit_tag :search %>
+      <select class="select2" name="skill" multiple>
+        <% Skill.all.each do |skill| %>
+          <option value=<%=skill.name%>>
+            <%= skill.name %>
+          </option>
+        <% end %>
+      </select>
+      <select class="select2" name="skill" multiple>
+        <option>IT</option>
+      </select>
+      <%= submit_tag :search %>
     </form>
   </div>
 </section>
