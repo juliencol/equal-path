@@ -14,5 +14,4 @@ load base + '/user_jobs_seed.rb'
 load base + '/user_skills_seed.rb'
 
 puts "Everything worked fine"
-puts "Your database was successfully updated by Juliencol"
-puts "PS: Gaetan aime les gros penis"
+puts "Your database was successfully updated by Juliencol & PRK"

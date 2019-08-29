@@ -84,7 +84,7 @@ ARCHITECTE = Job.new(
     La majorité des architectes (près de 70 %) exerce en libéral, mais la
     plupart débutent comme salariés dans de toutes petites agences (moins de 4
     personnes). Quelques-uns intègrent, par voie de concours, le secteur public.",
-  field: "IT",
+  field: "Architecture",
 )
 
 ARCHITECTE.remote_job_photo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567002463/architect_jdldwl.jpg"
@@ -110,7 +110,7 @@ ARCHITECTE_D_INTERIEUR = Job.new(
     des décors de télé, des plateaux de débats...
     L'architecte d'intérieur peut exercer en libéral, à titre individuel ou comme associé
     dans un cabinet. Il est parfois salarié dans un atelier d'architecture.",
-  field: "IT",
+  field: "Architecture",
 )
 
 ARCHITECTE_D_INTERIEUR.remote_job_photo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567004706/interior_design_ueppdd.jpg"
@@ -119,48 +119,45 @@ ARCHITECTE_D_INTERIEUR.save!
 PRODUCT_MANAGER = Job.new(
   title: "Product Manager",
   short_description: "Le Product Manager est le Chef de Produit. Un cadre marketing que tous les personnels techniques
-  doivent impérativement consulter avant de bouger leur petit doigt. Ce professionnel de l’informatique gère
-   la vie d’un produit depuis sa conception jusqu’à sa consommation. Le tout, en concert avec les équipes techniques
-   et commerciales au sein de son entreprise",
-   long_description: "La mission principale du chef de produit consiste avant tout à répondre aux besoins des clients
-   (voire à les créer), en accompagnant un produit :
-– en amont dans sa conception (ou sélection), puisque le produit n’est lancé qu’après la réalisation d’une analyse marketing complète (analyse des 4P : Product, Promotion, Price, Place). Elaborer un plan marketing, c’est avoir une excellente connaissance du marché, de la concurrence et des ventes réalisées au cours des saisons précédentes, mais c’est aussi être capable d’anticiper en appréhendant les habitudes de consommation des clients.
-Concrètement, le Chef de produit connaît précisément les besoins et les envies de notre chère ménagère de moins de 50 ans.
- Il définit la cible, évalue les conditions de distribution (quantités, prix, délais, etc.). Il est à même de donner un brief pour
- créer un slogan publicitaire accrocheur (voire, le fait lui-même), et sait négocier un emplacement pour la mise en rayon de son produit.
- Il est également responsable de la gestion des budgets, des prévisions et des estimations, ainsi que du suivi des ventes et de leur progression.
-– en aval pour la commercialisation du produit : il coordonne les actions de promotion et de communication ; ainsi, c’est à lui
-que revient la responsabilité de choisir le moyen le plus adapté pour communiquer autour du produit : campagne d’affichage ou télévisée,
-promotion sur lieu de vente ou pub on-line, etc.
-Et ce n’est qu’une fois sa stratégie mise en place que le Chef de produit adapte ses actions en fonction du comportement des consommateurs et
- de ses concurrents (baisse des prix par exemple).
-Le Chef de produit joue donc un rôle d’interface entre les différents prestataires (internes et externes) qui entrent en jeu dans la commercialisation
-d’un produit : équipes de production, fournisseurs, publicitaires, force de vente…
-Sa performance est évaluée sur les résultats qu’il obtient en fonction des objectifs fixés. Une fois ces résultats obtenus, il est en charge d’émettre des
-recommandations et des préconisations concernant le suivi des ventes.",
-field: "Business"
+    doivent impérativement consulter avant de bouger leur petit doigt. Ce professionnel de l’informatique gère
+    la vie d’un produit depuis sa conception jusqu’à sa consommation. Le tout, en concert avec les équipes techniques
+    et commerciales au sein de son entreprise",
+  long_description: "La mission principale du chef de produit consiste avant tout à répondre aux besoins des clients
+    (voire à les créer), en accompagnant un produit :
+    – en amont dans sa conception (ou sélection), puisque le produit n’est lancé qu’après la réalisation d’une analyse
+    marketing complète (analyse des 4P : Product, Promotion, Price, Place). Elaborer un plan marketing, c’est avoir une
+    excellente connaissance du marché, de la concurrence et des ventes réalisées au cours des saisons précédentes, mais c’est aussi être capable d’anticiper en appréhendant les habitudes de consommation des clients.
+    Concrètement, le Chef de produit connaît précisément les besoins et les envies de notre chère ménagère de moins de
+    50 ans.
+     Il définit la cible, évalue les conditions de distribution (quantités, prix, délais, etc.). Il est à même de donner
+     un brief pour créer un slogan publicitaire accrocheur (voire, le fait lui-même), et sait négocier un emplacement pour la mise
+     en rayon de son produit.
+     Il est également responsable de la gestion des budgets, des prévisions et des estimations, ainsi que du suivi des ventes et de leur progression.
+    – en aval pour la commercialisation du produit : il coordonne les actions de promotion et de communication ; ainsi, c’est à lui
+    que revient la responsabilité de choisir le moyen le plus adapté pour communiquer autour du produit : campagne d’affichage ou télévisée,
+    promotion sur lieu de vente ou pub on-line, etc.
+    Et ce n’est qu’une fois sa stratégie mise en place que le Chef de produit adapte ses actions en fonction du comportement des consommateurs et
+     de ses concurrents (baisse des prix par exemple).
+    Le Chef de produit joue donc un rôle d’interface entre les différents prestataires (internes et externes) qui entrent en jeu dans la commercialisation
+    d’un produit : équipes de production, fournisseurs, publicitaires, force de vente…
+    Sa performance est évaluée sur les résultats qu’il obtient en fonction des objectifs fixés. Une fois ces résultats obtenus, il est en charge d’émettre des
+    recommandations et des préconisations concernant le suivi des ventes.",
+  field: "Business"
   )
 PRODUCT_MANAGER.remote_job_photo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567070392/Product-Manager_lcscao.jpg"
 PRODUCT_MANAGER.save!
 
 
 BUSINESS_DEV = Job.new(
-  title: "Business Develoeper",
-  short_description: "e business developer a pour mission de défricher les marchés et générer des nouveaux leads commerciaux « from scratch »
-   (sans portefeuille) ou via de « l’upselling » sur la base d’un nombre limité de comptes. Dans un environnement digital, il doit posséder une bonne culture générale sur les aspects techniques des produits qu’il commercialise : adserving / e-publicité (SEM, SEO, affiliation, …), emailing (technique de routage, délivrabilité, compréhension du paramétrage…),
-  site web / mobile (conception / user expérience, contraintes liées aux langages HTML/Flash…), etc.",
+  title: "Développeur d'affaires",
+  short_description: "Le développeur d'affaires a pour mission de défricher les marchés et générer des nouveaux leads commerciaux « from scratch »
+    (sans portefeuille) ou via de « l’upselling » sur la base d’un nombre limité de comptes. Dans un environnement digital, il doit posséder une bonne culture générale sur les aspects techniques des produits qu’il commercialise : adserving / e-publicité (SEM, SEO, affiliation, …), emailing (technique de routage, délivrabilité, compréhension du paramétrage…),
+    site web / mobile (conception / user expérience, contraintes liées aux langages HTML/Flash…), etc.",
   long_description: "L’équivalent d’un directeur du développement, d’un responsable marketing ou d’un directeur commercial ? Pas tout à fait. « C’est une fonction bien plus large, qu’on retrouve désormais dans de très nombreuses entreprises du Web et start-up, mais aussi dans des sociétés plus traditionnelles, explique Olivier Fécherolles,
-directeur de la stratégie et du développement de Viadeo. Elle fait partie des métiers d’avenir, même si trop peu de gens et d’entreprises la connaissent alors qu’elle est au carrefour de différentes compétences incontournables tant pour les grandes entreprises que pour les PME
-Le Business Developer a pour mission de trouver de nouveaux leviers de croissance d'une entreprise, il doit apporter des solutions, projets... pour développer le chiffre d'affaire de manière directe (nouveaux clients ou produits) ou de manière indirecte (marketing, communication).
-En lien avec les équipes commerciales, marketing, financière, juridique, il doit coordonner les idées et équipes afin de créer de nouvelles activités au sein d'une entreprise.",
+    directeur de la stratégie et du développement de Viadeo. Elle fait partie des métiers d’avenir, même si trop peu de gens et d’entreprises la connaissent alors qu’elle est au carrefour de différentes compétences incontournables tant pour les grandes entreprises que pour les PME
+    Le Business Developer a pour mission de trouver de nouveaux leviers de croissance d'une entreprise, il doit apporter des solutions, projets... pour développer le chiffre d'affaire de manière directe (nouveaux clients ou produits) ou de manière indirecte (marketing, communication).
+    En lien avec les équipes commerciales, marketing, financière, juridique, il doit coordonner les idées et équipes afin de créer de nouvelles activités au sein d'une entreprise.",
+  field: "Business"
 )
 BUSINESS_DEV.remote_job_photo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567070393/cowomen-pd5FVvQ9-aY-unsplash_yrbbg5.jpg"
 BUSINESS_DEV.save!
-
-
-
-
-
-
-
-
