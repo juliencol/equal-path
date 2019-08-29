@@ -1,24 +1,24 @@
-// const dashboard_animation = () => {
-//   const btnJobsBookmarked = document.getElementById('reservations_btn');
-//   const btnFormationsBookmarked = document.getElementById('islands_btn');
+const dashboard_animation = () => {
+  const jobsBtn = document.getElementById('jobs-btn');
+  const formationsBtn = document.getElementById('formations-btn');
+  const favJobs = document.getElementById('fav-jobs');
+  const favFormations = document.getElementById('fav-formations');
 
-//   btnJobsBookmarked.addEventListener("click", (event) => {
-//     bookings_list.classList.remove("active");
-//     btn_bookings.classList.add("active");
-//     one_reservation.classList.remove("disapear");
-//     one_island.classList.add("disapear");
+  jobsBtn.addEventListener("click", (event) => {
+    formationsBtn.classList.remove("active");
+    jobsBtn.classList.add("active");
+    favJobs.classList.remove("d-none");
+    favFormations.classList.add("d-none");
+  });
 
-//   });
+  formationsBtn.addEventListener("click", (event) => {
+    jobsBtn.classList.remove("active");
+    formationsBtn.classList.add("active");
+    favFormations.classList.remove("d-none");
+    favJobs.classList.add("d-none");
+  });
 
-//   btnFormationsBookmarked.addEventListener("click", (event) => {
-//     btn_bookings.classList.remove("active");
-//     bookings_list.classList.add("active");
-//     one_island.classList.remove("disapear");
-//     one_reservation.classList.add("disapear");
-//   });
+};
 
-// };
+export { dashboard_animation };
 
-
-
-// export { dashboard_animation };

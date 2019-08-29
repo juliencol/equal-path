@@ -6,7 +6,11 @@
     "bootstrap": "^4.3.1",
     "jquery": "^3.4.1",
     "popper.js": "^1.15.0",
+<<<<<<< HEAD
     "select2": "^4.0.10"
+=======
+    "typed.js": "^2.0.10"
+>>>>>>> master
   },
   "devDependencies": {
     "webpack-dev-server": "^3.8.0"
