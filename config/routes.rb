@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root to: 'pages#home'
 
   resources :jobs, only: [:show, :index] do
-    post "bookmark", to: 'jobs#bookmark'
+    post "bookmark_job", to: 'jobs#bookmark_job'
     post "remove_from_fav", to: 'jobs#remove_from_fav'
   end
 

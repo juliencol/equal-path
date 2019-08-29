@@ -13,11 +13,11 @@
       <div class="card-product">
         <div>
           <% if job.bookmarked %>
-            <%= link_to job_bookmark_path(job), method: :post do %>
+            <%= link_to job_bookmark_job_path(job), method: :post do %>
               <i class="fas fa-star" id="star"></i>
             <% end %>
           <% else %>
-            <%= link_to job_bookmark_path(job), method: :post do %>
+            <%= link_to job_bookmark_job_path(job), method: :post do %>
               <i class="far fa-star" id="star"></i>
             <% end %>
           <% end %>
