@@ -1,12 +1,35 @@
+<section class="search-sec">
+  <div class="main-container">
+    <form action="/jobs" method="get" novalidate="novalidate">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="row">
+            <input type="text" name="query">
+            <div class="col-lg-3 col-md-3 col-sm-12 p-0">
+              <select class="select2" name="skill" multiple>
+                <% Skill.all.each do |skill| %>
+                  <option value=<%=skill.name%>>
+                    <%= skill.name %>
+                  </option>
+                <% end %>
+              </select>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-12 p-0">
+              <select class="form-control search-slt" id="exampleFormControlSelect1" name="field">
+                <option>IT</option>
+              </select>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-12 p-0">
+              <%= submit_tag :search %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>
+
 <div class="main-container">
-   <%= form_tag jobs_path, method: :get do %>
-    <%= text_field_tag :query,
-      params[:query],
-      class: "form-control",
-      placeholder: "Find a job"
-    %>
-    <%= submit_tag "Search", class: "btn btn-primary" %>
-  <% end %>
 
   <% @jobs.each do |job| %>
     <div class="card-product">
@@ -15,12 +38,13 @@
           <h2><%= job.title %></h2>
           <p><%= job.short_description %></p>
           <p><%= job.field %></p>
+          <%= link_to "Clique Ici ", job_path(job) %>
         </div>
         <% job.skills.each do |job_skill| %>
           <%= job_skill.name %>
         <% end %>
     </div>
-  <% end  %>
+  <% end %>
 </div>
 
 
