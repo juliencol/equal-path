@@ -9,3 +9,22 @@
 .cards-container {
   margin: 4rem 1rem 4rem 1rem ;
 }
+
+.search-container {
+  margin: 6rem;
+  display: grid;
+  .select2 {
+  width: 200px !important;
+}
+input {
+  width: 200px !important;
+}
+
+
+}
+
+form {
+  display: flex;
+  border-radius: 10px;
+  justify-content: center;
+}
