@@ -15,13 +15,7 @@
           <% end %>...
         </div>
       </div>
-      <div class="mt-5 container d-flex flex-column border">
-        <h2 class = "mb-5">Formations menant à ce métier</h2>
-        <div class="container d-flex border">
-          <% @job.formations.each do |formation|%>
-            <div class="border m-3"><img id="card-product-logo" src=<%= formation.logo %>></div>
-          <% end %>
-        </div>
+
       </div>
     </div>
   </div>
@@ -30,6 +24,33 @@
     <p>Disponible très prochainement, nos meilleurs développeurs travaillent dessus...</p>
   </div>
 </div>
+
+
+
+  <% @job.formations.each do |formation|%>
+    <div class="container" data-toggle="modal" data-target="#school-modal-<%= formation.id %>">
+        <div><img class= "rounded-logo" src=<%= formation.logo %>></div>
+    </div>
+    <div class="modal fade" id="school-modal-<%= formation.id %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div id="header-modal-formation">
+              <img class= "rounded-logo" src= <%= formation.logo %>>
+              <h3 class="modal-title" id="exampleModalLongTitle" class="text-center"><%= formation.title%></h3>
+            </div>
+          </div>
+        <div class="modal-body">
+          <p><%= formation.description %></p>
+          <p><strong> Lieux : </strong><%= formation.location%></p>
+          <p><strong> Durée : </strong><%= formation.duration%></p>
+          <p> Pour en savoir plus sur cette formation : <a href=" <%=formation.website_url%>" class="tooltip-test" title="LinkSchool" target="_blank"> Le lien </a></p>
+        </div>
+        </div>
+      </div>
+    </div>
+  <%end%>
+
 
 
 
