@@ -1,21 +1,66 @@
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= cl_image_path @job.job_photo %>);">
 </div>
-<div class="main-container">
-  <div class="container d-flex border p-3">
-    <div class="container mb-5 mr-5 border">
+<div class="container">
+  <div class="container d-flex p-3">
+    <div class="container d-flex flex-column mb-5 mr-5">
       <h2 class = "mb-5"> <%= @job.title %></h2>
         <p><%= @job.long_description %></p>
     </div>
-    <div class="container d-flex flex-column mb-5 ml-5 border">
-      <div class="mb-5 container d-flex align-items-center border">
+    <div class="container d-flex flex-column mb-5 ml-5">
+      <div class="mb-5 container d-flex align-items-center">
         <div>
           <h2>Compétences requises</h2>
-          <% @job.skills.each do |skill| %>
-            <div class="border m-3"><img id="card-product-logo" src=<%= skill.logo %>></div>
-          <% end %>...
+          <div class="container d-flex flex-column">
+            <p>Strong skills</p>
+            <div class="d-flex justify-content-between">
+              <% @job.skills.each do |skill| %>
+                <% unless skill.soft %>
+                  <div class="ml-3 mr-3">
+                    <img id="skill-logo" src=<%= skill.logo %>>
+                  </div>
+                <% end %>
+              <% end %>
+            </div>
+            <p>Soft skills</p>
+            <div class="d-flex">
+              <% @job.skills.each do |skill| %>
+                <% if skill.soft %>
+                  <div>
+                    <p><%= skill.name %></p>
+                  </div>
+                <% end %>
+              <% end %>
+            </div>
+          </div>
         </div>
       </div>
-
+      <div class="container d-flex flex-column">
+        <h2>Formations</h2>
+        <div class="container d-flex">
+          <% @job.formations.each do |formation|%>
+            <div class="container" data-toggle="modal" data-target="#school-modal-<%= formation.id %>">
+                <div><img id="formation-logo" class= "rounded-logo" src=<%= formation.logo %>></div>
+            </div>
+            <div class="modal fade" id="school-modal-<%= formation.id %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <div id="header-modal-formation">
+                      <img class= "rounded-logo" src= <%= formation.logo %>>
+                      <h3 class="modal-title" id="exampleModalLongTitle" class="text-center"><%= formation.title%></h3>
+                    </div>
+                  </div>
+                <div class="modal-body">
+                  <p><%= formation.description %></p>
+                  <p><strong> Lieux : </strong><%= formation.location%></p>
+                  <p><strong> Durée : </strong><%= formation.duration%></p>
+                  <p> Pour en savoir plus sur cette formation : <a href=" <%=formation.website_url%>" class="tooltip-test" title="LinkSchool" target="_blank"> Le lien </a></p>
+                </div>
+                </div>
+              </div>
+            </div>
+          <%end%>
+        </div>
       </div>
     </div>
   </div>
@@ -24,32 +69,10 @@
     <p>Disponible très prochainement, nos meilleurs développeurs travaillent dessus...</p>
   </div>
 </div>
+</div>
 
 
 
-  <% @job.formations.each do |formation|%>
-    <div class="container" data-toggle="modal" data-target="#school-modal-<%= formation.id %>">
-        <div><img class= "rounded-logo" src=<%= formation.logo %>></div>
-    </div>
-    <div class="modal fade" id="school-modal-<%= formation.id %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <div id="header-modal-formation">
-              <img class= "rounded-logo" src= <%= formation.logo %>>
-              <h3 class="modal-title" id="exampleModalLongTitle" class="text-center"><%= formation.title%></h3>
-            </div>
-          </div>
-        <div class="modal-body">
-          <p><%= formation.description %></p>
-          <p><strong> Lieux : </strong><%= formation.location%></p>
-          <p><strong> Durée : </strong><%= formation.duration%></p>
-          <p> Pour en savoir plus sur cette formation : <a href=" <%=formation.website_url%>" class="tooltip-test" title="LinkSchool" target="_blank"> Le lien </a></p>
-        </div>
-        </div>
-      </div>
-    </div>
-  <%end%>
 
 
 
