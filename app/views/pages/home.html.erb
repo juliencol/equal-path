@@ -11,36 +11,22 @@
 </div>
 
 <div id="starting">
-  <br>
-  <br>
-  <div class="main-container d-flex flex-column">
+</div>
 
-    <a href="#second_card" id="first_click">
-      <div class="order-1 slide-in-fwd-bottom" style="margin-left: 10%; margin-bottom: 300px; padding-top: 100px;">
-        <h1>Première Etape</h1>
-        <img src="https://organicthemes.com/wp-content/uploads/2013/03/profile-v3-wordpress-theme.jpg" style="height: 100%; width: 20%; object-fit: cover;"alt="">
-        <p>Creez votre profil</p>
-      </div>
-    </a>
-
-    <a href="#third_card" id="second_click">
-      <div id="second_card" class="order-2 slide-in-fwd-bottom" style="margin-left: 50%;  margin-bottom: 300px; margin-top: 300px; padding-top: 300px;" >
-        <h1>Deuxième Etape</h1>
-        <img src="https://organicthemes.com/wp-content/uploads/2013/03/profile-v3-wordpress-theme.jpg" alt="" style="height: 100%; width: 20%; object-fit: cover;" >
-        <p>Mentionner vos compétences</p>
-      </div>
-    </a>
-
-    <div id="third_card" class="order-3 slide-in-fwd-bottom" style="margin-left: 10%;  margin-bottom: 100px; margin-top: 200px; padding-top: 200px;">
-      <br>
-      <br>
-      <h1>Troisième Etape</h1>
-      <img src="https://organicthemes.com/wp-content/uploads/2013/03/profile-v3-wordpress-theme.jpg" style="height: 100%; width: 20%; object-fit: cover;" alt="">
-      <p>Trouvez le Job de vos rèves</p>
+<div class="cards start-container">
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://res.cloudinary.com/dovu27lye/image/upload/v1567007175/daf9ugxgzepxby3n8iwv.jpg)">
+      1. Créez votre profil
     </div>
 
-    <div class="order-4 align-self-end" style="margin-right: 200px;">
-      <%= link_to "Start now", jobs_path, class: "btn btn-primary mt-5 mb-5" %>
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://res.cloudinary.com/dovu27lye/image/upload/v1567007175/pvcajorsunbriolz5ujl.jpg)">
+      2. Mentionner vos compétences
     </div>
+
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://res.cloudinary.com/dovu27lye/image/upload/v1566836640/developer_lgdkpz.jpg)">
+      3. Trouvez le Job de vos rêves
+    </div>
+  </div>
+  <div class="d-flex justify-content-center">
+      <%= link_to "Start now", jobs_path, class: "btn btn-outline-secondary btn-lg mt-5 mb-5" %>
   </div>
 </div>
