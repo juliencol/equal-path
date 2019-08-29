@@ -11,7 +11,7 @@
         <div>
           <h2>Compétences requises</h2>
           <% @job.skills.each do |skill| %>
-            <%= skill.name %>,
+            <div class="border m-3"><img id="card-product-logo" src=<%= skill.logo %>></div>
           <% end %>...
         </div>
       </div>
