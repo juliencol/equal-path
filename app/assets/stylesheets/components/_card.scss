@@ -4,9 +4,11 @@
 .card-prod {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 16px;
+  grid-gap: 20px;
   justify-content: center;
   margin-top: 50px;
+  margin-left: 4rem;
+  margin-right: 4rem;
 }
 
 
