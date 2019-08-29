@@ -1,20 +1,146 @@
 Skill.destroy_all
 puts "Creating skills..."
 
-skills = %w(PHP Pearl Python HTML CSS C C# Java JavaScript  autonome siteweb leadership anglais analytique SQL)
-skills.push("langage informatique", "site web", "travail en équipe", "code informatique")
-skills.push("physique du batiment", "techniques des matériaux", "règles dans le domaine de l'urbanisme", "mémoire visuelle", "conception", "dessin", "logiciels de dessin", "formules géométriques", "formules mathématiques")
-skills.push("adaptation", "design", "décoration intérieure", "ingéniosité", "coordination")
-skills.push("gestion de projet", "web design", "web marketing", "informatique")
-skills.push("négociation", "sens relationnel", "esprit d'analyse", "esprit entrepreneur", "strategie")
-skills.each do |skill|
-  Skill.create(
-    name: skill
-    )
-end
+# computer skills
 
+PHP = Skill.new(
+  name: "PHP",
+  description: "langage de programmation un peu nul"
+)
 
-Skill.create(
+PHP.remote_logo_url = "https://res.cloudinary.com/isep/image/upload/v1567089954/equal-path/skills-logo/php-logo-png-transparent_yxwxvu.png"
+PHP.save!
+
+PEARL = Skill.new(
+  name: "Pearl",
+  description: ""
+)
+
+PEARL.remote_logo_url = "https://res.cloudinary.com/isep/image/upload/v1567089954/equal-path/skills-logo/kisspng-perl-dynamic-programming-language-scripting-langua-perl-5b2e371360eb61.549598641529755411397_qleari.jpg"
+PEARL.save!
+
+RUBY = Skill.new(
   name: "Ruby",
-  description: "Ruby est un langage de programmation libre. Il est interprété, orienté objet et multi-paradigme. Le langage a été standardisé au Japon en 2011 (JIS X 3017:2011)4, et en 2012 par l'Organisation internationale de normalisation (ISO 30170:2012)5."
+  description: "Ruby est un langage de programmation libre. Il est interprété, orienté objet et multi-paradigme. Le langage a été standardisé au Japon en 2011 (JIS X 3017:2011)4, et en 2012 par l'Organisation internationale de normalisation (ISO 30170:2012)5.",
+)
+
+RUBY.remote_logo_url = "https://res.cloudinary.com/isep/image/upload/v1567089955/equal-path/skills-logo/kisscc0-ruby-on-rails-computer-icons-gemstone-rubygems-ruby-5b4eb896781980.6494373715318857184919_q52vdp.jpg"
+RUBY.save!
+
+PYTHON = Skill.new(
+  name: "Python",
+  description: "Le meilleur langage",
+)
+
+PYTHON.remote_logo_url = "https://res.cloudinary.com/isep/image/upload/v1567089954/equal-path/skills-logo/kisspng-python-programming-language-computer-programming-language-5acfdc3636bac7.8891188615235717662242_wxorpq.jpg"
+PYTHON.save!
+
+HTML = Skill.new(
+  name: "HTML",
+  description: "",
+)
+
+HTML.remote_logo_url = "https://res.cloudinary.com/isep/image/upload/v1567089955/equal-path/skills-logo/imgbin-icon-design-computer-icons-html-programming-language-computer-software-symbol-0Pcn1X8YECFkzK4MXCQeWYRHc_zc0jkc.jpg"
+HTML.save!
+
+CSS = Skill.new(
+  name: "CSS",
+  description: "",
+)
+
+CSS.remote_logo_url = "https://res.cloudinary.com/isep/image/upload/v1567089955/equal-path/skills-logo/CSS3_logo_and_wordmark.svg_atqval.png"
+CSS.save!
+
+LANGAGE_C = Skill.new(
+  name: "C",
+  description: "",
+)
+
+LANGAGE_C.remote_logo_url = "https://res.cloudinary.com/isep/image/upload/v1567089954/equal-path/skills-logo/letter-c-png-5a36954d474e54.1991877715135266052921_sfuf7t.jpg"
+LANGAGE_C.save!
+
+JAVASCRIPT = Skill.new(
+  name: "JavaScript",
+  description: "",
+)
+
+JAVASCRIPT.remote_logo_url = "https://res.cloudinary.com/isep/image/upload/v1567089955/equal-path/skills-logo/javascript-logo_s5q0xt.png"
+JAVASCRIPT.save!
+
+JAVA = Skill.new(
+  name: "Java",
+  description: "",
+)
+
+JAVA.remote_logo_url = "https://res.cloudinary.com/isep/image/upload/v1567089954/equal-path/skills-logo/kisspng-logo-java-runtime-environment-programming-language-java-util-concurrentmodificationexception-%C3%96mer-5b6766ab2d98b8.1809687115335031471868_dy0akj.jpg"
+JAVA.save!
+
+SQL = Skill.new(
+  name: "SQL",
+  description: "",
+)
+
+SQL.remote_logo_url = "https://res.cloudinary.com/isep/image/upload/v1567089955/equal-path/skills-logo/7_ksfnv5.png"
+SQL.save!
+
+
+
+
+# soft skills
+
+AUTONOME = Skill.new(
+  name: "Autonome"
+)
+
+LEADERSHIP = Skill.new(
+  name: "leadership"
+)
+
+ANGLAIS = Skill.new(
+  name: "Anglais"
+)
+
+ANALYTIQUE = Skill.new(
+  name: "analytique"
+)
+
+
+
+
+
+# other skills
+PHYSIQUE_DU_BATIMENT = Skill.create(
+  name: "physique du batiment"
+)
+
+TECHNIQUE_DES_MATERIAUX = Skill.create(
+  name: "technique des materiaux"
+)
+
+MEMOIRE_VISUELLE = Skill.create(
+  name: "memoire visuelle"
+)
+
+DESSIN = Skill.create(
+  name: "dessin"
+)
+
+CONCEPTION = Skill.create(
+  name: "conception"
+)
+
+ADAPTATION = Skill.create(
+  name: "adaptation"
+)
+
+DESIGN = Skill.create(
+  name: "design"
+)
+
+INGENIOSITE = Skill.create(
+  name: "ingéniosité"
+)
+
+COORDINATION = Skill.create(
+  name: "coordination"
 )
