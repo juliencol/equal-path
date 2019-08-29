@@ -29,24 +29,7 @@
   </div>
 </section>
 
-<div class="main-container">
 
-<<<<<<< HEAD
-  <% @jobs.each do |job| %>
-    <div class="card-product">
-      <img src=<%= job.job_photo %> />
-        <div class="card-product-infos">
-          <h2><%= job.title %></h2>
-          <p><%= job.short_description %></p>
-          <p><%= job.field %></p>
-          <%= link_to "Clique Ici ", job_path(job) %>
-        </div>
-        <% job.skills.each do |job_skill| %>
-          <%= job_skill.name %>
-        <% end %>
-    </div>
-  <% end %>
-=======
   <div class="container mt-5">
     <% @jobs.each do |job| %>
       <div class="card-product">
@@ -90,6 +73,5 @@
       </div>
     <% end  %>
   </div>
->>>>>>> master
 </div>
 

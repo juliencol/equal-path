@@ -17,13 +17,12 @@ gem 'uglifier'
 gem 'webpacker'
 gem 'cloudinary', '~> 1.9.1'
 gem 'carrierwave', '~> 1.2'
-<<<<<<< HEAD
+
 gem 'pg_search', '~> 2.3.0'
-=======
 
 gem 'animate-sass', '~> 0.1.1'
 
->>>>>>> master
+
 group :development do
   gem 'web-console', '>= 3.3.0'
 end
