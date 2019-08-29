@@ -30,48 +30,50 @@
 </section>
 
 
-  <div class="container mt-5">
-    <% @jobs.each do |job| %>
-      <div class="card-product">
-        <div>
-          <% if job.bookmarked %>
-            <%= link_to job_bookmark_path(job), method: :post do %>
-              <i class="fas fa-star" id="star"></i>
-            <% end %>
-          <% else %>
-            <%= link_to job_bookmark_path(job), method: :post do %>
-              <i class="far fa-star" id="star"></i>
-            <% end %>
-          <% end %>
-        </div>
-        <img src=<%= job.job_photo %> />
-          <div class="card-product-infos">
-            <h2><%= job.title %> (<%= job.field %>)</h2>
-            <p><%= job.short_description %></p>
-            <div class="d-flex align-items-center">
-              <p><strong>Skills required:</strong></p>
-              <% if job.skills == [] %>
-                <p class="ml-3">none</p>
-              <% else %>
-                <% job.skills.each do |job_skill| %>
-                  <p class="ml-3 skill-name" data-toggle="modal" data-target=<%="#exampleModal-#{job_skill.id}"%>>
-                    <%= job_skill.name %>
-                  </p>
-                  <div class="modal fade skill-modal" id=<%="exampleModal-#{job_skill.id}"%> tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog" role="document">
-                      <div class="modal-content">
-                        <h2 class="modal-title text-center mt-5" id="exampleModalLabel"><%= job_skill.name %></h2>
-                        <p class="m-5"><%= job_skill.description %></p>
+  <div class="cards-container">
+    <div class="card-prod">
+      <% @jobs.each do |job| %>
+        <div class="card-product">
+          <img src=<%= job.job_photo %> />
+            <div class="card-product-infos">
+              <h2><%= job.title %> (<%= job.field %>)</h2>
+              <h5><%= job.short_description %></h5>
+              <div class="d-flex flex-column">
+                <p><strong>Quelques compétences requises:</strong></p>
+                <% if job.skills == [] %>
+                  <p class="">none</p>
+                <% else %>
+                  <% job.skills.first(3).each do |job_skill| %>
+                    <p class="skill-name" data-toggle="modal" data-target=<%="#exampleModal-#{job_skill.id}"%>>
+                      <%= job_skill.name %>
+                    </p>
+                    <div class="modal fade skill-modal" id=<%="exampleModal-#{job_skill.id}"%> tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <h2 class="modal-title text-center mt-5" id="exampleModalLabel"><%= job_skill.name %></h2>
+                          <p class="m-5"><%= job_skill.description %></p>
+                        </div>
                       </div>
                     </div>
-                  </div>
+                  <% end %>
                 <% end %>
-              <% end %>
+              </div>
             </div>
+          <div>
+            <% if job.bookmarked %>
+              <%= link_to job_bookmark_path(job), method: :post do %>
+                <i class="fas fa-star" id="star"></i>
+              <% end %>
+            <% else %>
+              <%= link_to job_bookmark_path(job), method: :post do %>
+                <i class="far fa-star" id="star"></i>
+              <% end %>
+            <% end %>
           </div>
-          <%= link_to "", job_path(job), class: "transparent-link" %>
-      </div>
-    <% end  %>
+             <%= link_to "", job_path(job), class: "transparent-link" %>
+        </div>
+      <% end  %>
+    </div>
   </div>
 </div>
 
