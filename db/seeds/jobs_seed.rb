@@ -1,0 +1,166 @@
+require_relative 'formations_seed'
+require_relative 'skills_seed'
+
+Job.destroy_all
+puts "Creating jobs..."
+
+DEVELOPPEUR = Job.new(
+  title: "Développeur/euse informatique",
+  short_description: "Expert des langages informatiques, le développeur informatique traduit
+    la demande d'un client en lignes de code informatique.",
+  long_description: "Le développeur informatique est le pro des langages informatiques,
+    tels que Ruby ou JavaScript ! Responsable de la programmation,
+    c'est-à-dire de la production de lignes de code, il rédige et suit un cahier des charges
+    précisant les spécificités techniques à suivre pour créer le programme.
+    Afin de concevoir des programmes informatiques « sur mesure », il participe en
+    amont à l'analyse des besoins des utilisateurs, puis à la phase d'essai. En aval,
+    il adapte le logiciel à la demande du client en apportant les retouches nécessaires.
+    Le dévelop-peur prend en charge la formation des utilisateurs de l'application
+    et peut même rédiger un guide d'utilisateur. Par la suite, il intervient pour effectuer
+    la maintenance ou faire évoluer les programmes.",
+  field: "IT",
+)
+DEVELOPPEUR.remote_job_photo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1566990467/tim-van-der-kuip-CPs2X8JYmS8-unsplash_1_zggwdi.jpg"
+DEVELOPPEUR.save!
+
+RESPONSABLE_MICRO = Job.new(
+  title: "Responsable micro",
+  short_description: "Le gestionnaire de parc micro-informatique est chargé d'organiser,
+    d'installer, de remplacer et de transformer l'ensemble du parc informatique d'une entreprise. ",
+  long_description: "Le gestionnaire de parc informatique est chargé de l'inventaire
+  et de l'évolution du matériel informatique au sein d'une d'une entreprise
+  (ou d'une administration). À ce titre, il est responsable de l'achat
+  de nouveaux équipements (ordinateurs, imprimantes, logiciels...),
+  en assure l'installation et le paramétrage. Une fois le matériel installé,
+  il aide les salariés à gérer leur poste informatique, en mettant en place une
+  assistance technique (une hotline, par exemple). Dans les grandes entreprises,
+  où les systèmes d'information sont très développés et qui peuvent avoir des
+  filiales en France ou à l'étranger, ce sont des ingénieurs qui sont recherchés,
+  capables d'une forte réactivité en cas de problème, mobiles et disponibles.
+  Des qualités relationnelles sont également requises, ainsi que le sens de
+  l'écoute et de la pédagogie.",
+  field: "IT",
+)
+
+RESPONSABLE_MICRO.remote_job_photo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1566895944/responsable_micro_dkylqi.jpg"
+RESPONSABLE_MICRO.save!
+
+EXPERT_SECURITE = Job.new(
+  title: "Expert/e en sécurité informatique",
+  short_description: "Étudier la fiabilité du système d'information
+    d'une entreprise et en assurer la sûreté, telle est la mission de
+    l'expert en sécurité informatique.",
+  long_description: "Ses ennemis : les virus et les hackers (pirates informatiques).
+    Sa hantise : une faille dans le réseau. Avec des informations de plus en plus
+    nombreuses en ligne, les virus contaminent serveurs et messageries en quelques
+    clics. L'expert en sécurité est là pour protéger les données et traquer les failles
+    de sécurité des réseaux Internet et intranet. Il évalue d'abord le niveau de
+    vulnérabilité des sites, traque d'éventuels virus et met en échec les tentatives
+    d'intrusion de hackers. Ensuite, il met en place tout un système de protection :
+    mots de passe, cryptologie, pare-feu, antivirus, etc. Les parades ne manquent pas
+    pour réduire les risques.",
+  field: "IT",
+)
+
+EXPERT_SECURITE.remote_job_photo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1566896566/expert_securite_fngvcq.jpg"
+EXPERT_SECURITE.save!
+
+ARCHITECTE = Job.new(
+  title: "Architecte",
+  short_description: "Construction d'un immeuble ou d'un hôpital, réhabilitation de
+    logements sociaux, reconversion d'une usine en bureaux... Autant de projets
+    qui ne peuvent pas voir le jour sans l'intervention d'un architecte.
+    Ce maître d'oeuvre exerce le plus souvent en libéral.",
+  long_description: "Construction d'un immeuble, réaménagement d'une cafétéria,
+    réhabilitation d'une maison, etc. Le maître d'œuvre de tous ces chantiers,
+    c'est l'architecte. Il suit le projet de construction, de la commande à la
+    livraison. Très créatif, surtout en phase de conception, l'architecte n'a
+    rien d'un artiste qui travaillerait seul face à l'ordinateur. Et il ne suffit
+    pas de dessiner un bâtiment pour qu'il voie le jour !
+    Le métier comporte aussi beaucoup de contraintes techniques : choix des
+    matériaux, problèmes réglementaires et financiers, date d'achèvement du projet,
+    etc. De plus, l'architecte doit concilier le besoin du client et des utilisateurs,
+    négocier avec les entreprises et les bureaux d'études.
+    La majorité des architectes (près de 70 %) exerce en libéral, mais la
+    plupart débutent comme salariés dans de toutes petites agences (moins de 4
+    personnes). Quelques-uns intègrent, par voie de concours, le secteur public.",
+  field: "IT",
+)
+
+ARCHITECTE.remote_job_photo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567002463/architect_jdldwl.jpg"
+ARCHITECTE.save!
+
+ARCHITECTE_D_INTERIEUR = Job.new(
+  title: "Architecte d'intérieur",
+  short_description: "Concevoir et réaliser des espaces intérieurs esthétiques,
+    confortables et fonctionnels en jouant avec les volumes, la lumière, le mobilier
+    et les matériaux, tout en tenant compte des contraintes techniques et budgétaires,
+    telles sont les missions de l'architecte d'intérieur.",
+  long_description: "Ce designer conçoit l'aménagement intérieur des maisons et
+    celui des bureaux ou des boutiques. Il s'informe des souhaits du client, visite
+    le lieu à aménager, dialogue avec les différents corps de métier (maçons, plombiers,
+    etc.). Il joue avec les volumes, la lumière et les ambiances afin d'élaborer un projet
+    sous forme d'esquisses (au crayon ou sur ordinateur), de plans, de descriptifs d'études
+    techniques et financières des travaux à réaliser. Une fois le projet accepté par le
+    client, l'architecte d'intérieur coordonne les travaux confiés aux différents
+    professionnels. Il doit à la fois posséder la rigueur du géomètre, maîtriser
+    certains logiciels et avoir de solides connaissances en histoire de l'art. Si de
+    nombreuses entreprises aujourd'hui font appel à lui pour aménager leurs bureaux ou
+    les boutiques de leurs chaînes commerciales, il peut également concevoir des expositions,
+    des décors de télé, des plateaux de débats...
+    L'architecte d'intérieur peut exercer en libéral, à titre individuel ou comme associé
+    dans un cabinet. Il est parfois salarié dans un atelier d'architecture.",
+  field: "IT",
+)
+
+ARCHITECTE_D_INTERIEUR.remote_job_photo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567004706/interior_design_ueppdd.jpg"
+ARCHITECTE_D_INTERIEUR.save!
+
+PRODUCT_MANAGER = Job.new(
+  title: "Product Manager",
+  short_description: "Le Product Manager est le Chef de Produit. Un cadre marketing que tous les personnels techniques
+  doivent impérativement consulter avant de bouger leur petit doigt. Ce professionnel de l’informatique gère
+   la vie d’un produit depuis sa conception jusqu’à sa consommation. Le tout, en concert avec les équipes techniques
+   et commerciales au sein de son entreprise",
+   long_description: "La mission principale du chef de produit consiste avant tout à répondre aux besoins des clients
+   (voire à les créer), en accompagnant un produit :
+– en amont dans sa conception (ou sélection), puisque le produit n’est lancé qu’après la réalisation d’une analyse marketing complète (analyse des 4P : Product, Promotion, Price, Place). Elaborer un plan marketing, c’est avoir une excellente connaissance du marché, de la concurrence et des ventes réalisées au cours des saisons précédentes, mais c’est aussi être capable d’anticiper en appréhendant les habitudes de consommation des clients.
+Concrètement, le Chef de produit connaît précisément les besoins et les envies de notre chère ménagère de moins de 50 ans.
+ Il définit la cible, évalue les conditions de distribution (quantités, prix, délais, etc.). Il est à même de donner un brief pour
+ créer un slogan publicitaire accrocheur (voire, le fait lui-même), et sait négocier un emplacement pour la mise en rayon de son produit.
+ Il est également responsable de la gestion des budgets, des prévisions et des estimations, ainsi que du suivi des ventes et de leur progression.
+– en aval pour la commercialisation du produit : il coordonne les actions de promotion et de communication ; ainsi, c’est à lui
+que revient la responsabilité de choisir le moyen le plus adapté pour communiquer autour du produit : campagne d’affichage ou télévisée,
+promotion sur lieu de vente ou pub on-line, etc.
+Et ce n’est qu’une fois sa stratégie mise en place que le Chef de produit adapte ses actions en fonction du comportement des consommateurs et
+ de ses concurrents (baisse des prix par exemple).
+Le Chef de produit joue donc un rôle d’interface entre les différents prestataires (internes et externes) qui entrent en jeu dans la commercialisation
+d’un produit : équipes de production, fournisseurs, publicitaires, force de vente…
+Sa performance est évaluée sur les résultats qu’il obtient en fonction des objectifs fixés. Une fois ces résultats obtenus, il est en charge d’émettre des
+recommandations et des préconisations concernant le suivi des ventes.",
+field: "Business"
+  )
+PRODUCT_MANAGER.remote_job_photo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567070392/Product-Manager_lcscao.jpg"
+PRODUCT_MANAGER.save!
+
+
+BUSINESS_DEV = Job.new(
+  title: "Business Develoeper",
+  short_description: "e business developer a pour mission de défricher les marchés et générer des nouveaux leads commerciaux « from scratch »
+   (sans portefeuille) ou via de « l’upselling » sur la base d’un nombre limité de comptes. Dans un environnement digital, il doit posséder une bonne culture générale sur les aspects techniques des produits qu’il commercialise : adserving / e-publicité (SEM, SEO, affiliation, …), emailing (technique de routage, délivrabilité, compréhension du paramétrage…),
+  site web / mobile (conception / user expérience, contraintes liées aux langages HTML/Flash…), etc.",
+  long_description: "L’équivalent d’un directeur du développement, d’un responsable marketing ou d’un directeur commercial ? Pas tout à fait. « C’est une fonction bien plus large, qu’on retrouve désormais dans de très nombreuses entreprises du Web et start-up, mais aussi dans des sociétés plus traditionnelles, explique Olivier Fécherolles,
+directeur de la stratégie et du développement de Viadeo. Elle fait partie des métiers d’avenir, même si trop peu de gens et d’entreprises la connaissent alors qu’elle est au carrefour de différentes compétences incontournables tant pour les grandes entreprises que pour les PME
+Le Business Developer a pour mission de trouver de nouveaux leviers de croissance d'une entreprise, il doit apporter des solutions, projets... pour développer le chiffre d'affaire de manière directe (nouveaux clients ou produits) ou de manière indirecte (marketing, communication).
+En lien avec les équipes commerciales, marketing, financière, juridique, il doit coordonner les idées et équipes afin de créer de nouvelles activités au sein d'une entreprise.",
+)
+BUSINESS_DEV.remote_job_photo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567070393/cowomen-pd5FVvQ9-aY-unsplash_yrbbg5.jpg"
+BUSINESS_DEV.save!
+
+
+
+
+
+
+
+
