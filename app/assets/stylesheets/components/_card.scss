@@ -8,7 +8,7 @@
 
 .card-product {
   overflow: hidden;
-  height: 200px;
+  height: 300px;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
@@ -22,9 +22,9 @@
 .transparent-link {
   position: absolute;
   top: 0;
-  left: 100px;
+  left: 0px;
   bottom: 0;
-  height: 120px;
+  height: 100%;
   width: 100%;
   z-index: 2;
 }
@@ -36,17 +36,24 @@
 }
 
 .card-product h2 {
-  font-size: 16px;
+  font-size: 22px;
   font-weight: bold;
   margin: 0;
+  text-align: justify;
 }
 
 .card-product p {
-  font-size: 12px;
+  font-size: 15px;
   line-height: 1.4;
   opacity: .7;
   margin-bottom: 0;
   margin-top: 8px;
+  word-break: normal;
+  text-align: justify;
+    overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
 }
 
 .card-product .card-product-infos {
@@ -59,12 +66,13 @@
   position: absolute;
   top: 6px;
   right: 6px;
-  font-size: 30px;
+  font-size: 20px;
   color: gold;
+  z-index: 3;
 }
 
 .skill-name {
-  z-index: 3;
+  z-index: 4;
 }
 
 .skill-modal {
@@ -105,11 +113,17 @@
   .cards {
     grid-template-columns: 1fr;
   }
+  .card-prod {
+    grid-template-columns: 1fr;
+  }
 }
 
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {
   .cards {
+    grid-template-columns: 1fr;
+  }
+  .card-prod {
     grid-template-columns: 1fr;
   }
 }
@@ -119,6 +133,9 @@
   .cards {
     grid-template-columns: 1fr 1fr;
   }
+  .card-prod {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 // Large devices (desktops, 992px and up)
@@ -126,12 +143,18 @@
   .cards {
     grid-template-columns: 1fr 1fr 1fr;
   }
+  .card-prod {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
   .cards {
     grid-template-columns: 1fr 1fr 1fr;
+  }
+  .card-prod {
+    grid-template-columns: 1fr 1fr;
   }
 }
 
