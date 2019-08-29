@@ -7,7 +7,6 @@ JobSkill.create!(job: ARCHITECTE, skill: MEMOIRE_VISUELLE)
 JobSkill.create!(job: ARCHITECTE, skill: DESSIN)
 JobSkill.create!(job: ARCHITECTE, skill: CONCEPTION)
 
-JobSkill.create!(job: ARCHITECTE_D_INTERIEUR, skill: DESSIN)
 JobSkill.create!(job: ARCHITECTE_D_INTERIEUR, skill: ADAPTATION)
 JobSkill.create!(job: ARCHITECTE_D_INTERIEUR, skill: DESIGN)
 JobSkill.create!(job: ARCHITECTE_D_INTERIEUR, skill: INGENIOSITE)
