@@ -7,7 +7,7 @@ Rails.application.routes.draw do
     post "remove_from_fav", to: 'jobs#remove_from_fav'
   end
 
-  resources :users, only: [:index]
+  resources :users, only: [:index, :show]
   resources :formations, only: [:index, :show]
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

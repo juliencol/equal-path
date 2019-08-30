@@ -16,7 +16,7 @@ EPITA = Formation.new(
   field: "IT",
 )
 
-EPITA.remote_logo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567005003/epita_logo_ili1xc.jpg"
+EPITA.remote_logo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567157160/Epita_vfyrah.png"
 EPITA.save!
 
 LE_WAGON = Formation.new(
@@ -28,7 +28,7 @@ LE_WAGON = Formation.new(
    qui vous apprend à coder entièrement vos applications web.",
   field: "IT",
 )
-LE_WAGON.remote_logo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567005002/le_wagon_logo_jhgzi8.png"
+LE_WAGON.remote_logo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567157160/lewagon-logo-square-fe76916e1b923ade71e253ae6dc031d936e5e8eebac4e26b0fbac650ea6ee360_dnqvpf.png"
 LE_WAGON.save!
 
 ENS = Formation.new(
@@ -44,7 +44,7 @@ ENS = Formation.new(
   field: "IT"
 )
 
-ENS.remote_logo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567005003/ens_logo_ebozok.jpg"
+ENS.remote_logo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567157159/ENS_Logo_j9k5qv.png"
 ENS.save!
 
 ECOLE_42 = Formation.new(
@@ -57,7 +57,7 @@ ECOLE_42 = Formation.new(
   field: " IT "
   )
 
-ECOLE_42.remote_logo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567005002/e%CC%81cole-42-logo_qizvkr.jpg"
+ECOLE_42.remote_logo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567157159/Logo42-300x210_pe57b9.png"
 ECOLE_42.save!
 
 ECOLE_BOULLE = Formation.new(
@@ -69,7 +69,7 @@ ECOLE_BOULLE = Formation.new(
   field: "Architecture d'intérieure"
   )
 
-ECOLE_BOULLE.remote_logo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567005002/logo_BOULLE_tpppxm.jpg"
+ECOLE_BOULLE.remote_logo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567157159/Ecole-Boulle-logo-transp-300x191_qppth6.png"
 ECOLE_BOULLE.save!
 
 ECOLE_D_ARCHI = Formation.new(
@@ -82,7 +82,7 @@ ECOLE_D_ARCHI = Formation.new(
   field: "Architecture"
   )
 
-ECOLE_D_ARCHI.remote_logo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567005003/Logo_ENSAPB_qpf5jf.png"
+ECOLE_D_ARCHI.remote_logo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567157160/Logo_ENSAPB.svg_ltrsz8.png"
 ECOLE_D_ARCHI.save!
 
 ROCKET_SCHOOl = Formation.new(
@@ -98,7 +98,7 @@ sont les formations qui y préparent vraiment.
 La Rocket School appuie sur l’innovation pédagogique et sur un processus de recrutement spécifique pour donner toutes les chances à ses
 étudiants d’exceller dans ces nouveaux métiers du numérique."
   )
-ROCKET_SCHOOl.remote_logo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567074414/download_xvwrrz.png"
+ROCKET_SCHOOl.remote_logo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567157160/1544991020-aab8a73b36e6067fd064c88b3a9f2b69_byh0pu.png"
 ROCKET_SCHOOl.save!
 
 ICONOCLASS = Formation.new(
@@ -122,7 +122,7 @@ ESCE = Formation.new(
   understanding the craft of becoming a solid product manager through its diverse course offerings, sudents should not only attain the necessary
   skills of operations, but should have the opportunity to impress professionals and to broaden their options through networking opportunities.",
   )
-ESCE.remote_logo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567074413/download-2_ks41tm.png"
+ESCE.remote_logo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567157160/ESCE-logo_Vertic_Pant_kkjwcs.png"
 ESCE.save!
 
 THIGA = Formation.new(
@@ -135,7 +135,7 @@ Après une introduction au Design Thinking et au Lean Startup, vous apprendrez �
 à des techniques de tests utilisateurs et de prototypage rapide.
 Dans un second temps, vous déterminerez le périmètre de votre MVP et verrez comment mesurer sa performance grace au framework AARRR.",
 )
-THIGA.remote_logo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567074356/images_prvjqj.png"
+THIGA.remote_logo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567157159/logo-thiga_academy_ltsksm.png"
 THIGA.save!
 
 LION =Formation.new(
@@ -161,7 +161,7 @@ Ce diplôme est de niveau Bac+5, c'est-à-dire de niveau 7 sur le Cadre Europée
 Si vous avez des questions à propos de son équivalence pour poursuivre vos études, contactez votre université ou école dans laquelle vous voulez continuer après le diplôme.
 Si vous avez déjà au moins 1 an d'expérience professionnelle dans ce métier, vous pouvez obtenir plus rapidement ce diplôme grâce à une Validation des Acquis de l'Expérience (VAE)",
 )
-OPEN_CLASSROOM.remote_logo_url= "https://res.cloudinary.com/dovu27lye/image/upload/v1567074440/QZiRAhUq_kdasbd.jpg"
+OPEN_CLASSROOM.remote_logo_url= "https://res.cloudinary.com/dovu27lye/image/upload/v1567157159/Logo_OpenClassrooms_mps6gy.png"
 OPEN_CLASSROOM.save!
 
 ISEP = Formation.new(
@@ -172,5 +172,4 @@ ISEP = Formation.new(
   description: "L’ISEP forme les ingénieurs d’aujourd’hui et de demain, dans les domaines clés du numérique : Informatique & Cybersécurité – Électronique & Robotique – Télécommunications & Internet des Objets (IoT) – Imagerie &  Santé – Intelligence Artificielle"
 )
 
-ISEP.remote_logo_url = "https://res.cloudinary.com/isep/image/upload/v1567088965/iseplogo_gcz1bg.png"
-ISEP.save!
+ISEP.remote_logo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567157159/logoisepweb400px-1449224112_uey8dm.png"
