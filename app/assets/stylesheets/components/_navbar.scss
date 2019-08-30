@@ -15,14 +15,22 @@
 .navbar-equal-path-transparent {
   background-color: rgba(244, 244, 244, 0.9);
 }
+.dropdown-toggle{
+  color: rgb(255, 172, 4);
+    font-weight: 400;
 
+}
+.dropdown-toggle:hover {
+  color: grey;
+}
 .link {
-  color: #000;
-  text-decoration: none !important;
+  color: rgb(255, 172, 4);
+  font-weight: 400;
+
 }
 
 .link:hover {
-  color: #000;
+  color: grey;
   text-decoration: none !important;
 }
 
