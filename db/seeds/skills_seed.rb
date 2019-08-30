@@ -121,7 +121,6 @@ ANALYTIQUE = Skill.new(
 
 
 
-
 # other skills
 PHYSIQUE_DU_BATIMENT = Skill.create(
   name: "physique du batiment",
@@ -167,3 +166,8 @@ COORDINATION = Skill.create(
   name: "coordination",
   soft: true
 )
+
+CONNAISSANCE_DU_MARCHE = Skill.create(
+  name: "Connaissance du marché",
+  soft: true
+  )

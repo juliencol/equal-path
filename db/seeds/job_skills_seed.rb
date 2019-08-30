@@ -27,3 +27,17 @@ JobSkill.create!(job: RESPONSABLE_MICRO, skill: SQL)
 
 JobSkill.create!(job: EXPERT_SECURITE, skill: PHP)
 JobSkill.create!(job: EXPERT_SECURITE, skill: LANGAGE_C)
+
+JobSkill.create!(job: BUSINESS_DEV, skill: ADAPTATION)
+JobSkill.create!(job: BUSINESS_DEV, skill: ANGLAIS)
+JobSkill.create!(job: BUSINESS_DEV, skill: LEADERSHIP)
+JobSkill.create!(job: BUSINESS_DEV, skill: CONNAISSANCE_DU_MARCHE)
+
+
+JobSkill.create!(job: PRODUCT_MANAGER, skill: ADAPTATION)
+JobSkill.create!(job: PRODUCT_MANAGER, skill: ANGLAIS)
+JobSkill.create!(job: PRODUCT_MANAGER, skill: LEADERSHIP)
+JobSkill.create!(job: PRODUCT_MANAGER, skill: SQL)
+JobSkill.create!(job: PRODUCT_MANAGER, skill: HTML)
+JobSkill.create!(job: PRODUCT_MANAGER, skill: CSS)
+JobSkill.create!(job: PRODUCT_MANAGER, skill: JAVASCRIPT)
