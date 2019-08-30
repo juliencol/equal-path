@@ -11,4 +11,3 @@ initSelect2();
 
 import { dashboard_animation } from '../components/dashboard';
 dashboard_animation();
-
