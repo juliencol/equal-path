@@ -1,8 +1,8 @@
 <section class="search">
   <div class="search-container">
-    <h2>Entrez ou selectionner des compétences </h2>
+    <h2>Hello Jacques 👋 </h2>
     <form action="/jobs" method="get" novalidate="novalidate">
-      <input type="text" name="query" placeholder="Mettez vos mots clés">
+      <input type="text" id="keyword" name="query" placeholder=" Recherchez ici ✍️ ">
       <select class="select2-skill" name="skill" multiple>
         <% Skill.all.each do |skill| %>
           <option value=<%=skill.name%>>
@@ -13,7 +13,7 @@
       <select class="select2-field" name="skill" multiple >
         <option>IT</option>
       </select>
-      <%= submit_tag :search %>
+      <%= submit_tag :"Ton métier idéal 🏝️", id: "papa"%>
     </form>
   </div>
 </section>
@@ -21,7 +21,7 @@
   <div class="cards-container">
     <div class="card-prod ">
       <% @jobs.each do |job| %>
-        <div class="card-product">
+        <div class="card-product" data-aos="flip-left">
           <img src=<%= job.job_photo %> />
             <div class="card-product-infos">
               <h2><%= job.title %> (<%= job.field %>)</h2>
