@@ -122,7 +122,7 @@ ESCE = Formation.new(
   understanding the craft of becoming a solid product manager through its diverse course offerings, sudents should not only attain the necessary
   skills of operations, but should have the opportunity to impress professionals and to broaden their options through networking opportunities.",
   )
-ESCE.remote_logo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567157160/ESCE-logo_Vertic_Pant_kkjwcs.png"
+ESCE.remote_logo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567168649/eboqop83tno6wsolgxpt.png"
 ESCE.save!
 
 THIGA = Formation.new(
@@ -179,7 +179,7 @@ AVIATION_CIVILE = Formation.new(
   duration: "2 ans",
   location: "7 Avenue Edouard Belin, 31400 Toulouse",
   website_url: "http://www.enac.fr/",
-  description: "Créée en 1949 à Orly, installée à Toulouse depuis 1968, rejointe par le Service d’Exploitation de la Formation Aéronautique depuis le 1er janvier 2011, l’Ecole Nationale de l’Aviation Civile (ENAC) est l’unique exemple d’une seule école proposant un ensemble aussi large et aussi complet de formations et d’activités destinées au domaine aéronautique et en particulier au secteur du transport aérien.)";
+  description: "Créée en 1949 à Orly, installée à Toulouse depuis 1968, rejointe par le Service d’Exploitation de la Formation Aéronautique depuis le 1er janvier 2011, l’Ecole Nationale de l’Aviation Civile (ENAC) est l’unique exemple d’une seule école proposant un ensemble aussi large et aussi complet de formations et d’activités destinées au domaine aéronautique et en particulier au secteur du transport aérien.)",
 )
 
 AVIATION_CIVILE.remote_logo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567253088/logo_enac_cbo5um.png"
@@ -190,10 +190,21 @@ COURS_FLORENT = Formation.new(
   duration: "3 ans",
   location: "37/39 Avenue Jean Jaurès, 75019 Paris",
   website_url: "https://www.coursflorent.fr/‎",
-  description: "Le Cours Florent forme les Artistes de Demain.";
+  description: "Le Cours Florent forme les Artistes de Demain.",
 )
 
 COURS_FLORENT.remote_logo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567254984/cours_florent_logo_bfrqjr.png"
+
+DE = Formation.new(
+  title: "UNIVERSITÉ D'ODONTOLOGIE DE BORDEAUX",
+  duration: "6 ans",
+  location: "16 à 20, cours de la Marne, 33082 BORDEAUX",
+  website_url: "https://www.u-bordeaux.fr/‎",
+  description: "L’UFR (Unité de Formation et de Recherche) des Sciences odontologiques est une des 16 UFR d’Odontologie de France, ayant pour mission la formation des futurs chirurgiens-dentistes, la formation continue et la recherche.",
+)
+
+DE.remote_logo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567254049/logobdx_icvq6i.png"
+
 
 
 
