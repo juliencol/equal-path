@@ -1,4 +1,8 @@
 footer {
+  height: 210px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 
 .category p {
@@ -7,6 +11,10 @@ footer {
 
 .category li {
   list-style: none;
+}
+
+.category a {
+  color: black !important;
 }
 
 .footer-icons {
