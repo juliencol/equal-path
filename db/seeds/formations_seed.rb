@@ -173,3 +173,28 @@ ISEP = Formation.new(
 )
 
 ISEP.remote_logo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567157159/logoisepweb400px-1449224112_uey8dm.png"
+
+AVIATION_CIVILE = Formation.new(
+  title: "Ecole nationale de l'aviation civile",
+  duration: "2 ans",
+  location: "7 Avenue Edouard Belin, 31400 Toulouse",
+  website_url: "http://www.enac.fr/",
+  description: "Créée en 1949 à Orly, installée à Toulouse depuis 1968, rejointe par le Service d’Exploitation de la Formation Aéronautique depuis le 1er janvier 2011, l’Ecole Nationale de l’Aviation Civile (ENAC) est l’unique exemple d’une seule école proposant un ensemble aussi large et aussi complet de formations et d’activités destinées au domaine aéronautique et en particulier au secteur du transport aérien.)";
+)
+
+AVIATION_CIVILE.remote_logo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567253088/logo_enac_cbo5um.png"
+
+
+COURS_FLORENT = Formation.new(
+  title: "Cours Florent - École de formation professionnelle d'acteur",
+  duration: "3 ans",
+  location: "37/39 Avenue Jean Jaurès, 75019 Paris",
+  website_url: "https://www.coursflorent.fr/‎",
+  description: "Le Cours Florent forme les Artistes de Demain.";
+)
+
+COURS_FLORENT.remote_logo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567254984/cours_florent_logo_bfrqjr.png"
+
+
+
+

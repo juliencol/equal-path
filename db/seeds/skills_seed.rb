@@ -171,3 +171,83 @@ CONNAISSANCE_DU_MARCHE = Skill.create(
   name: "Connaissance du marché",
   soft: true
   )
+
+PEDAGOGIE = Skill.create(
+  name: "Pédagogie",
+  soft: true
+  )
+
+SENS_DU_RELATIONNEL = Skill.create(
+  name: "Sens du relationnel",
+  soft: true
+  )
+
+LOGICIELS_EBP = Skill.create(
+  name: "Logiciels EBP",
+  soft: true
+  )
+
+SONDAGE_TIG = Skill.create(
+  name: "Sondage TIG",
+  soft: true
+  )
+
+TERMINOLOGIE_DENTAIRE = Skill.create(
+  name: "Terminologie dentaire",
+  soft: true
+  )
+
+TECHNIQUES_DENTAIRES = Skill.create(
+  name: "Techniques dentaires",
+  soft: true
+  )
+
+PRATIQUES_DENTAIRES = Skill.create(
+  name: "Pratiques dentaires",
+  soft: true
+  )
+
+HABILITE = Skill.create(
+  name: "Habilité",
+  soft: true
+  )
+
+PRECISION = Skill.create(
+  name: "Précision",
+  soft: true
+  )
+
+ADAPTATION = Skill.create(
+  name: "Adaptation",
+  soft: true
+  )
+
+RESISTANCE_PHYSIQUE = Skill.create(
+  name: "Résistance physique",
+  soft: true
+  )
+
+JOUER_LA_COMEDIE = Skill.create(
+  name: "Jouer la comédie",
+  soft: true
+  )
+
+RIGUEUR = Skill.create(
+  name: "Rigueur",
+  soft: true
+  )
+
+PERSEVERANCE = Skill.create(
+  name: "Persévérance",
+  soft: true
+  )
+
+ADAPTATION = Skill.create(
+  name: "Adaptation",
+  soft: true
+  )
+
+TALENT = Skill.create(
+  name: "Talent",
+  soft: true
+  )

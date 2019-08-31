@@ -3,6 +3,22 @@ require_relative 'formations_seed'
 FormationSkill.destroy_all
 puts "Creating formation_skills..."
 
+FormationSkill.create!(formation: AVIATION_CIVILE, skill: EXCEL)
+FormationSkill.create!(formation: AVIATION_CIVILE, skill: PEDAGOGIE)
+FormationSkill.create!(formation: AVIATION_CIVILE, skill: DYNAMISME)
+FormationSkill.create!(formation: AVIATION_CIVILE, skill: TRAVAIL_EN_EQUIPE)
+FormationSkill.create!(formation: AVIATION_CIVILE, skill: SENS_DU_RELATIONNEL)
+
+FormationSkill.create!(formation: COURS_FLORENT, skill: RIGUEUR)
+FormationSkill.create!(formation: COURS_FLORENT, skill: ADAPTATION)
+FormationSkill.create!(formation: COURS_FLORENT, skill: ECOUTE_DES_AUTRES)
+FormationSkill.create!(formation: COURS_FLORENT, skill: JOUER_LA_COMEDIE)
+
+FormationSkill.create!(formation: DE, skill: TERMINOLOGIE_DENTAIRE)
+FormationSkill.create!(formation: DE, skill: PRATIQUES_DENTAIRES)
+FormationSkill.create!(formation: DE, skill: HABILITE)
+FormationSkill.create!(formation: DE, skill: PRECISION)
+
 FormationSkill.create!(formation: LE_WAGON, skill: RUBY)
 FormationSkill.create!(formation: LE_WAGON, skill: JAVASCRIPT)
 FormationSkill.create!(formation: LE_WAGON, skill: HTML)

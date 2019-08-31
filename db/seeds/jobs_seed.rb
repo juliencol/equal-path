@@ -161,3 +161,42 @@ BUSINESS_DEV = Job.new(
 )
 BUSINESS_DEV.remote_job_photo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567070393/cowomen-pd5FVvQ9-aY-unsplash_yrbbg5.jpg"
 BUSINESS_DEV.save!
+
+
+PILOTE_DE_LIGNE = Job.new(
+  title: "Pilote de ligne",
+  short_description: "Aujourd'hui Tokyo, demain New York, Dakar la semaine prochaine... Le métier de pilote de ligne fascine. Mais ce professionnel du ciel doit garder les pieds sur terre : il est responsable de la vie de centaines de passagers.",
+  long_description: "Le pilote de ligne a la responsabilité d'assurer le transport, en avion, des passagers, ce qui exige un équilibre nerveux et physique à toute épreuve, mais également une grande présence d'esprit pour maîtriser les imprévus : brouillard, turbulences, espace aérien encombré, etc. Ce métier attire en raison des voyages lointains et des salaires, mais il est très fatigant : nuits blanches et décalages horaires sont au rendez-vous.
+    D'abord copilote pendant plusieurs années, le pilote de ligne peut accéder, avec l'expérience, au titre de commandant de bord. Il subit régulièrement des contrôles portant sur ses capacités physiques et psychomotrices. Il doit impérativement maîtriser l'anglais.",
+  field: "Aviation"
+)
+PILOTE_DE_LIGNE.remote_job_photo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567252854/jon-flobrant-Cg9QlLuX120-unsplash_uttugy.jpg"
+PILOTE_DE_LIGNE.save!
+
+CHIRURGIEN_DENTISTE = Job.new(
+  title: "Chirurgien/ne-dentiste",
+  short_description: "Du détartrage à la pose d'implants, en passant par l'extraction d'une dent de sagesse, le chirurgien-dentiste fait jouer sa dextérité, doublée de la maîtrise de techniques de soins complexes.",
+  long_description: "Caries, fêlures, abcès : le chirurgien-dentiste traite les maladies qui affectent les dents et les mâchoires. Spécialisé en orthodontie, il « redresse » les dentitions mal implantées au moyen d'appareillages, et redonne le sourire en faisant réaliser des couronnes, des bridges, des bagues, par un prothésiste dentaire.
+    Chirurgien de formation, le dentiste réalise certaines opérations qui nécessitent une anesthésie, comme l'extraction de dents de sagesse ou la pose de pivots implantés dans l'os de la mâchoire. La prévention et le conseil en hygiène bucco-dentaire font aussi partie de son quotidien.",
+  field: "Medical"
+)
+CHIRURGIEN_DENTISTE.remote_job_photo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567253809/ani-kolleshi-7jjnJ-QA9fY-unsplash_tvthkh.jpg"
+CHIRURGIEN_DENTISTE.save!
+
+
+COMEDIEN = Job.new(
+  title: "Comédien/ne",
+  short_description: "Incarner un rôle sur scène ou à l'écran, apparaître dans un téléfilm ou un spot publicitaire, doubler un personnage... Quelques-unes des multiples facettes du métier de comédien.",
+  long_description: "Pour être comédien, il faut non seulement avoir du talent mais aussi beaucoup de technique ! C'est pourquoi les professionnels conseillent de passer par une école (renommée de préférence) et de monter sur scène le plus tôt et le plus souvent possible. C'est un métier passionnant où la routine n'a pas sa place : chaque contrat apporte une nouvelle aventure. Les comédiens exercent le plus souvent au théâtre, mais ils peuvent aussi trouver des contrats dans d'autres domaines d'activité : cinéma, télévision, doublage, radio, publicité, etc.
+    Les conditions de travail sont difficiles : horaires décalés, déplacements fréquents (tournées, festivals, promotions...) et revenus aléatoires. Le plus souvent, des périodes de chômage alternent avec des phases d'activité. Dans ce métier, les places sont chères, il faut sans arrêt être à la recherche d'un contrat, courir les castings et les auditions, développer des contacts professionnels... C'est pourquoi motivation et persévérance sont des qualités primordiales pour réussir.",
+  field: "Art"
+)
+COMEDIEN.remote_job_photo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567254658/avel-chuklanov-Hn3S90f6aak-unsplash_v6vh7g.jpg"
+COMEDIEN.save!
+
+
+
+
+
+
+

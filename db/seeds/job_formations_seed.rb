@@ -33,3 +33,8 @@ JobFormation.create!(job: BUSINESS_DEV, formation: ICONOCLASS)
 JobFormation.create!(job: PRODUCT_MANAGER, formation: ESCE)
 JobFormation.create!(job: PRODUCT_MANAGER, formation: LE_WAGON)
 JobFormation.create!(job: PRODUCT_MANAGER, formation: ROCKET_SCHOOl)
+
+JobFormation.create!(job: PILOTE_DE_LIGNE, formation: AVIATION_CIVILE)
+
+JobFormation.create!(job: CHIRURGIEN_DENTISTE, formation: DE)
+JobFormation.create!(job: COMEDIEN, formation: COURS_FLORENT)
