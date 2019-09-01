@@ -217,11 +217,6 @@ PRECISION = Skill.create(
   soft: true
   )
 
-ADAPTATION = Skill.create(
-  name: "Adaptation",
-  soft: true
-  )
-
 RESISTANCE_PHYSIQUE = Skill.create(
   name: "Résistance physique",
   soft: true
@@ -242,12 +237,27 @@ PERSEVERANCE = Skill.create(
   soft: true
   )
 
-ADAPTATION = Skill.create(
-  name: "Adaptation",
+TALENT = Skill.create(
+  name: "Talent",
   soft: true
   )
 
-TALENT = Skill.create(
-  name: "Talent",
+EXCEL = Skill.create(
+  name: "Excel",
+  soft: true
+  )
+
+DYNAMISME = Skill.create(
+  name: "Dynamisme",
+  soft: true
+  )
+
+TRAVAIL_EN_EQUIPE = Skill.create(
+  name: "Travail en équipe",
+  soft: true
+  )
+
+ECOUTE_DES_AUTRES = Skill.create(
+  name: "Ecoute des autres",
   soft: true
   )
