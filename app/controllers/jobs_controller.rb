@@ -19,9 +19,14 @@ class JobsController < ApplicationController
   end
 
   def bookmark_job
-    job = Job.find(params[:job_id])
-    job.bookmarked ? job.update(bookmarked: false) : job.update(bookmarked: true)
-    redirect_back(fallback_location: root_path)
+    @job = Job.find(params[:job_id])
+    @job.bookmarked ? @job.update(bookmarked: false) : @job.update(bookmarked: true)
+    # redirect_back(fallback_location: root_path)
+     respond_to do |format|
+        format.html { redirect_to(jobs_path) }
+        format.js  # <-- will render `app/views/reviews/create.js.erb`
+      end
+
   end
 
   # def bookmark_formation
