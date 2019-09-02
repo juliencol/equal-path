@@ -21,7 +21,7 @@ class JobsController < ApplicationController
   def bookmark_job
     job = Job.find(params[:job_id])
     job.bookmarked ? job.update(bookmarked: false) : job.update(bookmarked: true)
-    redirect_to jobs_path
+    redirect_back(fallback_location: root_path)
   end
 
   # def bookmark_formation

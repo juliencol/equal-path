@@ -30,7 +30,7 @@ LOLA.save!
 JACQUES_MARTIN = User.new(
   first_name: 'Jacques - Martin',
   last_name: 'Du Lac',
-  age: 22,
+  age: 32,
   email: "jacques@martin.com",
   password: "password",
 )
