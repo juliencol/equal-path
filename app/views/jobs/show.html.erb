@@ -1,5 +1,15 @@
 <div class="banner-show-user" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= cl_image_path @job.job_photo %>);">
   <h1 class="text-center"><%= @job.title %></h1>
+
+  <% if @job.bookmarked %>
+              <%= link_to job_bookmark_job_path(@job), method: :post do %>
+                <i class="fas fa-star" id="star-user-show-two"></i>
+              <% end %>
+            <% else %>
+              <%= link_to job_bookmark_job_path(@job), method: :post do %>
+                <i class="far fa-star" id="star-user-show-two"></i>
+              <% end %>
+            <% end %>
 </div>
 
 <div class="user-container">
