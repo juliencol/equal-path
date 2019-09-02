@@ -2,14 +2,15 @@
   <h1 class="text-center"><%= @job.title %></h1>
 
   <% if @job.bookmarked %>
-              <%= link_to job_bookmark_job_path(@job), method: :post do %>
-                <i class="fas fa-star" id="star-user-show-two"></i>
-              <% end %>
-            <% else %>
-              <%= link_to job_bookmark_job_path(@job), method: :post do %>
-                <i class="far fa-star" id="star-user-show-two"></i>
-              <% end %>
-            <% end %>
+    <%= link_to job_bookmark_job_path(@job), method: :post, remote: true do %>
+      <i class="fas fa-star" id="star-user-show-two"></i>
+    <% end %>
+  <% else %>
+    <%= link_to job_bookmark_job_path(@job), method: :post, remote: true do %>
+      <i class="far fa-star" id="star-user-show-two"></i>
+    <% end %>
+  <% end %>
+
 </div>
 
 <div class="user-container">
@@ -32,18 +33,6 @@
           <h2 class = "mb-5"> 📝 Description du métier</h2>
         </div>
         <p class=" text-justify"><%= @job.long_description %></p>
-
-        <div class="d-flex justify-content-center" data-aos="zoom-in">
-        <% if @job.bookmarked %>
-          <%= link_to job_bookmark_job_path(@job), method: :post do %>
-            <i class="fas fa-star" id="star-user-show"><strong> Enlever des favoris</strong></i>
-          <% end %>
-        <% else %>
-          <%= link_to job_bookmark_job_path(@job), method: :post do %>
-            <i class="far fa-star" id="star-user-show"><strong> Ajouter aux favoris</strong></i>
-          <% end %>
-        <% end %>
-        </div>
       </div>
 
       <div id="right-block" class="container d-flex flex-column ml-3">
@@ -137,12 +126,12 @@
 
                   <div class="d-flex justify-content-center" data-aos="zoom-in">
                     <% if formation.bookmarked %>
-                      <%= link_to job_bookmark_formation_path(@job), method: :post do %>
-                        <i class="fas fa-star stars" id="star-user-show"><strong> Enlever des favoris</strong></i>
+                      <%= link_to job_bookmark_formation_path(@job, formation_id: formation.id), method: :post, remote: true do %>
+                        <i class="fas fa-star star-user-formation" id="star-user-formation-<%= formation.id %>"><strong> Enlever des favoris</strong></i>
                       <% end %>
                     <% else %>
-                      <%= link_to job_bookmark_formation_path(@job), method: :post do %>
-                        <i class="far fa-star stars" id="star-user-show"><strong> Ajouter aux favoris</strong></i>
+                      <%= link_to job_bookmark_formation_path(@job, formation_id: formation.id), method: :post, remote: true do %>
+                        <i class="far fa-star star-user-formation" id="star-user-formation-<%= formation.id %>"><strong> Ajouter aux favoris</strong></i>
                       <% end %>
                     <% end %>
                   </div>
