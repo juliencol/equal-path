@@ -41,6 +41,12 @@
   object-fit: cover;
 }
 
+#card-formation-img {
+  padding: 50px;
+  object-fit: contain;
+  width: 30%;
+}
+
 
 .card-product h2 {
   font-size: 22px;
@@ -65,7 +71,7 @@
 
 
 .card-product p {
-  font-size: 12px;
+  font-size: 16px;
   line-height: 1.4;
   opacity: .7;
   margin-bottom: 0;
