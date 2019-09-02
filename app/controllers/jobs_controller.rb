@@ -33,6 +33,7 @@ class JobsController < ApplicationController
     @job.formations.each do |formation|
       formation.bookmarked ? formation.update(bookmarked: false) : formation.update(bookmarked: true)
     end
+    @formation = params[:formation_id]
     respond_to do |format|
        format.html { redirect_back(fallback_location: root_path) }
        format.js  # <-- will render `app/views/reviews/create.js.erb`

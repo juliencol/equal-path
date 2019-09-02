@@ -14,3 +14,6 @@ dashboard_animation();
 
 import { jobShowTabs } from '../components/job_show_tabs';
 jobShowTabs();
+
+import { Bookmark } from '../components/bookmark';
+global.Bookmark = Bookmark;
