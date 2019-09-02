@@ -21,20 +21,22 @@ class JobsController < ApplicationController
   def bookmark_job
     @job = Job.find(params[:job_id])
     @job.bookmarked ? @job.update(bookmarked: false) : @job.update(bookmarked: true)
-    # redirect_back(fallback_location: root_path)
      respond_to do |format|
-        format.html { redirect_to(jobs_path) }
+        format.html { redirect_back(fallback_location: root_path) }
         format.js  # <-- will render `app/views/reviews/create.js.erb`
       end
-
   end
 
-  # def bookmark_formation
-  #   job = Job.find(params[:job_id])
-  #   formation = Formation.find(params[:formation_id])
-  #   formation.bookmarked ? formation.update(bookmarked: false) : formation.update(bookmarked: true)
-  #   redirect_to job_path(job_id)
-  # end
+  def bookmark_formation
+    @job = Job.find(params[:job_id])
+    @job.formations.each do |formation|
+      formation.bookmarked ? formation.update(bookmarked: false) : formation.update(bookmarked: true)
+    end
+    respond_to do |format|
+       format.html { redirect_back(fallback_location: root_path) }
+       format.js  # <-- will render `app/views/reviews/create.js.erb`
+     end
+  end
 
   def remove_from_fav
     job = Job.find(params[:job_id])

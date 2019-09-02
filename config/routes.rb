@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   resources :jobs, only: [:show, :index] do
     post "bookmark_job", to: 'jobs#bookmark_job'
+    post "bookmark_formation", to: 'jobs#bookmark_formation'
     post "remove_from_fav", to: 'jobs#remove_from_fav'
   end
 

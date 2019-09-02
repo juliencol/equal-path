@@ -1,7 +1,7 @@
 <!-- This is the dashboard page -->
 
 <div class="main-container">
-  <h1 class="text-center">Dashboard de <%= current_user.first_name %> <%= current_user.last_name %></h1>
+  <h1 class="text-center">Tableau de bord de <%= current_user.first_name %> <%= current_user.last_name %></h1>
   <ul class="list-inline tabs-underlined">
     <li>
         <a href="#" id="jobs-btn" class="tab-underlined active">Métiers favoris </a>
@@ -28,7 +28,7 @@
               <div class="d-flex align-items-center">
                 <p><strong>Skills required:</strong></p>
                 <% if job.skills == [] %>
-                  <p class="ml-3">none</p>
+                  <p class="ml-3">Aucune compétence requise</p>
                 <% else %>
                   <% job.skills.each do |job_skill| %>
                     <p class="ml-3 skill-name" data-toggle="modal" data-target=<%="#exampleModal-#{job_skill.id}"%>>
@@ -56,12 +56,14 @@
   <div id="fav-formations" class="container mt-5 d-none">
     <% @formations.each do |formation| %>
       <div class="card-product">
+        <img id="card-formation-img"  src=<%= formation.logo %> />
         <div class="card-product-infos">
-          <h2><%= formation.title %></h2>
+          <h2><%= formation.title %> (<%= formation.field %>)</h2>
           <p><%= formation.description %></p>
-          <p><%= formation.field %></p>
         </div>
       </div>
     <% end %>
   </div>
 </div>
+
+

@@ -34,20 +34,12 @@
               <div class="d-flex flex-column">
                 <p><strong>Quelques compétences requises:</strong></p>
                 <% if job.skills == [] %>
-                  <p class="">none</p>
+                  <p class="">Aucune compétence requise</p>
                 <% else %>
                   <% job.skills.first(3).each do |job_skill| %>
                     <p class="skill-name" data-toggle="modal" data-target=<%="#exampleModal-#{job_skill.id}"%>>
                       <%= job_skill.name %>
                     </p>
-                    <div class="modal fade skill-modal" id=<%="exampleModal-#{job_skill.id}"%> tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                      <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                          <h2 class="modal-title text-center mt-5" id="exampleModalLabel"><%= job_skill.name %></h2>
-                          <p class="m-5"><%= job_skill.description %></p>
-                        </div>
-                      </div>
-                    </div>
                   <% end %>
                 <% end %>
               </div>

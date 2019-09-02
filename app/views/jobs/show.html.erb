@@ -24,7 +24,6 @@
         <p class=" text-justify"><%= @job.long_description %></p>
 
         <div class="d-flex justify-content-center" data-aos="zoom-in">
-
         <% if @job.bookmarked %>
           <%= link_to job_bookmark_job_path(@job), method: :post do %>
             <i class="fas fa-star" id="star-user-show"><strong> Enlever des favoris</strong></i>
@@ -77,7 +76,7 @@
   </div>
 
 
-  <div id="Formations" class="d-none tab-content">
+  <div id="Formations" class=" tab-content">
     <div class="container d-flex flex-column mt-5">
       <div class="d-flex align-items-center">
         <h2 class=""> 🎓 Formations recommandées</h2>
@@ -101,6 +100,21 @@
                   <p><strong> Lieux : </strong><%= formation.location%></p>
                   <p><strong> Durée : </strong><%= formation.duration%></p>
                   <p> Pour en savoir plus sur cette formation : <a href=" <%=formation.website_url%>" class="tooltip-test" title="LinkSchool" target="_blank"> Le lien </a></p>
+
+
+                  <div class="d-flex justify-content-center" data-aos="zoom-in">
+                    <% if formation.bookmarked %>
+                      <%= link_to job_bookmark_formation_path(@job), method: :post do %>
+                        <i class="fas fa-star stars" id="star-user-show"><strong> Enlever des favoris</strong></i>
+                      <% end %>
+                    <% else %>
+                      <%= link_to job_bookmark_formation_path(@job), method: :post do %>
+                        <i class="far fa-star stars" id="star-user-show"><strong> Ajouter aux favoris</strong></i>
+                      <% end %>
+                    <% end %>
+                  </div>
+
+
                 </div>
               </div>
             </div>
