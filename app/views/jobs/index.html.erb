@@ -36,12 +36,26 @@
                 <% if job.skills == [] %>
                   <p class="">Aucune compétence requise</p>
                 <% else %>
-                  <% job.skills.first(3).each do |job_skill| %>
-                    <p class="skill-name" data-toggle="modal" data-target=<%="#exampleModal-#{job_skill.id}"%>>
-                      <%= job_skill.name %>
-                    </p>
-                  <% end %>
+                    <% job.skills.each do |skill| %>
+                      <% if @user.skills.include? skill %>
+                       <div class="text-success">
+                           <%= skill.name %>
+                        </div>
+                      <% end  %>
+                      <% if @user.skills.exclude? skill %>
+                        <div class="text-warning">
+                          <%= skill.name %>
+                        </div>
+                      <% end %>
+                    <% end %>
                 <% end %>
+                <% skills = [] %>
+                 <% job.skills.each do |skill| %>
+                   <% if @user.skills.include? skill %>
+                      <% skills << skill.name %>
+                   <% end  %>
+                 <% end %>
+                 <p> Vous avez <%= skills.count %> compétences sur <%= job.skills.count%> </p>
               </div>
             </div>
           <div>

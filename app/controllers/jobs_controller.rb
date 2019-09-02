@@ -11,6 +11,7 @@ class JobsController < ApplicationController
      if params[:field].present?
       @jobs = @jobs.global_search(params[:field])
     end
+  @user = current_user
   end
 
   def show
