@@ -63,24 +63,9 @@
   margin-top: 8px;
   word-break: normal;
   text-align: justify;
-    overflow: hidden;
+  overflow: hidden;
   display: -webkit-box;
   -webkit-line-clamp: 4;
-  -webkit-box-orient: vertical;
-}
-
-
-.card-product p {
-  font-size: 16px;
-  line-height: 1.4;
-  opacity: .7;
-  margin-bottom: 0;
-  margin-top: 8px;
-  word-break: normal;
-  text-align: justify;
-    overflow: hidden;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
 }
 
