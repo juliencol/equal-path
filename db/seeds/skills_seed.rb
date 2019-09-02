@@ -94,6 +94,14 @@ SQL.remote_logo_url = "https://res.cloudinary.com/isep/image/upload/v1567089955/
 SQL.save!
 
 
+EXCEL = Skill.create(
+  name: "Excel",
+  soft: false)
+
+PACK_OFFICE = Skill.create(
+  name: "Pack Office",
+  soft: false)
+
 
 
 # soft skills
@@ -261,3 +269,11 @@ ECOUTE_DES_AUTRES = Skill.create(
   name: "Ecoute des autres",
   soft: true
   )
+
+VENTE = Skill.ccreate(
+  name: "Vente",
+  soft: true
+  )
+
+
+
