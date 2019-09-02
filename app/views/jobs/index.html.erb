@@ -54,12 +54,12 @@
             </div>
           <div>
             <% if job.bookmarked %>
-              <%= link_to job_bookmark_job_path(job), method: :post do %>
-                <i class="fas fa-star" id="star"></i>
+              <%= link_to job_bookmark_job_path(job), method: :post, remote: true do  %>
+                <i class="fas fa-star stars" id="star<%= job.id %>"></i>
               <% end %>
             <% else %>
-              <%= link_to job_bookmark_job_path(job), method: :post do %>
-                <i class="far fa-star" id="star"></i>
+              <%= link_to job_bookmark_job_path(job), method: :post, remote: true  do %>
+                <i class="far fa-star stars" id="star<%= job.id %>"></i>
               <% end %>
             <% end %>
           </div>
