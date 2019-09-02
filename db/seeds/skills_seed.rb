@@ -6,7 +6,6 @@ puts "Creating skills..."
 PHP = Skill.new(
   name: "PHP",
   description: "langage de programmation un peu nul",
-  soft: false
 )
 
 PHP.remote_logo_url = "https://res.cloudinary.com/isep/image/upload/v1567089954/equal-path/skills-logo/php-logo-png-transparent_yxwxvu.png"
@@ -14,8 +13,7 @@ PHP.save!
 
 PEARL = Skill.new(
   name: "Pearl",
-  description: "",
-  soft: "false"
+  description: ""
 )
 
 PEARL.remote_logo_url = "https://res.cloudinary.com/isep/image/upload/v1567089954/equal-path/skills-logo/kisspng-perl-dynamic-programming-language-scripting-langua-perl-5b2e371360eb61.549598641529755411397_qleari.jpg"
@@ -23,8 +21,7 @@ PEARL.save!
 
 RUBY = Skill.new(
   name: "Ruby",
-  description: "Ruby est un langage de programmation libre. Il est interprété, orienté objet et multi-paradigme. Le langage a été standardisé au Japon en 2011 (JIS X 3017:2011)4, et en 2012 par l'Organisation internationale de normalisation (ISO 30170:2012)5.",
-  soft: false
+  description: "Ruby est un langage de programmation libre. Il est interprété, orienté objet et multi-paradigme. Le langage a été standardisé au Japon en 2011 (JIS X 3017:2011)4, et en 2012 par l'Organisation internationale de normalisation (ISO 30170:2012)5."
 )
 
 RUBY.remote_logo_url = "https://res.cloudinary.com/isep/image/upload/v1567089955/equal-path/skills-logo/kisscc0-ruby-on-rails-computer-icons-gemstone-rubygems-ruby-5b4eb896781980.6494373715318857184919_q52vdp.jpg"
@@ -32,8 +29,7 @@ RUBY.save!
 
 PYTHON = Skill.new(
   name: "Python",
-  description: "Le meilleur langage",
-  soft: false
+  description: "Le meilleur langage"
 )
 
 PYTHON.remote_logo_url = "https://res.cloudinary.com/isep/image/upload/v1567089954/equal-path/skills-logo/kisspng-python-programming-language-computer-programming-language-5acfdc3636bac7.8891188615235717662242_wxorpq.jpg"
@@ -41,8 +37,7 @@ PYTHON.save!
 
 HTML = Skill.new(
   name: "HTML",
-  description: "",
-  soft: false
+  description: ""
 )
 
 HTML.remote_logo_url = "https://res.cloudinary.com/isep/image/upload/v1567089955/equal-path/skills-logo/imgbin-icon-design-computer-icons-html-programming-language-computer-software-symbol-0Pcn1X8YECFkzK4MXCQeWYRHc_zc0jkc.jpg"
@@ -50,8 +45,7 @@ HTML.save!
 
 CSS = Skill.new(
   name: "CSS",
-  description: "",
-  soft: false
+  description: ""
 )
 
 CSS.remote_logo_url = "https://res.cloudinary.com/isep/image/upload/v1567089955/equal-path/skills-logo/CSS3_logo_and_wordmark.svg_atqval.png"
@@ -59,8 +53,7 @@ CSS.save!
 
 LANGAGE_C = Skill.new(
   name: "C",
-  description: "",
-  soft: false
+  description: ""
 )
 
 LANGAGE_C.remote_logo_url = "https://res.cloudinary.com/isep/image/upload/v1567089954/equal-path/skills-logo/letter-c-png-5a36954d474e54.1991877715135266052921_sfuf7t.jpg"
@@ -68,8 +61,7 @@ LANGAGE_C.save!
 
 JAVASCRIPT = Skill.new(
   name: "JavaScript",
-  description: "",
-  soft: false
+  description: ""
 )
 
 JAVASCRIPT.remote_logo_url = "https://res.cloudinary.com/isep/image/upload/v1567089955/equal-path/skills-logo/javascript-logo_s5q0xt.png"
@@ -77,8 +69,7 @@ JAVASCRIPT.save!
 
 JAVA = Skill.new(
   name: "Java",
-  description: "",
-  soft: false
+  description: ""
 )
 
 JAVA.remote_logo_url = "https://res.cloudinary.com/isep/image/upload/v1567089954/equal-path/skills-logo/kisspng-logo-java-runtime-environment-programming-language-java-util-concurrentmodificationexception-%C3%96mer-5b6766ab2d98b8.1809687115335031471868_dy0akj.jpg"
@@ -86,8 +77,7 @@ JAVA.save!
 
 SQL = Skill.new(
   name: "SQL",
-  description: "",
-  soft: false
+  description: ""
 )
 
 SQL.remote_logo_url = "https://res.cloudinary.com/isep/image/upload/v1567089955/equal-path/skills-logo/7_ksfnv5.png"
@@ -95,35 +85,31 @@ SQL.save!
 
 
 EXCEL = Skill.create(
-  name: "Excel",
-  soft: false)
+  name: "Excel"
+  )
 
 PACK_OFFICE = Skill.create(
-  name: "Pack Office",
-  soft: false)
+  name: "Pack Office"
+  )
 
 
 
 # soft skills
 
 AUTONOME = Skill.new(
-  name: "Autonome",
-  soft: true
+  name: "Autonome"
 )
 
 LEADERSHIP = Skill.new(
-  name: "leadership",
-  soft: true
-)
+  name: "leadership"
+  )
 
 ANGLAIS = Skill.new(
-  name: "Anglais",
-  soft: true
+  name: "Anglais"
 )
 
 ANALYTIQUE = Skill.new(
-  name: "analytique",
-  soft: true
+  name: "analytique"
 )
 
 
@@ -132,147 +118,118 @@ ANALYTIQUE = Skill.new(
 # other skills
 PHYSIQUE_DU_BATIMENT = Skill.create(
   name: "physique du batiment",
-  soft: true
 )
 
 TECHNIQUE_DES_MATERIAUX = Skill.create(
   name: "technique des materiaux",
-  soft: true
 )
 
 MEMOIRE_VISUELLE = Skill.create(
   name: "memoire visuelle",
-  soft: true
 )
 
 DESSIN = Skill.create(
   name: "dessin",
-  soft: true
 )
 
 CONCEPTION = Skill.create(
   name: "conception",
-  soft: true
 )
 
 ADAPTATION = Skill.create(
-  name: "adaptation",
-  soft: true
+  name: "adaptation"
 )
 
 DESIGN = Skill.create(
-  name: "design",
-  soft: true
+  name: "design"
 )
 
 INGENIOSITE = Skill.create(
-  name: "ingéniosité",
-  soft: true
+  name: "ingéniosité"
 )
 
 COORDINATION = Skill.create(
-  name: "coordination",
-  soft: true
+  name: "coordination"
 )
 
 CONNAISSANCE_DU_MARCHE = Skill.create(
-  name: "Connaissance du marché",
-  soft: true
+  name: "Connaissance du marché"
   )
 
 PEDAGOGIE = Skill.create(
-  name: "Pédagogie",
-  soft: true
+  name: "Pédagogie"
   )
 
 SENS_DU_RELATIONNEL = Skill.create(
-  name: "Sens du relationnel",
-  soft: true
+  name: "Sens du relationnel"
   )
 
 LOGICIELS_EBP = Skill.create(
-  name: "Logiciels EBP",
-  soft: true
+  name: "Logiciels EBP"
   )
 
 SONDAGE_TIG = Skill.create(
-  name: "Sondage TIG",
-  soft: true
+  name: "Sondage TIG"
   )
 
 TERMINOLOGIE_DENTAIRE = Skill.create(
-  name: "Terminologie dentaire",
-  soft: true
+  name: "Terminologie dentaire"
   )
 
 TECHNIQUES_DENTAIRES = Skill.create(
-  name: "Techniques dentaires",
-  soft: true
+  name: "Techniques dentaires"
   )
 
 PRATIQUES_DENTAIRES = Skill.create(
-  name: "Pratiques dentaires",
-  soft: true
+  name: "Pratiques dentaires"
   )
 
 HABILITE = Skill.create(
-  name: "Habilité",
-  soft: true
+  name: "Habilité"
   )
 
 PRECISION = Skill.create(
-  name: "Précision",
-  soft: true
+  name: "Précision"
   )
 
 RESISTANCE_PHYSIQUE = Skill.create(
-  name: "Résistance physique",
-  soft: true
+  name: "Résistance physique"
   )
 
 JOUER_LA_COMEDIE = Skill.create(
-  name: "Jouer la comédie",
-  soft: true
+  name: "Jouer la comédie"
   )
 
 RIGUEUR = Skill.create(
-  name: "Rigueur",
-  soft: true
+  name: "Rigueur"
   )
 
 PERSEVERANCE = Skill.create(
-  name: "Persévérance",
-  soft: true
+  name: "Persévérance"
   )
 
 TALENT = Skill.create(
-  name: "Talent",
-  soft: true
+  name: "Talent"
   )
 
 EXCEL = Skill.create(
-  name: "Excel",
-  soft: true
+  name: "Excel"
   )
 
 DYNAMISME = Skill.create(
-  name: "Dynamisme",
-  soft: true
+  name: "Dynamisme"
   )
 
 TRAVAIL_EN_EQUIPE = Skill.create(
-  name: "Travail en équipe",
-  soft: true
+  name: "Travail en équipe"
   )
 
 ECOUTE_DES_AUTRES = Skill.create(
-  name: "Ecoute des autres",
-  soft: true
+  name: "Ecoute des autres"
   )
 
 VENTE = Skill.ccreate(
-  name: "Vente",
-  soft: true
+  name: "Vente"
   )
 
 
