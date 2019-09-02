@@ -61,3 +61,7 @@ JobSkill.create!(job: PRODUCT_MANAGER, skill: SQL)
 JobSkill.create!(job: PRODUCT_MANAGER, skill: HTML)
 JobSkill.create!(job: PRODUCT_MANAGER, skill: CSS)
 JobSkill.create!(job: PRODUCT_MANAGER, skill: JAVASCRIPT)
+JobSkill.create!(job: PRODUCT_MANAGER, skill: VENTE)
+JobSkill.create!(job: PRODUCT_MANAGER, skill: NEGOCIATION)
+
+
