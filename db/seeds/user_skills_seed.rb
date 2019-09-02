@@ -12,3 +12,8 @@ UserSkill.create!(user: JACQUES_MARTIN, skill: AUTONOME)
 UserSkill.create!(user: JACQUES_MARTIN, skill: ANALYTIQUE)
 UserSkill.create!(user: JACQUES_MARTIN, skill: LEADERSHIP)
 UserSkill.create!(user: JACQUES_MARTIN, skill: ANGLAIS)
+UserSkill.create!(user: JACQUES_MARTIN, skill: EXCEL)
+UserSkill.create!(user: JACQUES_MARTIN, skill: NEGOCIATION)
+UserSkill.create!(user: JACQUES_MARTIN, skill: VENTE)
+UserSkill.create!(user: JACQUES_MARTIN, skill: PACK_OFFICE)
+
