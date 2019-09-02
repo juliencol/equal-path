@@ -42,41 +42,59 @@
           <div>
             <div class="d-flex align-items-center">
             <h2> Pour ce travail, il faut : </h2>
-        </div>
+          </div>
           <div class="container d-flex mt-5 justify-content-between">
-            <div>
-              <div class="d-flex flex-column justify-content-between">
                 <% @job.skills.each do |skill| %>
-                  <% if @user.skills.include? skill %>
-                    <li data-toggle="modal" data-target="#skill-modal-<%= skill.id %>">
-                      <strong> <%= skill.name %> </strong>
-                    </li>
-                  <% else %>
-                      <li data-toggle="modal" data-target="#skill-modal-<%= skill.id %>">
-                        <%= skill.name %>
-                      </li>
-                  <% end %>
-                        <!-- skill Modal -->
-                <div class="modal fade" id="skill-modal-<%= skill.id %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                  <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                      <div class="modal-body text-center">
-                         <h1 class="m-3"><%= skill.name %></h1>
-                          <img id="skill-logo" class="m-3" src=<%= skill.logo %>>
-                            <p class="m-3"><%= skill.description %></p>
+                  <div class="d-flex justify-content-around">
+                    <% if @user.skills.include? skill %>
+                     <button class="btn btn-outline-success m-2" data-toggle="modal" data-target="#skill-modal-<%= skill.id %>">
+                         <%= skill.name %>
+                      </button>
+                    <% end  %>
+                  </div>
+                  <!-- modal -->
+                  <div class="modal fade" id="skill-modal-<%= skill.id %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class="modal-body text-center">
+                           <h1 class="m-3"><%= skill.name %></h1>
+                            <img id="skill-logo" class="m-3" src=<%= skill.logo %>>
+                              <p class="m-3"><%= skill.description %></p>
+                        </div>
                       </div>
                     </div>
                   </div>
+                  <!-- fin modal -->
+                <% end %>
+
+              <% @job.skills.each do |skill| %>
+                <div class="d-flex justify-content-around">
+                  <% if @user.skills.exclude? skill %>
+                    <button type="button" class="btn btn-outline-warning m-2" data-toggle="modal" data-target="#skill-modal-<%= skill.id %>">
+                      <%= skill.name %>
+                    </button>
+                  <% end %>
                 </div>
-              <% end %>
-            </div>
+              <!-- modal -->
+                  <div class="modal fade" id="skill-modal-<%= skill.id %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class="modal-body text-center">
+                            <h1 class="m-3"><%= skill.name %></h1>
+                            <img id="skill-logo" class="m-3" src=<%= skill.logo %>>
+                              <p class="m-3"><%= skill.description %></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- fin modal -->
+                <% end %>
+              </div>
           </div>
-        </div>
-      </div>
-      <div class="d-flex justify-content-center">
-        <%= link_to "Revenir à l'index", jobs_path, class: "btn" %>
-      </div>
     </div>
+  <div class="mt-5">
+    <%= link_to "Revenir à l'index", jobs_path, class: "btn-prk text-decoration-none" %>
+  </div>
   </div>
 
 
