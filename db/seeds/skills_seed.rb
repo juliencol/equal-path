@@ -212,9 +212,6 @@ TALENT = Skill.create(
   name: "Talent"
   )
 
-EXCEL = Skill.create(
-  name: "Excel"
-  )
 
 DYNAMISME = Skill.create(
   name: "Dynamisme"
@@ -228,8 +225,11 @@ ECOUTE_DES_AUTRES = Skill.create(
   name: "Ecoute des autres"
   )
 
-VENTE = Skill.ccreate(
+VENTE = Skill.create(
   name: "Vente"
+  )
+NEGOCIATION = Skill.create(
+  name: "Negaciation"
   )
 
 
