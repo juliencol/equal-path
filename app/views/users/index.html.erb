@@ -1,8 +1,10 @@
 <!-- This is the dashboard page -->
-
 <div class="main-container">
   <h1 class="text-center">Tableau de bord de <%= current_user.first_name %> <%= current_user.last_name %></h1>
   <ul class="list-inline tabs-underlined">
+    <li>
+        <a href="#" id="profile-btn"class="tab-underlined">Profil</a>
+    </li>
     <li>
         <a href="#" id="jobs-btn" class="tab-underlined active">Métiers favoris </a>
           <span class="badge badge-light">
@@ -14,6 +16,29 @@
         <span class="badge badge-light1" id="formationss"><%= @formations.count %></span>
     </li>
   </ul>
+
+  <div class="main-container d-flex flex-column justify-content-center align-items-center">
+    <h1 class="text-center">Profil de <%= @user.first_name %> <%= @user.last_name %></h1>
+    <p class="text-center">age : <%= @user.age %></p>
+    <div class="d-flex">
+      <p class="mt-3 text-center">Compétences acquises :</p>
+      <div class="d-flex">
+        <% @user.skills.each do |skill| %>
+          <div class="d-flex justify-content-around">
+            <button class="btn btn-outline-success m-2" data-toggle="modal" data-target="#skill-modal-<%= skill.id %>">
+              <%= skill.name %>
+            </button>
+          </div>
+        <% end %>
+      </div>
+    </div>
+    <div class="container">
+      <div class="d-flex justify-content-center" data-aos="zoom-in">
+        <%= link_to "Retour au Tableau de bord", users_path, class: "btn-prk text-decoration-none" %>
+        <%= link_to "Modifier le profil", edit_user_path(@user), class: "btn-prk text-decoration-none" %>
+      </div>
+    </div>
+  </div>
 
   <div id="fav-jobs" class="container mt-5">
     <% if @jobs == [] %>
