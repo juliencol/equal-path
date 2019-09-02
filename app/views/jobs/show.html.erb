@@ -8,6 +8,19 @@
       <div class="d-flex">
         <h2 class = "mb-5"> 📝 Description du métier</h2>
       </div>
+      <div class="">
+        <% if @job.bookmarked %>
+          <%= link_to job_bookmark_job_path(@job), method: :post do %>
+            <i class="fas fa-star" id="star"></i>
+            <p>Enlever des favoris</p>
+          <% end %>
+        <% else %>
+          <%= link_to job_bookmark_job_path(@job), method: :post do %>
+            <i class="far fa-star" id="star"></i>
+            <p>Ajouter aux favoris</p>
+          <% end %>
+        <% end %>
+      </div>
         <p><%= @job.long_description %></p>
     </div>
     <div id="right-block" class="container d-flex flex-column ml-3">
