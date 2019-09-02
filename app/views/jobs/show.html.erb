@@ -36,7 +36,7 @@
         <% end %>
         </div>
       </div>
-      
+
       <div id="right-block" class="container d-flex flex-column ml-3">
         <div class="mb-3 container d-flex">
           <div>
@@ -52,10 +52,12 @@
                     <li data-toggle="modal" data-target="#skill-modal-<%= skill.id %>">
                       <strong> <%= skill.name %> </strong>
                     </li>
+                    <% end %>
                   <% else  %>
                       <li data-toggle="modal" data-target="#skill-modal-<%= skill.id %>">
                         <%= skill.name %>
                       </li>
+                    <% end %>
                   <% end %>
                         <!-- skill Modal -->
                   <div class="modal fade" id="skill-modal-<%= skill.id %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -66,7 +68,7 @@
                             <img id="skill-logo" class="m-3" src=<%= skill.logo %>>
                               <p class="m-3"><%= skill.description %></p>
                         </div>
-                      
+
                       </div>
             </div>
           </div>
