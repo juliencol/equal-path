@@ -1,56 +1,76 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= cl_image_path @job.job_photo %>);">
+$<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= cl_image_path @job.job_photo %>);">
   <h1 class="text-center"><%= @job.title %></h1>
 </div>
 
 <div class="main-container">
-  <div id="top-block" class="container d-flex p-3">
-    <div id="left-block" class="container d-flex flex-column mr-3">
-      <div class="d-flex">
-        <h2 class = "mb-5"> 📝 Description du métier</h2>
+  <ul class="list-inline tabs-underlined">
+    <li>
+      <a href="#" class="tab-underlined active" data-target="Fiche">Ficher métier</a>
+    </li>
+    <li>
+      <a href="#" class="tab-underlined" data-target="Formations">Formations</a>
+    </li>
+    <li>
+      <a href="#" class="tab-underlined" data-target="Mentors">Mentors</a>
+    </li>
+  </ul>
+
+
+
+
+
+
+  <div class="tab-content" id="Fiche">
+    <div id="top-block" class="container d-flex p-3">
+      <div id="left-block" class="container d-flex flex-column mr-3">
+        <div class="d-flex">
+          <h2 class = "mb-5"> 📝 Description du métier</h2>
+        </div>
+          <p><%= @job.long_description %></p>
+
       </div>
-        <p><%= @job.long_description %></p>
-    </div>
-    <div id="right-block" class="container d-flex flex-column ml-3">
-      <div class="mb-3 container d-flex">
-        <div>
-          <div class="d-flex align-items-center">
-            <h2> 💎 Compétences requises</h2>
-          </div>
-          <div class="container d-flex mt-5 justify-content-between">
-            <div>
-              <h4 class="mb-3">Strong skills</h4>
-              <div class="d-flex flex-column justify-content-between">
-                <% @job.skills.each do |skill| %>
-                  <% unless skill.soft %>
-                    <ul>
-                      <li data-toggle="modal" data-target="#skill-modal-<%= skill.id %>">
-                        <%= skill.name %>
-                      </li>
-                      <!-- skill Modal -->
-                      <div class="modal fade" id="skill-modal-<%= skill.id %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog" role="document">
-                          <div class="modal-content">
-                            <div class="modal-body text-center">
-                              <h1 class="m-3"><%= skill.name %></h1>
-                              <img id="skill-logo" class="m-3" src=<%= skill.logo %>>
-                              <p class="m-3"><%= skill.description %></p>
+      <div id="right-block" class="container d-flex flex-column ml-3">
+        <div class="mb-3 container d-flex">
+          <div>
+            <div class="d-flex align-items-center">
+              <h2> 💎 Compétences requises</h2>
+            </div>
+            <div class="container d-flex mt-5 justify-content-between">
+              <div>
+                <h4 class="mb-3">Strong skills</h4>
+                <div class="d-flex flex-column justify-content-between">
+                  <% @job.skills.each do |skill| %>
+                    <% unless skill.soft %>
+                      <ul>
+                        <li data-toggle="modal" data-target="#skill-modal-<%= skill.id %>">
+                          <%= skill.name %>
+                        </li>
+                        <!-- skill Modal -->
+                        <div class="modal fade" id="skill-modal-<%= skill.id %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                          <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                              <div class="modal-body text-center">
+                                <h1 class="m-3"><%= skill.name %></h1>
+                                <img id="skill-logo" class="m-3" src=<%= skill.logo %>>
+                                <p class="m-3"><%= skill.description %></p>
+                              </div>
                             </div>
                           </div>
                         </div>
-                      </div>
-                    </ul>
+                      </ul>
+                    <% end %>
                   <% end %>
-                <% end %>
+                </div>
               </div>
-            </div>
-            <div>
-              <h4 class="mb-3">Soft skills</h4>
-              <div class="d-flex flex-column justify-content-between">
-                <% @job.skills.each do |skill| %>
-                  <% if skill.soft %>
-                    <ul><li><%= skill.name %></li></ul>
+              <div>
+                <h4 class="mb-3">Soft skills</h4>
+                <div class="d-flex flex-column justify-content-between">
+                  <% @job.skills.each do |skill| %>
+                    <% if skill.soft %>
+                      <ul><li><%= skill.name %></li></ul>
+                    <% end %>
                   <% end %>
-                <% end %>
+                </div>
               </div>
             </div>
           </div>
@@ -59,40 +79,44 @@
     </div>
   </div>
 
-  <div class="container d-flex flex-column mt-5">
-    <div class="d-flex align-items-center">
-      <h2 class=""> 🎓 Formations recommandées</h2>
-    </div>
-    <div id="logo-container" class="container d-flex">
-      <% @job.formations.each do |formation|%>
-        <div class="container" data-toggle="modal" data-target="#school-modal-<%= formation.id %>">
-          <img id="formation-logo" class= "rounded-logo" src=<%= formation.logo %>>
-        </div>
-        <div class="modal fade" id="school-modal-<%= formation.id %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <div id="header-modal-formation">
-                  <img class= "rounded-logo" src= <%= formation.logo %>>
-                  <h3 class="modal-title" id="exampleModalLongTitle" class="text-center"><%= formation.title%></h3>
+  <div id="Formations" class="d-none tab-content">
+    <div class="container d-flex flex-column mt-5">
+      <div class="d-flex align-items-center">
+        <h2 class=""> 🎓 Formations recommandées</h2>
+      </div>
+      <div id="logo-container" class="container d-flex">
+        <% @job.formations.each do |formation|%>
+          <div class="container" data-toggle="modal" data-target="#school-modal-<%= formation.id %>">
+            <img id="formation-logo" class= "rounded-logo" src=<%= formation.logo %>>
+          </div>
+          <div class="modal fade" id="school-modal-<%= formation.id %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <div id="header-modal-formation">
+                    <img class= "rounded-logo" src= <%= formation.logo %>>
+                    <h3 class="modal-title" id="exampleModalLongTitle" class="text-center"><%= formation.title%></h3>
+                  </div>
                 </div>
-              </div>
-              <div class="modal-body">
-                <p><%= formation.description %></p>
-                <p><strong> Lieux : </strong><%= formation.location%></p>
-                <p><strong> Durée : </strong><%= formation.duration%></p>
-                <p> Pour en savoir plus sur cette formation : <a href=" <%=formation.website_url%>" class="tooltip-test" title="LinkSchool" target="_blank"> Le lien </a></p>
+                <div class="modal-body">
+                  <p><%= formation.description %></p>
+                  <p><strong> Lieux : </strong><%= formation.location%></p>
+                  <p><strong> Durée : </strong><%= formation.duration%></p>
+                  <p> Pour en savoir plus sur cette formation : <a href=" <%=formation.website_url%>" class="tooltip-test" title="LinkSchool" target="_blank"> Le lien </a></p>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      <%end%>
+        <%end%>
+      </div>
     </div>
   </div>
 
-  <div class="container mt-5">
-    <h2>Rencontrez des mentors</h2>
-    <p>Disponible très prochainement, nos meilleurs développeurs travaillent dessus...</p>
+  <div id="Mentors" class="d-none tab-content">
+    <div class="container mt-5">
+      <h2>Rencontrez des mentors</h2>
+      <p>Disponible très prochainement, nos meilleurs développeurs travaillent dessus...</p>
+    </div>
   </div>
 </div>
 

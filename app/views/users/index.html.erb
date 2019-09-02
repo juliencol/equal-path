@@ -4,44 +4,52 @@
   <h1 class="text-center">Dashboard de <%= current_user.first_name %> <%= current_user.last_name %></h1>
   <ul class="list-inline tabs-underlined">
     <li>
-        <a href="#" id="jobs-btn" class="tab-underlined active">Métiers favoris</a>
+        <a href="#" id="jobs-btn" class="tab-underlined active">Métiers favoris </a>
+          <span class="badge badge-light">
+            <%= @jobs.count %>
+        </span>
     </li>
     <li>
         <a href="#" id="formations-btn"class="tab-underlined">Formations favorites</a>
+        <span class="badge badge-light1" id="formationss"><%= @formations.count %></span>
     </li>
   </ul>
 
   <div id="fav-jobs" class="container mt-5">
-    <% @jobs.each do |job| %>
-      <div class="card-product">
-        <img src=<%= job.job_photo %> />
-          <div class="card-product-infos">
-            <h2><%= job.title %> (<%= job.field %>)</h2>
-            <p><%= job.short_description %></p>
-            <div class="d-flex align-items-center">
-              <p><strong>Skills required:</strong></p>
-              <% if job.skills == [] %>
-                <p class="ml-3">none</p>
-              <% else %>
-                <% job.skills.each do |job_skill| %>
-                  <p class="ml-3 skill-name" data-toggle="modal" data-target=<%="#exampleModal-#{job_skill.id}"%>>
-                    <%= job_skill.name %>
-                  </p>
-                  <div class="modal fade skill-modal" id=<%="exampleModal-#{job_skill.id}"%> tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog" role="document">
-                      <div class="modal-content">
-                        <h2 class="modal-title text-center mt-5" id="exampleModalLabel"><%= job_skill.name %></h2>
-                        <p class="m-5"><%= job_skill.description %></p>
+    <% if @jobs == [] %>
+      <p> Vous n'avez pas de métiers en favoris </p>
+    <% else %>
+      <% @jobs.each do |job| %>
+        <div class="card-product">
+          <img src=<%= job.job_photo %> />
+            <div class="card-product-infos">
+              <h2><%= job.title %> (<%= job.field %>)</h2>
+              <p><%= job.short_description %></p>
+              <div class="d-flex align-items-center">
+                <p><strong>Skills required:</strong></p>
+                <% if job.skills == [] %>
+                  <p class="ml-3">none</p>
+                <% else %>
+                  <% job.skills.each do |job_skill| %>
+                    <p class="ml-3 skill-name" data-toggle="modal" data-target=<%="#exampleModal-#{job_skill.id}"%>>
+                      <%= job_skill.name %>
+                    </p>
+                    <div class="modal fade skill-modal" id=<%="exampleModal-#{job_skill.id}"%> tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <h2 class="modal-title text-center mt-5" id="exampleModalLabel"><%= job_skill.name %></h2>
+                          <p class="m-5"><%= job_skill.description %></p>
+                        </div>
                       </div>
                     </div>
-                  </div>
+                  <% end %>
                 <% end %>
-              <% end %>
+              </div>
             </div>
-          </div>
-          <%= link_to "", job_path(job), class: "transparent-link" %>
-      </div>
-      <p><%= link_to 'Enlever des favoris', job_remove_from_fav_path(job), method: :post, data: { confirm: 'Are you sure?' } %></p>
+            <%= link_to "", job_path(job), class: "transparent-link" %>
+        </div>
+        <p><%= link_to 'Enlever des favoris', job_remove_from_fav_path(job), method: :post, data: { confirm: 'Are you sure?' } %></p>
+      <% end %>
     <% end %>
   </div>
 
