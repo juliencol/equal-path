@@ -1,18 +1,18 @@
 class JobsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
   def index
-    @user = current_user
-    @jobs = Job.all.sort_by { |job| job.skills.count { |skill| @user.skills.include? skill } }.reverse!
-
+        @user = current_user
+    @jobs = Job.all
     if params[:query].present?
-      @jobs = @jobs.global_search(params[:query])
+      @jobs = Job.global_search(params[:query])
     end
     if params[:skill].present?
-      @jobs = @jobs.global_search(params[:skill])
+      @jobs = Job.global_search(params[:skill])
     end
      if params[:field].present?
-      @jobs = @jobs.global_search(params[:field])
+      @jobs = Job.global_search(params[:field])
     end
+  @jobs = @jobs.sort_by { |job| ((job.skills.count { |skill| @user.skills.include? skill } )/ job.skills.count.to_f * 100).round}.reverse!
   @user = current_user
   end
 
