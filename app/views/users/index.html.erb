@@ -4,18 +4,35 @@
   <h1 class="text-center">Tableau de bord de <%= current_user.first_name %> <%= current_user.last_name %></h1>
   <ul class="list-inline tabs-underlined">
     <li>
-        <a href="#" id="jobs-btn" class="tab-underlined active">Métiers favoris </a>
+        <a class="tab-underlined active" data-target ="profile">Profil</a>
+    </li>
+    <li>
+        <a class="tab-underlined active" data-target ="fav-jobs">Métiers favoris </a>
           <span class="badge badge-light">
             <%= @jobs.count %>
         </span>
     </li>
     <li>
-        <a href="#" id="formations-btn"class="tab-underlined">Formations favorites</a>
+        <a class="tab-underlined" data-target = "fav-formations">Formations favorites</a>
         <span class="badge badge-light1" id="formationss"><%= @formations.count %></span>
     </li>
   </ul>
 
-  <div id="fav-jobs" class="container mt-5">
+    <div class="tab-content container text-center" id="profile">
+      <p class="mb-3">Profil de <%= @user.first_name %> <%= @user.last_name %></p>
+      <div class="mt-3">
+        <%= cl_image_tag current_user.profile_picture, id: "profile_image", alt: "" %>
+      </div>
+      <p class="mt-3">Compétences acquises :</p>
+      <%  @user.skills.each do |skill|  %>
+      <p class="mt-3"> <%= skill.name %></p>
+      <% end  %>
+      <p class="mt-3">Age: <%= @user.age %> ans</p>
+      <p class="mt-3"><%= @user.email %></p>
+    </div>
+  </div>
+
+  <div class="d-none tab-content container mt-5" id="fav-jobs">
     <% if @jobs == [] %>
       <p> Vous n'avez pas de métiers en favoris </p>
     <% else %>
@@ -53,7 +70,7 @@
     <% end %>
   </div>
 
-  <div id="fav-formations" class="container mt-5 d-none">
+  <div id="fav-formations" class="d-none tab-content container mt-5 d-none">
     <% @formations.each do |formation| %>
       <div class="card-product">
         <img id="card-formation-img"  src=<%= formation.logo %> />
