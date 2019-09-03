@@ -49,10 +49,11 @@
 
 
 .card-product h2 {
-  font-size: 22px;
+  font-size: 20px;
   font-weight: bold;
   margin: 0;
-  // text-align: justify;
+  text-align: center;
+  margin-bottom: 3px;
 }
 
 .card-product h5 {
@@ -112,8 +113,30 @@
     box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
+.card-product .job-skills {
+  display: flex;
+  text-align: left;
+  padding-top: 15px;
+  padding-left: 2px;
+  .job-skills-user li {
+    font-size: 12px;
+    list-style-type: none;
+    color: #00C310;
+  }
+  .job-skills-not-user {
+    flex: 0 0 50%;
+  }
+  .job-skills-not-user li {
+    font-size: 12px;
+    list-style-type: none;
+    color: #EE0505;
+  }
+}
 
-// card-formation
+
+
+
+/*// card-formation*/
 #card-product-logo {
   width: 150px;
   object-fit: contain;
