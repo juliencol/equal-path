@@ -89,16 +89,14 @@
           </div>
         </div>
       </div>
-       <div class="mt-5 text-center">
-         <%= link_to "Revenir à l'index", jobs_path, class: "btn-prk text-decoration-none" %>
-       </div>
-    </div>
+
 
 
     <div id="Formations" class="d-none tab-content">
+      <div class="border-card">
       <div class="container d-flex flex-column mt-5">
         <div class="d-flex align-items-center">
-          <h2 class=""> 🎓 Formations recommandées</h2>
+          <h2 class = "mb-3 d-flex justify-content-center">🎓 Formations recommandées</h2>
         </div>
         <div id="logo-container" class="container d-flex">
           <% @job.formations.each do |formation|%>
@@ -142,14 +140,22 @@
     </div>
 
     <div id="Mentors" class="d-none tab-content">
+      <div class="border-card">
       <div class="container mt-5">
         <h2>Rencontrez des mentors</h2>
         <p>Disponible très prochainement, nos meilleurs développeurs travaillent dessus...</p>
       </div>
     </div>
   </div>
+
+   <div class="mt-5 text-center">
+         <%= link_to "Revenir à ma recherche", jobs_path, class: "btn-prk text-decoration-none" %>
+    </div>
 </div>
 
+
+
+    </div>
 
 
 
