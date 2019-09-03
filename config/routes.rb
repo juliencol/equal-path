@@ -9,6 +9,9 @@ Rails.application.routes.draw do
   end
 
   resources :users, only: [:index, :show, :edit]
+  resources :skills, only: [] do
+    post "update_skill", to: 'users#update_skill'
+  end
   resources :formations, only: [:index, :show]
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
