@@ -1,6 +1,6 @@
-<div class="d-flex">
+<div class="row">
 
-  <div class="banner-show-user" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= cl_image_path @job.job_photo %>);">
+  <div class="banner-show-user col-md-4" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= cl_image_path @job.job_photo %>);">
     <h1 class=""><%= @job.title %></h1>
 
     <% if @job.bookmarked %>
@@ -14,7 +14,7 @@
     <% end %>
   </div>
 
-  <div class="user-container">
+  <div class="user-container col-md-6">
     <ul class="list-inline tabs-underlined justify-content-center mb-5">
       <li>
         <a href="#" class="tab-underlined active" data-target="Fiche">Fiche métier</a>
@@ -98,10 +98,11 @@
         <div class="d-flex align-items-center">
           <h2 class = "mb-3 d-flex justify-content-center">🎓 Formations recommandées</h2>
         </div>
-        <div id="logo-container" class="container d-flex">
+        <div id="logo-container" class="container">
           <% @job.formations.each do |formation|%>
-            <div class="container" data-toggle="modal" data-target="#school-modal-<%= formation.id %>">
+            <div class="container d-flex align-items-center" data-toggle="modal" data-target="#school-modal-<%= formation.id %>">
               <img id="formation-logo" class= "rounded-logo" src=<%= formation.logo %>>
+             <span class="pl-4"> <%= formation.title  %> </span>
             </div>
             <div class="modal fade" id="school-modal-<%= formation.id %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
               <div class="modal-dialog" role="document">
