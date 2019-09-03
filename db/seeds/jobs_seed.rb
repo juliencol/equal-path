@@ -149,8 +149,8 @@ PRODUCT_MANAGER.save!
 
 
 BUSINESS_DEV = Job.new(
-  title: "Développeur d'affaires",
-  short_description: "Le développeur d'affaires a pour mission de défricher les marchés et générer des nouveaux leads commerciaux « from scratch »
+  title: "Business Developer",
+  short_description: "Le business developer a pour mission de défricher les marchés et générer des nouveaux leads commerciaux « from scratch »
     (sans portefeuille) ou via de « l’upselling » sur la base d’un nombre limité de comptes. Dans un environnement digital, il doit posséder une bonne culture générale sur les aspects techniques des produits qu’il commercialise : adserving / e-publicité (SEM, SEO, affiliation, …), emailing (technique de routage, délivrabilité, compréhension du paramétrage…),
     site web / mobile (conception / user expérience, contraintes liées aux langages HTML/Flash…), etc.",
   long_description: "L’équivalent d’un directeur du développement, d’un responsable marketing ou d’un directeur commercial ? Pas tout à fait. « C’est une fonction bien plus large, qu’on retrouve désormais dans de très nombreuses entreprises du Web et start-up, mais aussi dans des sociétés plus traditionnelles, explique Olivier Fécherolles,
@@ -193,6 +193,15 @@ COMEDIEN = Job.new(
 )
 COMEDIEN.remote_job_photo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567254658/avel-chuklanov-Hn3S90f6aak-unsplash_v6vh7g.jpg"
 COMEDIEN.save!
+
+DATA_SCIENTIST = Job.new(
+  title: "Data Scientist",
+  short_description: "Spécialiste de la science des données.",
+  long_description: "Le Data scientist est un spécialiste de la science des données. Il analyse les datas (concernant les clients, les prospects, les employés, etc.) que l’entreprise récupère par différents canaux et la restitue sous forme de prospective, de conseils, d’améliorations du produit, du service, de la formation en interne, de l’efficacité de l’entreprise, de sa performance. Il part généralement d’une problématique et définit les données dont l’entreprise aurait besoin pour la résoudre.",
+  field: "IT"
+)
+DATA_SCIENTIST.remote_job_photo_url = "https://res.cloudinary.com/isep/image/upload/v1567495623/datascientist_klyxa4.png"
+DATA_SCIENTIST.save!
 
 
 
