@@ -9,8 +9,8 @@ initUpdateNavbarOnScroll();
 import { initSelect2 } from '../plugins/init_select2';
 initSelect2();
 
-import { dashboard_animation } from '../components/dashboard';
-dashboard_animation();
+import { dashboardTabs } from '../components/dashboard';
+dashboardTabs();
 
 import { jobShowTabs } from '../components/job_show_tabs';
 jobShowTabs();
