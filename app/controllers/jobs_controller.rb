@@ -2,8 +2,7 @@ class JobsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
   def index
     @user = current_user
-    @jobs = Job.all.sort_by { |job| job.skills.count { |skill| @user.skills.include? skill } }.reverse!
-
+    @jobs = Job.all
     # @green_skills = []
     # @green_skills << @user.skills[0]
     # @green_skills << @user.skills[1]
