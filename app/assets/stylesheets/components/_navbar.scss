@@ -7,6 +7,8 @@
   width: 100%;
   z-index:1000;
   height: 60px;
+  padding-left: 38px;
+  padding-right: 39px;
 }
 
 .navbar-equal-path .navbar-collapse {
@@ -19,7 +21,7 @@
 .dropdown-toggle{
   color: rgb(255, 172, 4);
     font-weight: 400;
-
+  padding-right: 20px;
 }
 .dropdown-toggle:hover {
   color: grey;
@@ -27,8 +29,10 @@
 .link {
   color: rgb(255, 172, 4);
   font-weight: 400;
-
+  padding-right: 7px;
 }
+
+
 
 .link:hover {
   color: grey;
@@ -39,3 +43,4 @@
   height: auto;
   width: 150px;
 }
+
