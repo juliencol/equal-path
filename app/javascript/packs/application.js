@@ -20,3 +20,6 @@ global.Bookmark = Bookmark;
 
 import { loadDynamicBannerText } from '../components/banner';
 loadDynamicBannerText();
+
+import { skill } from '../components/skills';
+global.skill = skill;
