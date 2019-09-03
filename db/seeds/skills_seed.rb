@@ -229,7 +229,7 @@ VENTE = Skill.create(
   name: "Vente"
   )
 NEGOCIATION = Skill.create(
-  name: "Negaciation"
+  name: "Negociation"
   )
 
 MATHEMATIQUES = Skill.create(

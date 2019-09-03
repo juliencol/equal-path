@@ -129,19 +129,9 @@ PRODUCT_MANAGER = Job.new(
     excellente connaissance du marché, de la concurrence et des ventes réalisées au cours des saisons précédentes, mais c’est aussi être capable d’anticiper en appréhendant les habitudes de consommation des clients.
     Concrètement, le Chef de produit connaît précisément les besoins et les envies de notre chère ménagère de moins de
     50 ans.
-     Il définit la cible, évalue les conditions de distribution (quantités, prix, délais, etc.). Il est à même de donner
-     un brief pour créer un slogan publicitaire accrocheur (voire, le fait lui-même), et sait négocier un emplacement pour la mise
-     en rayon de son produit.
-     Il est également responsable de la gestion des budgets, des prévisions et des estimations, ainsi que du suivi des ventes et de leur progression.
     – en aval pour la commercialisation du produit : il coordonne les actions de promotion et de communication ; ainsi, c’est à lui
     que revient la responsabilité de choisir le moyen le plus adapté pour communiquer autour du produit : campagne d’affichage ou télévisée,
-    promotion sur lieu de vente ou pub on-line, etc.
-    Et ce n’est qu’une fois sa stratégie mise en place que le Chef de produit adapte ses actions en fonction du comportement des consommateurs et
-     de ses concurrents (baisse des prix par exemple).
-    Le Chef de produit joue donc un rôle d’interface entre les différents prestataires (internes et externes) qui entrent en jeu dans la commercialisation
-    d’un produit : équipes de production, fournisseurs, publicitaires, force de vente…
-    Sa performance est évaluée sur les résultats qu’il obtient en fonction des objectifs fixés. Une fois ces résultats obtenus, il est en charge d’émettre des
-    recommandations et des préconisations concernant le suivi des ventes.",
+    promotion sur lieu de vente ou pub on-line, etc.",
   field: "Business"
   )
 PRODUCT_MANAGER.remote_job_photo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567070392/Product-Manager_lcscao.jpg"

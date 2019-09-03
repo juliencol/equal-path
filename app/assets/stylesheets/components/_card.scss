@@ -173,3 +173,21 @@
   }
 }
 
+.border-card {
+  border: 0.5rem;
+  box-shadow: 0 0 0 0.1rem #D6D6D6;
+  border-radius: 1%;
+  margin: 3rem;
+  padding: 2rem;
+}
+
+
+.border-card p {
+  font-size: 13px !important;
+}
+
+.border-card h2 {
+  font-size: 25px !important;
+}
+
+
