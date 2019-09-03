@@ -19,6 +19,10 @@ class JobsController < ApplicationController
   def show
     @user = current_user
     @job = Job.find(params[:id])
+    @userjobs = UserJob.where('job_id = ?', @job)
+    @mentors = @userjobs.map do |u|
+      User.find(u.user_id)
+    end
   end
 
   def bookmark_job
