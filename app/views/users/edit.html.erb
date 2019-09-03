@@ -1,0 +1,12 @@
+<div class="main-container">
+    <h1 class="text-center">Sélectionner de nouvelles compétences</h1>
+    <div class="mt-5">
+      <% @skills.each do |skill| %>
+        <button class="btn btn-outline-success m-2" data-toggle="modal" data-target="#skill-modal-<%= skill.id %>">
+          <%= skill.name %>
+        </button>
+      <% end %>
+    </div>
+  </div>
+  <p class="text-center"><%= link_to "Retour au profil", user_path, class: "btn-prk" %></p>
+</div>
