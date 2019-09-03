@@ -1,6 +1,6 @@
 <section class="search">
   <div class="search-container">
-    <h2>Hello Jacques 👋 </h2>
+    <h2>Hello Jacques-Martin 👋 </h2>
     <form action="/jobs" method="get" novalidate="novalidate">
       <input type="text" id="keyword" name="query" placeholder=" Recherchez ici ✍️ ">
       <select class="select2-skill" name="skill" multiple>
@@ -23,10 +23,6 @@
   </div>
 </section>
 
-
-
-
-
   <div class="cards-container">
     <div class="card-prod ">
       <% @jobs.each do |job| %>
@@ -36,37 +32,47 @@
               <h2><%= job.title %> (<%= job.field %>)</h2>
               <h5 class="mb-3"><%= job.short_description %></h5>
               <div class="d-flex flex-column">
-                <p class="d-flex mb-1">Quelques compétences requises:</p>
                 <% if job.skills == [] %>
                   <p class="d-flex mb-1">Aucune compétence requise</p>
                 <% else %>
                     <div class="d-flex flex-wrap mt-1">
-                      <% job.skills.each do |skill| %>
-                        <% if @user.skills.include? skill %>
-                          <div class="text-success">
-                            <h5><%= skill.name.capitalize%> &nbsp;</h5>
-                          </div>
-                        <% end  %>
-                        <% if @user.skills.exclude? skill %>
-                          <div class="text-warning">
-                            <h5> <%= skill.name.capitalize%> &nbsp;</h5>
-                          </div>
+                      <% skills = [] %>
+                         <% job.skills.each do |skill| %>
+                           <% if @user.skills.include? skill %>
+                              <% skills << skill.name %>
+                           <% end  %>
+                         <% end %>
+                         <%  if skills.count == 0 %>
+                            <p> Vous avez encore tout à apprendre ! </p>
+                            <% job.skills.each do |skill| %>
+                              <% if @user.skills.include? skill %>
+                                <div class="text-success">
+                                  <h5> ✅ <%= skill.name.capitalize%> &nbsp;</h5>
+                                  </div>
+                              <% end  %>
+                            <% if @user.skills.exclude? skill %>
+                                <div class="text-warning">
+                                  <h5> ❌ <%= skill.name.capitalize%> &nbsp;</h5>
+                                </div>
+                             <% end %>
+                             <% end %>
+                         <% else  %>
+                           Vous avez déja <%= (skills.count.to_f / job.skills.count.to_f * 100).round %> % des compétences pour atteindre le job de vos rêves !
+                            <% job.skills.each do |skill| %>
+                              <% if @user.skills.include? skill %>
+                                <div class="text-success">
+                                  <h5> ✅ <%= skill.name.capitalize%> &nbsp;</h5>
+                                  </div>
+                              <% end  %>
+                            <% if @user.skills.exclude? skill %>
+                                <div class="text-warning">
+                                  <h5> ❌ <%= skill.name.capitalize%> &nbsp;</h5>
+                                </div>
+                             <% end %>
+                            <% end %>
                         <% end %>
-                      <% end %>
                     </div>
                 <% end %>
-                <% skills = [] %>
-                 <% job.skills.each do |skill| %>
-                   <% if @user.skills.include? skill %>
-                      <% skills << skill.name %>
-                   <% end  %>
-                 <% end %>
-                 <% if skills.count == 1 %>
-                 <p class="d-flex mt-3" > Vous avez &nbsp;<strong><%= skills.count %> </strong>&nbsp; compétence sur <%= job.skills.count%> </p>
-                 <% elsif skills.count == 0 %>
-                 <% else %>
-                 <p class="d-flex mt-3" > Vous avez &nbsp;<strong><%= skills.count %></strong> &nbsp; compétences sur <%= job.skills.count%> </p>
-                 <% end %>
               </div>
             </div>
           <div>

@@ -129,19 +129,9 @@ PRODUCT_MANAGER = Job.new(
     excellente connaissance du marché, de la concurrence et des ventes réalisées au cours des saisons précédentes, mais c’est aussi être capable d’anticiper en appréhendant les habitudes de consommation des clients.
     Concrètement, le Chef de produit connaît précisément les besoins et les envies de notre chère ménagère de moins de
     50 ans.
-     Il définit la cible, évalue les conditions de distribution (quantités, prix, délais, etc.). Il est à même de donner
-     un brief pour créer un slogan publicitaire accrocheur (voire, le fait lui-même), et sait négocier un emplacement pour la mise
-     en rayon de son produit.
-     Il est également responsable de la gestion des budgets, des prévisions et des estimations, ainsi que du suivi des ventes et de leur progression.
     – en aval pour la commercialisation du produit : il coordonne les actions de promotion et de communication ; ainsi, c’est à lui
     que revient la responsabilité de choisir le moyen le plus adapté pour communiquer autour du produit : campagne d’affichage ou télévisée,
-    promotion sur lieu de vente ou pub on-line, etc.
-    Et ce n’est qu’une fois sa stratégie mise en place que le Chef de produit adapte ses actions en fonction du comportement des consommateurs et
-     de ses concurrents (baisse des prix par exemple).
-    Le Chef de produit joue donc un rôle d’interface entre les différents prestataires (internes et externes) qui entrent en jeu dans la commercialisation
-    d’un produit : équipes de production, fournisseurs, publicitaires, force de vente…
-    Sa performance est évaluée sur les résultats qu’il obtient en fonction des objectifs fixés. Une fois ces résultats obtenus, il est en charge d’émettre des
-    recommandations et des préconisations concernant le suivi des ventes.",
+    promotion sur lieu de vente ou pub on-line, etc.",
   field: "Business"
   )
 PRODUCT_MANAGER.remote_job_photo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567070392/Product-Manager_lcscao.jpg"
@@ -149,8 +139,8 @@ PRODUCT_MANAGER.save!
 
 
 BUSINESS_DEV = Job.new(
-  title: "Développeur d'affaires",
-  short_description: "Le développeur d'affaires a pour mission de défricher les marchés et générer des nouveaux leads commerciaux « from scratch »
+  title: "Business Developer",
+  short_description: "Le business developer a pour mission de défricher les marchés et générer des nouveaux leads commerciaux « from scratch »
     (sans portefeuille) ou via de « l’upselling » sur la base d’un nombre limité de comptes. Dans un environnement digital, il doit posséder une bonne culture générale sur les aspects techniques des produits qu’il commercialise : adserving / e-publicité (SEM, SEO, affiliation, …), emailing (technique de routage, délivrabilité, compréhension du paramétrage…),
     site web / mobile (conception / user expérience, contraintes liées aux langages HTML/Flash…), etc.",
   long_description: "L’équivalent d’un directeur du développement, d’un responsable marketing ou d’un directeur commercial ? Pas tout à fait. « C’est une fonction bien plus large, qu’on retrouve désormais dans de très nombreuses entreprises du Web et start-up, mais aussi dans des sociétés plus traditionnelles, explique Olivier Fécherolles,
@@ -194,6 +184,35 @@ COMEDIEN = Job.new(
 COMEDIEN.remote_job_photo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567254658/avel-chuklanov-Hn3S90f6aak-unsplash_v6vh7g.jpg"
 COMEDIEN.save!
 
+DATA_SCIENTIST = Job.new(
+  title: "Data Scientist",
+  short_description: "Spécialiste de la science des données.",
+  long_description: "Le Data scientist est un spécialiste de la science des données. Il analyse les datas (concernant les clients, les prospects, les employés, etc.) que l’entreprise récupère par différents canaux et la restitue sous forme de prospective, de conseils, d’améliorations du produit, du service, de la formation en interne, de l’efficacité de l’entreprise, de sa performance. Il part généralement d’une problématique et définit les données dont l’entreprise aurait besoin pour la résoudre.",
+  field: "IT"
+)
+DATA_SCIENTIST.remote_job_photo_url = "https://res.cloudinary.com/isep/image/upload/v1567495623/datascientist_klyxa4.png"
+DATA_SCIENTIST.save!
+
+
+RESSOURCES_HUMAINES = Job.new(
+  title: "Ressources Humaines",
+  short_description: "Au cœur de l’organisation, il y a le Capital Humain. Les ressources humaines ont pour objectif d’apporter à l’entreprise le personnel nécessaire à son bon fonctionnement.",
+  long_description: "La Gestion des ressources humaines s’emploie donc au quotidien dans l’entreprise sur 4 grands champs d’action tels que Le recrutement des salariés Afin de faire concorder les besoins en compétences dans l’entreprise avec les talents individuels, les ressources humaines doivent parfaitement cibler leurs besoins présents mais aussi les facilités qu’aura chaque personnel recruté à s’adapter aux besoins futurs de l’entreprise,
+  La rémunération du personnel la GRH englobe tant le service paie que la motivation par le salaire. Il doit être le juste équilibre entre le coût engendré pour l’entreprise et la motivation nécessaire au salarié et L’amélioration des conditions de travail La fonction Ressources Humaines va au delà de la simple prévention de l’absentéisme due aux accidents et maladies pour améliorer la productivité et la performance de l’entreprise en prenant en compte la psychologie, de par la prise en compte de la motivation et du stress de son Capital Humain.",
+  field: "Business"
+)
+RESSOURCES_HUMAINES.remote_job_photo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567500361/directeur-ressources-humaines_ittl7g.jpg"
+RESSOURCES_HUMAINES.save!
+
+
+WEB_DESIGNER = Job.new(
+  title: "Web Designer",
+  short_description: "Au cœur de l’organisation, il y a le Capital Humain. Les ressources humaines ont pour objectif d’apporter à l’entreprise le personnel nécessaire à son bon fonctionnement.",
+  long_description: "  Le Web Designer choisit la place des photos, la taille des caractères et les couleurs qui rendront la consultation agréable pour l'utilisateur. Il crée aussi les pictogrammes qui facilitent la lecture et la navigation dans le site. Dans certains cas, il sera amené à établir la charte graphique et à créer l'identité visuelle du site. C'est un exercice délicat car il faut respecter à la fois la demande du client, les impératifs de marketing et de communication, et ceux du public visé... De plus, Internet comporte des contraintes spécifiques à prendre en compte : par exemple, les temps de téléchargement trop lents qui peuvent décourager les internautes",
+  field: "Art"
+)
+WEB_DESIGNER.remote_job_photo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567500361/webdesigner-portage-salarial_vygdk4.jpg"
+WEB_DESIGNER.save!
 
 
 

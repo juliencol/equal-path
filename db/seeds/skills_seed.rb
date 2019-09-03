@@ -229,8 +229,85 @@ VENTE = Skill.create(
   name: "Vente"
   )
 NEGOCIATION = Skill.create(
-  name: "Negaciation"
+  name: "Negociation"
+  )
+
+MATHEMATIQUES = Skill.create(
+  name: "Mathématiques"
+)
+
+PROJECT_MANAGEMENT = Skill.create(
+  name: "Project Management"
+)
+MARKETING = Skill.create(
+  name: "Marketing"
+)
+
+SEO = Skill.create(
+  name: "SEO"
+)
+
+SEA = Skill.create(
+  name: "SEA"
+)
+
+INBOUND_MARKETING = Skill.create(
+  name: "Inbound Marketing"
+)
+
+OUTBOUND_MARKETING = Skill.create(
+  name: "Outbound Marketing"
+)
+
+FINANCE = Skill.create(
+  name: "Finance"
+  )
+
+RELATION_CLIENT = Skill.create(
+  name: "Relation Client"
+)
+
+SALESFORCE = Skill.create(
+  name: "Salesforce logiciel"
+)
+
+BIG_DATA = Skill.create(
+  name: "Big Data"
+)
+
+STATISTIQUE = Skill.create(
+  name: "STATISTIQUE"
+)
+
+MATLAB = Skill.create(
+  name: "Matlab"
+)
+
+SAAS = Skill.create(
+  name: "SaaS"
+)
+
+R = Skill.create(
+  name: "R"
+)
+
+AWS = Skill.create(
+  name: "Amazon Web Service"
   )
 
 
+PHOTOSHOP = Skill.create(
+  name: "Photoshop"
+  )
 
+ ILLUSTRATOR = Skill.create(
+  name: "Illustrator"
+  )
+
+ WORDPRESS = Skill.create(
+  name: "WordPress"
+  )
+
+MEDECINE = Skill.create(
+  name: "Base de médecine"
+  )

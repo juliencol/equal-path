@@ -17,3 +17,6 @@ jobShowTabs();
 
 import { Bookmark } from '../components/bookmark';
 global.Bookmark = Bookmark;
+
+import { loadDynamicBannerText } from '../components/banner';
+loadDynamicBannerText();

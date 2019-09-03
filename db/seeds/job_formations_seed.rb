@@ -9,6 +9,10 @@ JobFormation.create!(job: DEVELOPPEUR, formation: EPITA)
 JobFormation.create!(job: DEVELOPPEUR, formation: ECOLE_42)
 JobFormation.create!(job: DEVELOPPEUR, formation: ISEP)
 
+JobFormation.create!(job: DATA_SCIENTIST, formation: EPITA)
+JobFormation.create!(job: DATA_SCIENTIST, formation: ECOLE_42)
+JobFormation.create!(job: DATA_SCIENTIST, formation: ISEP)
+
 JobFormation.create!(job: EXPERT_SECURITE, formation: LE_WAGON)
 JobFormation.create!(job: EXPERT_SECURITE, formation: EPITA)
 JobFormation.create!(job: EXPERT_SECURITE, formation: ECOLE_42)

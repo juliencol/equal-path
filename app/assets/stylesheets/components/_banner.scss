@@ -16,12 +16,21 @@
   background-size: cover;
   background-position: center;
   padding: 130px 0 70px 0;
+  position: sticky;
+  height: 100vh;
+  top: 0;
 }
 
 .banner-show-user h1 {
-  margin: 0;
+  margin-top: 50%;
+  margin-right: 20px;
+  text-align: right;
   color: white;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   font-size: 49px;
   font-weight: bold;
+}
+
+.typed-cursor {
+    display:none!important
 }
