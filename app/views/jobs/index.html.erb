@@ -28,69 +28,47 @@
       <% @jobs.each do |job| %>
         <div class="card-product" data-aos="flip-left">
           <img src=<%= job.job_photo %> />
-            <div class="card-product-infos">
-              <h2><%= job.title %> (<%= job.field %>)</h2>
-              <h5 class="mb-1"><%= job.short_description %></h5>
-              <div class="d-flex flex-column">
-                <% if job.skills == [] %>
-                  <h5 class="d-flex mb-1">Aucune compétence requise</h5>
-                <% else %>
-                    <div class="d-flex flex-wrap mt-1">
-                      <% skills = [] %>
-                         <% job.skills.each do |skill| %>
-                           <% if @user.skills.include? skill %>
-                              <% skills << skill.name %>
-                           <% end  %>
-                         <% end %>
-                         <%  if skills.count == 0 %>
-                            <h5> Vous avez encore tout à apprendre ! </h5>
-                            <% job.skills.each do |skill| %>
-                              <% if @user.skills.include? skill %>
-                                <div class="text-success">
-                                  <h5> ✅ <%= skill.name.capitalize%> &nbsp;</h5>
-                                  </div>
-                              <% end  %>
-                            <% if @user.skills.exclude? skill %>
-                                <div class="text-warning">
-                                  <h5> ❌ <%= skill.name.capitalize%> &nbsp;</h5>
-                                </div>
-                             <% end %>
-                             <% end %>
-                         <% else  %>
-                          <h5>Vous avez déja <%= (skills.count.to_f / job.skills.count.to_f * 100).round %> %   des compétences pour atteindre le job  de vos rêves !
-                          </h5>
-                            <% job.skills.each do |skill| %>
-                              <% if @user.skills.include? skill %>
-                                <div class="text-success">
-                                  <h5> ✅ <%= skill.name.capitalize%> &nbsp;</h5>
-                                  </div>
-                              <% end  %>
-                              <% if @user.skills.exclude? skill %>
-                                <div class="text-warning">
-                                  <h5> ❌ <%= skill.name.capitalize%> &nbsp;</h5>
-                                </div>
-                              <% end %>
-                            <% end %>
-                        <% end %>
-                    </div>
-                <% end %>
-              </div>
-            </div>
-          <div>
-            <% if job.bookmarked %>
-              <%= link_to job_bookmark_job_path(job), method: :post, remote: true do  %>
-                <i class="fas fa-star stars" id="star<%= job.id %>"></i>
-              <% end %>
+          <div class="card-product-infos">
+            <h2><%= job.title %> (<%= job.field %>)</h2>
+            <h5><%= job.short_description %></h5>
+              <% job_skills_user = job.skills.select{|skill| @user.skills.include? skill}.first(2) %>
+            <% if job_skills_user.count == 0 %>
+              <h5> <strong> Vous n'avez pas les compétences nécessaires pour ce job !</strong> </h5>
             <% else %>
-              <%= link_to job_bookmark_job_path(job), method: :post, remote: true  do %>
-                <i class="far fa-star stars" id="star<%= job.id %>"></i>
-              <% end %>
-            <% end %>
+              <h5><strong>Vous avez déja <%= (job_skills_user.count.to_f / job.skills.count.to_f * 100).round %> % des compétences pour atteindre le job de vos rêves ! </strong> Voici quelques exemples: </h5>
+              <div class="job-skills">
+                <div class="job-skills-user">
+                  <ul>
+                    <% job_skills_user.each do |user_skill| %>
+                      <li>✅ <%= user_skill.name.capitalize%></li>
+                    <% end %>
+                  </ul>
+                </div>
+                <div class="job-skills-not-user">
+                  <% job_skills_not_user = job.skills.select{|skill| @user.skills.exclude? skill}.first(2) %>
+                  <ul>
+                    <% job_skills_not_user.each do |user_not_skill| %>
+                      <li>❌ <%= user_not_skill.name.capitalize%></li>
+                    <% end %>
+                  </ul>
+                </div>
+              </div>
+            <% end  %>
           </div>
-             <%= link_to "", job_path(job), class: "transparent-link" %>
+
+          <% if job.bookmarked %>
+            <%= link_to job_bookmark_job_path(job), method: :post, remote: true do  %>
+              <i class="fas fa-star stars" id="star<%= job.id %>"></i>
+            <% end %>
+          <% else %>
+            <%= link_to job_bookmark_job_path(job), method: :post, remote: true  do %>
+              <i class="far fa-star stars" id="star<%= job.id %>"></i>
+            <% end %>
+          <% end %>
+          <%= link_to "", job_path(job), class: "transparent-link" %>
+        <i class="fas fa-ellipsis-h" id="three-dot"></i>
         </div>
       <% end  %>
     </div>
   </div>
-</div>
 
