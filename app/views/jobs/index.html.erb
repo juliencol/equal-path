@@ -30,10 +30,10 @@
           <img src=<%= job.job_photo %> />
             <div class="card-product-infos">
               <h2><%= job.title %> (<%= job.field %>)</h2>
-              <h5 class="mb-3"><%= job.short_description %></h5>
+              <h5 class="mb-1"><%= job.short_description %></h5>
               <div class="d-flex flex-column">
                 <% if job.skills == [] %>
-                  <p class="d-flex mb-1">Aucune compétence requise</p>
+                  <h5 class="d-flex mb-1">Aucune compétence requise</h5>
                 <% else %>
                     <div class="d-flex flex-wrap mt-1">
                       <% skills = [] %>
@@ -43,7 +43,7 @@
                            <% end  %>
                          <% end %>
                          <%  if skills.count == 0 %>
-                            <p> Vous avez encore tout à apprendre ! </p>
+                            <h5> Vous avez encore tout à apprendre ! </h5>
                             <% job.skills.each do |skill| %>
                               <% if @user.skills.include? skill %>
                                 <div class="text-success">
@@ -57,18 +57,19 @@
                              <% end %>
                              <% end %>
                          <% else  %>
-                           Vous avez déja <%= (skills.count.to_f / job.skills.count.to_f * 100).round %> % des compétences pour atteindre le job de vos rêves !
+                          <h5>Vous avez déja <%= (skills.count.to_f / job.skills.count.to_f * 100).round %> %   des compétences pour atteindre le job  de vos rêves !
+                          </h5>
                             <% job.skills.each do |skill| %>
                               <% if @user.skills.include? skill %>
                                 <div class="text-success">
                                   <h5> ✅ <%= skill.name.capitalize%> &nbsp;</h5>
                                   </div>
                               <% end  %>
-                            <% if @user.skills.exclude? skill %>
+                              <% if @user.skills.exclude? skill %>
                                 <div class="text-warning">
                                   <h5> ❌ <%= skill.name.capitalize%> &nbsp;</h5>
                                 </div>
-                             <% end %>
+                              <% end %>
                             <% end %>
                         <% end %>
                     </div>

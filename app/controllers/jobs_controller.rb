@@ -4,16 +4,29 @@ class JobsController < ApplicationController
     @user = current_user
     @jobs = Job.all.sort_by { |job| job.skills.count { |skill| @user.skills.include? skill } }.reverse!
 
+    # @green_skills = []
+    # @green_skills << @user.skills[0]
+    # @green_skills << @user.skills[1]
+    # @green_skills << @user.skills[2]
+    # @yellow_skills = []
+
+    # while @yellow_skills != @user_skills && @yellow_skills.size <= 3
+    #   @jobs.each do |job|
+    #     job.skills.each do |skill|
+    #       @yellow_skills << skill
+    #     end
+    #   end
+    # end
+
     if params[:query].present?
       @jobs = @jobs.global_search(params[:query])
     end
     if params[:skill].present?
       @jobs = @jobs.global_search(params[:skill])
     end
-     if params[:field].present?
+      if params[:field].present?
       @jobs = @jobs.global_search(params[:field])
     end
-  @user = current_user
   end
 
   def show
