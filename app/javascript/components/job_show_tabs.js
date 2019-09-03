@@ -24,6 +24,3 @@ const jobShowTabs = () => {
 };
 
 export { jobShowTabs };
-
-
-
