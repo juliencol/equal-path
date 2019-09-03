@@ -43,3 +43,8 @@ box-shadow: 0 0 15px rgba(110, 121, 110, 0.5)
 .search-container h2 {
  margin-top: -54px;
 }
+
+:focus {
+  outline: none!important;
+
+}
