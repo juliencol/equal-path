@@ -12,9 +12,14 @@
   width: 50%;
 }
 
-#logo-container {
+logo-container {
   width: 100%;
 }
 */
+
+#logo-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
 
 

@@ -1,12 +1,16 @@
 <div class="main-container">
-    <h1 class="text-center">Sélectionner de nouvelles compétences</h1>
-    <div class="mt-5">
-      <% @skills.each do |skill| %>
-        <button class="btn btn-outline-success m-2" data-toggle="modal" data-target="#skill-modal-<%= skill.id %>">
-          <%= skill.name %>
-        </button>
+  <h1 class="text-center">Indiquez vos compétences</h1>
+  <div class="mt-5 mb-5">
+    <% current_user.skills.each do |skill| %>
+      <%= link_to skill.name, skill_update_skill_path(skill), method: :post, remote: true, class: "btn btn-outline-success m-2 skill-#{skill.id}", id: 'green-button' %>
+    <% end %>
+    <% @skills.each do |skill| %>
+      <% unless current_user.skills.include? skill %>
+        <%= link_to skill.name, skill_update_skill_path(skill), method: :post, remote: true, class: "btn btn-outline-secondary m-2 skill-#{skill.id}", id: 'grey-button' %>
       <% end %>
-    </div>
+    <% end %>
   </div>
-  <p class="text-center"><%= link_to "Retour au profil", user_path, class: "btn-prk" %></p>
+  <div class="d-flex justify-content-center">
+    <p class="text-center mt-5"><%= link_to "Découvrir les métiers", jobs_path, class: "btn-prk" %></p>
+  </div>
 </div>

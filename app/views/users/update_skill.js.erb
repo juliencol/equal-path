@@ -1,0 +1,16 @@
+<% if @skill_destroyed_id %>
+  skillId = '<%= @skill_destroyed_id %>'
+  // console.log('<%= @skill_destroyed_id %>')
+  skill = document.querySelector(`.skill-${skillId}`)
+  skill.classList.add("btn-outline-secondary")
+  skill.classList.remove("btn-outline-success")
+<% end %>
+
+<% if @skill_created_id %>
+  skillId = '<%= @skill_created_id %>'
+  // console.log(`.skill-${skillId}`)
+  skill = document.querySelector(`.skill-${skillId}`)
+  // console.log(skill)
+  skill.classList.remove("btn-outline-secondary")
+  skill.classList.add("btn-outline-success")
+<% end %>

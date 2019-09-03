@@ -132,7 +132,7 @@ PRODUCT_MANAGER = Job.new(
     – en aval pour la commercialisation du produit : il coordonne les actions de promotion et de communication ; ainsi, c’est à lui
     que revient la responsabilité de choisir le moyen le plus adapté pour communiquer autour du produit : campagne d’affichage ou télévisée,
     promotion sur lieu de vente ou pub on-line, etc.",
-  field: "Business"
+  field: "IT"
   )
 PRODUCT_MANAGER.remote_job_photo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567070392/Product-Manager_lcscao.jpg"
 PRODUCT_MANAGER.save!
