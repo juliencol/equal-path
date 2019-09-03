@@ -17,11 +17,16 @@ class UsersController < ApplicationController
   def update_skill
     @skill = Skill.find(params[:skill_id])
     if current_user.skills.include? @skill
+      @skill_destroyed_id = @skill.id
       current_user.user_skills.find_by(skill: @skill).destroy
     else
-      UserSkill.create(user: current_user, skill: @skill)
+      s = UserSkill.create(user: current_user, skill: @skill)
+      @skill_created_id = @skill.id
     end
-    redirect_back(fallback_location: root_path)
+    respond_to do |format|
+       format.html { redirect_back(fallback_location: root_path) }
+       format.js  # <-- will render `app/views/reviews/create.js.erb`
+     end
   end
 end
 
