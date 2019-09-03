@@ -201,7 +201,7 @@ RESSOURCES_HUMAINES = Job.new(
   La rémunération du personnel la GRH englobe tant le service paie que la motivation par le salaire. Il doit être le juste équilibre entre le coût engendré pour l’entreprise et la motivation nécessaire au salarié et L’amélioration des conditions de travail La fonction Ressources Humaines va au delà de la simple prévention de l’absentéisme due aux accidents et maladies pour améliorer la productivité et la performance de l’entreprise en prenant en compte la psychologie, de par la prise en compte de la motivation et du stress de son Capital Humain.",
   field: "Business"
 )
-RESSOURCES_HUMAINES.remote_job_photo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567500361/webdesigner-portage-salarial_vygdk4.jpg"
+RESSOURCES_HUMAINES.remote_job_photo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567500361/directeur-ressources-humaines_ittl7g.jpg"
 RESSOURCES_HUMAINES.save!
 
 
@@ -211,7 +211,7 @@ WEB_DESIGNER = Job.new(
   long_description: "  Le Web Designer choisit la place des photos, la taille des caractères et les couleurs qui rendront la consultation agréable pour l'utilisateur. Il crée aussi les pictogrammes qui facilitent la lecture et la navigation dans le site. Dans certains cas, il sera amené à établir la charte graphique et à créer l'identité visuelle du site. C'est un exercice délicat car il faut respecter à la fois la demande du client, les impératifs de marketing et de communication, et ceux du public visé... De plus, Internet comporte des contraintes spécifiques à prendre en compte : par exemple, les temps de téléchargement trop lents qui peuvent décourager les internautes",
   field: "Art"
 )
-WEB_DESIGNER.remote_job_photo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567500361/directeur-ressources-humaines_ittl7g.jpg"
+WEB_DESIGNER.remote_job_photo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567500361/webdesigner-portage-salarial_vygdk4.jpg"
 WEB_DESIGNER.save!
 
 
