@@ -69,7 +69,6 @@ JobSkill.create!(job: PRODUCT_MANAGER, skill: SEO)
 JobSkill.create!(job: PRODUCT_MANAGER, skill: SEA)
 JobSkill.create!(job: PRODUCT_MANAGER, skill: PROJECT_MANAGEMENT)
 JobSkill.create!(job: PRODUCT_MANAGER, skill: RELATION_CLIENT)
-JobSkill.create!(job: PRODUCT_MANAGER, skill: AWS)
 JobSkill.create!(job: PRODUCT_MANAGER, skill: PACK_OFFICE)
 
 

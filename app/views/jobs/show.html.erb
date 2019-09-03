@@ -140,13 +140,22 @@
       </div>
     </div>
 
-    <div id="Mentors" class="d-none tab-content">
-      <div class="border-card">
-      <div class="container mt-5">
-        <h2>Rencontrez des mentors</h2>
-        <p>Disponible très prochainement, nos meilleurs développeurs travaillent dessus...</p>
-      </div>
-    </div>
+
+            <div id="Mentors" class="d-none tab-content">
+              <div class="container mt-5">
+                <h2>Rencontrez des mentors</h2>
+                    <% @mentors.each do |mentor| %>
+                      <div>
+                        <%= mentor.first_name %>
+                        <%= mentor.profile_picture %>
+                        <%= mentor.Company %>
+                        <%= mentor.temoignage %>
+                      </div>
+                    <% end %>
+                <p>Disponible très prochainement, nos meilleurs développeurs travaillent dessus...</p>
+              </div>
+            </div>
+
   </div>
 
    <div class="mt-5 text-center">
