@@ -174,11 +174,12 @@
 }
 
 .border-card {
-  border: 0.5rem;
-  box-shadow: 0 0 0 0.1rem #D6D6D6;
-  border-radius: 1%;
-  margin: 3rem;
-  padding: 2rem;
+    border: 0.5rem;
+    box-shadow: 1px 1px 10px #D6D6D6;
+    border-radius: 1%;
+    margin: 3rem;
+    padding: 2rem;
+    background-color: white;
 }
 
 
@@ -187,7 +188,12 @@
 }
 
 .border-card h2 {
-  font-size: 25px !important;
+  font-size: 21px !important;
+  text-transform: uppercase;
+}
+
+.mt-5, .my-5 {
+    margin-top: 0rem !important;
 }
 
 
