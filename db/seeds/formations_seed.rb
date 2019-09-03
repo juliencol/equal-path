@@ -108,7 +108,7 @@ ICONOCLASS = Formation.new(
   website_url: "https://www.iconoclass.eu",
   description: " Pas besoin de passer par Parcoursup, IconoClass une école privée que tu peux rejoindre dès 18 ans et sans limite d'âge"
   )
-ICONOCLASS.remote_logo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567074414/download_xvwrrz.png"
+ICONOCLASS.remote_logo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567517456/logo_2017_kzuksw.png"
 ICONOCLASS.save!
 
 ESCE = Formation.new(
@@ -173,6 +173,7 @@ ISEP = Formation.new(
 )
 
 ISEP.remote_logo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567157159/logoisepweb400px-1449224112_uey8dm.png"
+ISEP.save!
 
 AVIATION_CIVILE = Formation.new(
   title: "Ecole nationale de l'aviation civile",
@@ -183,7 +184,7 @@ AVIATION_CIVILE = Formation.new(
 )
 
 AVIATION_CIVILE.remote_logo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567253088/logo_enac_cbo5um.png"
-
+AVIATION_CIVILE.save!
 
 COURS_FLORENT = Formation.new(
   title: "Cours Florent - École de formation professionnelle d'acteur",
@@ -194,6 +195,7 @@ COURS_FLORENT = Formation.new(
 )
 
 COURS_FLORENT.remote_logo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567254984/cours_florent_logo_bfrqjr.png"
+COURS_FLORENT.save!
 
 DE = Formation.new(
   title: "UNIVERSITÉ D'ODONTOLOGIE DE BORDEAUX",
@@ -204,8 +206,46 @@ DE = Formation.new(
 )
 
 DE.remote_logo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567254049/logobdx_icvq6i.png"
+DE.save!
 
 
+DIGITAL_CAMPUS = Formation.new(
+  title: "Digital Campus",
+  duration: "3 à 5 ans",
+  location: "45, rue Saint-Augustin 75002 Paris",
+  website_url: "https://www.digital-campus.fr/ecole/paris",
+  description: "Terre d’échange et de création, le numérique est présent à chaque instant de notre vie. Smartphones, tablettes, ordinateurs domestiques, tous nous connectent les uns aux autres et sont autant d’espaces de jeu, d’information et de communication.
+Vous êtes créatif, ingénieux et curieux ? Vous êtes à l’affût des dernières innovations et vous aimeriez participer à leurs développements ? Vous bouillonnez d’idées et avez soif d’entreprendre ?
+Si vous avez répondu oui à toutes ces questions alors vous êtes fait pour Digital Campus, une école du web !
+Digital Campus vous donne les moyens d’accélérer la mise en œuvre de vos projets, qu’ils visent l’entreprenariat ou l’intrepreunariat, et de concrétiser vos ambitions.",
+)
+
+DIGITAL_CAMPUS.remote_logo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567517456/DC-1_iihbpd.png"
+DIGITAL_CAMPUS.save!
+
+HETIC = Formation.new(
+  title: "HETIC",
+  duration: "3 à 5 ans",
+  location: "27 bis rue du Progrès 93100 Montreuil",
+  website_url: "https://www.hetic.net/",
+  description: "TLes membres fondateurs ont imaginé une école novatrice constituée d’un subtil mélange de technique, de management et de design, le tout lié au domaine du numérique afin de donner naissance à des profils pluricompétents. HETIC propose 5 formations : trois Bachelors
+   permettant d'accéder à un niveau BAC+3, une prépa mastère d'un an, deux Mastère permettant d'accéder à un niveau Bac+5, un MBA permettant d'accéder à un niveau BAC+5 et un programme Grande école permettant d'accéder à
+  un niveau BAC+5.",
+)
+
+HETIC.remote_logo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567517457/Logo_HETIC_tw4jj4.png"
+HETIC.save!
+
+PRODUCT_MANAGERS_SCHOOL = Formation.new(
+  title: "Product Manager",
+  duration: "2 à 4 semaines",
+  location: "Chez sois",
+  website_url: "https://product-managers.com/",
+  description: "Concevoir des produits qui répondent aux besoins du marché dans le respect de l’environnement et des hommes",
+)
+
+PRODUCT_MANAGERS_SCHOOL.remote_logo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567517456/logo_2017_kzuksw.png"
+PRODUCT_MANAGERS_SCHOOL.save!
 
 
 

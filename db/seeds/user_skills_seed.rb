@@ -8,12 +8,16 @@ UserSkill.create!(user: JEAN_MICHEL, skill: ANALYTIQUE)
 UserSkill.create!(user: JEAN_MICHEL, skill: LEADERSHIP)
 UserSkill.create!(user: JEAN_MICHEL, skill: ANGLAIS)
 
-UserSkill.create!(user: JACQUES_MARTIN, skill: AUTONOME)
+
 UserSkill.create!(user: JACQUES_MARTIN, skill: ANALYTIQUE)
-UserSkill.create!(user: JACQUES_MARTIN, skill: LEADERSHIP)
 UserSkill.create!(user: JACQUES_MARTIN, skill: ANGLAIS)
 UserSkill.create!(user: JACQUES_MARTIN, skill: EXCEL)
 UserSkill.create!(user: JACQUES_MARTIN, skill: NEGOCIATION)
 UserSkill.create!(user: JACQUES_MARTIN, skill: VENTE)
 UserSkill.create!(user: JACQUES_MARTIN, skill: PACK_OFFICE)
+UserSkill.create!(user: JACQUES_MARTIN, skill: PROJECT_MANAGEMENT)
+UserSkill.create!(user: JACQUES_MARTIN, skill: RELATION_CLIENT)
+UserSkill.create!(user: JACQUES_MARTIN, skill: SALESFORCE)
+
+
 
