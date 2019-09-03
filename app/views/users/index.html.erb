@@ -1,7 +1,5 @@
 <!-- This is the dashboard page -->
 <div class="main-container">
-  <h1 class="text-center">Tableau de bord de <%= current_user.first_name %> <%= current_user.last_name %></h1>
-
   <ul class="list-inline tabs-underlined">
     <li>
       <a class="tab-underlined active" data-target="profile">Profil</a>
@@ -34,7 +32,6 @@
     </div>
     <div class="container">
       <div class="d-flex justify-content-center" data-aos="zoom-in">
-        <%= link_to "Retour au Tableau de bord", users_path, class: "btn-prk text-decoration-none" %>
         <%= link_to "Modifier le profil", edit_user_path(@user), class: "btn-prk text-decoration-none" %>
       </div>
     </div>
