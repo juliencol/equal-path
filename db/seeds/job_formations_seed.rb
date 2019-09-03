@@ -37,6 +37,11 @@ JobFormation.create!(job: BUSINESS_DEV, formation: ICONOCLASS)
 JobFormation.create!(job: PRODUCT_MANAGER, formation: ESCE)
 JobFormation.create!(job: PRODUCT_MANAGER, formation: LE_WAGON)
 JobFormation.create!(job: PRODUCT_MANAGER, formation: ROCKET_SCHOOl)
+JobFormation.create!(job: PRODUCT_MANAGER, formation: OPEN_CLASSROOM)
+JobFormation.create!(job: PRODUCT_MANAGER, formation: LION)
+JobFormation.create!(job: PRODUCT_MANAGER, formation: HETIC)
+JobFormation.create!(job: PRODUCT_MANAGER, formation: DIGITAL_CAMPUS)
+JobFormation.create!(job: PRODUCT_MANAGER, formation: PRODUCT_MANAGERS_SCHOOL)
 
 JobFormation.create!(job: PILOTE_DE_LIGNE, formation: AVIATION_CIVILE)
 
