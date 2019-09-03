@@ -232,5 +232,9 @@ NEGOCIATION = Skill.create(
   name: "Negaciation"
   )
 
+MATHEMATIQUES = Skill.create(
+  name: "Mathématiques"
+)
+
 
 

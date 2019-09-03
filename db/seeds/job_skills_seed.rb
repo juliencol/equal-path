@@ -64,4 +64,11 @@ JobSkill.create!(job: PRODUCT_MANAGER, skill: JAVASCRIPT)
 JobSkill.create!(job: PRODUCT_MANAGER, skill: VENTE)
 JobSkill.create!(job: PRODUCT_MANAGER, skill: NEGOCIATION)
 
+JobSkill.create!(job: DATA_SCIENTIST, skill: MATHEMATIQUES)
+JobSkill.create!(job: DATA_SCIENTIST, skill: PYTHON)
+JobSkill.create!(job: DATA_SCIENTIST, skill: SQL)
+JobSkill.create!(job: DATA_SCIENTIST, skill: RIGUEUR)
+JobSkill.create!(job: DATA_SCIENTIST, skill: ANALYTIQUE)
+JobSkill.create!(job: DATA_SCIENTIST, skill: ANGLAIS)
+
 
