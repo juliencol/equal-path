@@ -5,11 +5,11 @@
 
     <% if @job.bookmarked %>
       <%= link_to job_bookmark_job_path(@job), method: :post, remote: true do %>
-        <i class="fas fa-star" id="star-user-show-two"></i>
+        <i class="fas fa-bookmark" id="star-user-show-two"></i>
       <% end %>
     <% else %>
       <%= link_to job_bookmark_job_path(@job), method: :post, remote: true do %>
-        <i class="far fa-star" id="star-user-show-two"></i>
+        <i class="far fa-bookmark" id="star-user-show-two"></i>
       <% end %>
     <% end %>
   </div>
@@ -103,12 +103,22 @@
         <div id="logo-container" class="container">
           <% @job.formations.each do |formation|%>
             <div class="container d-flex align-items-center" data-toggle="modal" data-target="#school-modal-<%= formation.id %>">
+
               <img id="formation-logo" class= "rounded-logo" src=<%= formation.logo %>>
              <span class="pl-4"> <%= formation.title  %> </span>
             </div>
             <div class="modal fade" id="school-modal-<%= formation.id %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
               <div class="modal-dialog" role="document">
                 <div class="modal-content">
+                  <% if formation.bookmarked %>
+                        <%= link_to job_bookmark_formation_path(@job, formation_id: formation.id), method: :post, remote: true do %>
+                          <i class="fas fa-bookmark star-user-formation" id="star-user-formation-<%= formation.id %>"><strong> Enlever des favoris</strong></i>
+                        <% end %>
+                      <% else %>
+                        <%= link_to job_bookmark_formation_path(@job, formation_id: formation.id), method: :post, remote: true do %>
+                          <i class="far fa-bookmark star-user-formation" id="star-user-formation-<%= formation.id %>"></i>
+                        <% end %>
+                      <% end %>
                   <div class="modal-header">
                     <div id="header-modal-formation">
                       <img class= "rounded-logo" src= <%= formation.logo %>>
@@ -116,6 +126,7 @@
                     </div>
                   </div>
                   <div class="modal-body">
+
                     <p><%= formation.description %></p>
                     <p><strong> Lieux : </strong><%= formation.location%></p>
                     <p><strong> Durée : </strong><%= formation.duration%></p>
@@ -123,15 +134,7 @@
 
 
                     <div class="d-flex justify-content-center" data-aos="zoom-in">
-                      <% if formation.bookmarked %>
-                        <%= link_to job_bookmark_formation_path(@job, formation_id: formation.id), method: :post, remote: true do %>
-                          <i class="fas fa-star star-user-formation" id="star-user-formation-<%= formation.id %>"><strong> Enlever des favoris</strong></i>
-                        <% end %>
-                      <% else %>
-                        <%= link_to job_bookmark_formation_path(@job, formation_id: formation.id), method: :post, remote: true do %>
-                          <i class="far fa-star star-user-formation" id="star-user-formation-<%= formation.id %>"><strong> Ajouter aux favoris</strong></i>
-                        <% end %>
-                      <% end %>
+
                     </div>
                   </div>
                 </div>
@@ -145,6 +148,7 @@
       <%= link_to "Revenir à ma recherche", jobs_path, class: "btn-prk text-decoration-none" %>
     </div>
 </div>
+
   <div id="Mentors" class="d-none tab-content">
     <div class="border-card">
        <div class = "text-center pb-2"> <h2> 🔆 Rencontrez des mentors</h2> </div>
