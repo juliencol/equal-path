@@ -1,7 +1,7 @@
 <div class="main-container">
   <h1 class="text-center">Indiquez vos compétences</h1>
 
-  <div class="mt-5 mb-5 container d-flex flex-wrap">
+  <div class="text-center container d-flex flex-wrap justify-content-center">
     <% current_user.skills.each do |skill| %>
       <%= link_to skill.name, skill_update_skill_path(skill), method: :post, remote: true, class: "btn btn-outline-success m-2 skill-#{skill.id}", id: 'green-button' %>
     <% end %>
