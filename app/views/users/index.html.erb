@@ -16,11 +16,12 @@
     </li>
   </ul>
 
-  <div class="tab-content main-container d-flex flex-column justify-content-center align-items-center" id="profile">
-    <p class="text-center">age : <%= @user.age %></p>
+  <div class="tab-content d-flex flex-column" id="profile">
+    <h3 class=""><%= current_user.first_name %> <%= current_user.last_name %></h3>
+    <p class=""><%= @user.age %> ans</p>
+    <p class="">Compétences acquises :</p>
     <div class="d-flex">
-      <p class="mt-3 text-center">Compétences acquises :</p>
-      <div class="d-flex">
+      <div class="d-flex flex-wrap">
         <% @user.skills.each do |skill| %>
           <div class="d-flex justify-content-around">
             <button class="btn btn-outline-success m-2" data-toggle="modal" data-target="#skill-modal-<%= skill.id %>">
@@ -37,7 +38,7 @@
     </div>
   </div>
 
-  <div id="fav-jobs" class="d-none tab-content container mt-5">
+  <div id="fav-jobs" class="d-none tab-content">
     <% if @jobs == [] %>
       <p> Vous n'avez pas de métiers en favoris </p>
     <% else %>
@@ -75,7 +76,7 @@
     <% end %>
   </div>
 
-  <div id="fav-formations" class="d-none tab-content container mt-5 d-none">
+  <div id="fav-formations" class="d-none tab-content d-none">
     <% @formations.each do |formation| %>
       <div class="card-product">
         <img id="card-formation-img"  src=<%= formation.logo %> />
