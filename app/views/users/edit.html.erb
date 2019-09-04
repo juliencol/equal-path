@@ -1,13 +1,13 @@
 <div class="main-container">
   <h1 class="text-center">Indiquez vos compétences</h1>
 
-  <div class="mt-5 mb-5">
+  <div class="mt-5 mb-5 container d-flex flex-wrap">
     <% current_user.skills.each do |skill| %>
       <%= link_to skill.name, skill_update_skill_path(skill), method: :post, remote: true, class: "btn btn-outline-success m-2 skill-#{skill.id}", id: 'green-button' %>
     <% end %>
     <% @skills.each do |skill| %>
       <% unless current_user.skills.include? skill %>
-        <%= link_to skill.name, skill_update_skill_path(skill), method: :post, remote: true, class: "btn btn-outline-secondary m-2 skill-#{skill.id}", id: 'grey-button' %>
+        <%= link_to skill.name, skill_update_skill_path(skill), method: :post, remote: true, class: "btn btn-outline-warning m-2 skill-#{skill.id}", id: 'grey-button' %>
       <% end %>
     <% end %>
   </div>

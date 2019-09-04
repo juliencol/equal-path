@@ -19,12 +19,12 @@
   <div class="tab-content d-flex flex-column" id="profile">
     <h3 class=""><%= current_user.first_name %> <%= current_user.last_name %></h3>
     <p class=""><%= @user.age %> ans</p>
-    <p class="">Compétences acquises :</p>
+    <p class="">Compétences :</p>
     <div class="d-flex">
       <div class="d-flex flex-wrap">
         <% @user.skills.each do |skill| %>
           <div class="d-flex justify-content-around">
-            <button class="btn btn-outline-success m-2" data-toggle="modal" data-target="#skill-modal-<%= skill.id %>">
+            <button id="green-btn" class="btn btn-outline-success mr-2 mt-2 mb-2" data-toggle="modal" data-target="#skill-modal-<%= skill.id %>">
               <%= skill.name %>
             </button>
           </div>
@@ -34,6 +34,7 @@
     <div class="container">
       <div class="d-flex justify-content-center" data-aos="zoom-in">
         <%= link_to "Modifier le profil", edit_user_path(@user), class: "btn-prk text-decoration-none" %>
+        <%= link_to "Métiers", jobs_path, class: "btn-prk text-decoration-none" %>
       </div>
     </div>
   </div>
@@ -71,22 +72,44 @@
             </div>
             <%= link_to "", job_path(job), class: "transparent-link" %>
         </div>
-        <p><%= link_to 'Enlever des favoris', job_remove_from_fav_path(job), method: :post, data: { confirm: 'Are you sure?' } %></p>
+        <p><%= link_to 'Enlever des favoris', job_remove_job_from_fav_path(job), method: :post, data: { confirm: 'Are you sure?' } %></p>
       <% end %>
     <% end %>
+    <div class="d-flex justify-content-center" data-aos="zoom-in">
+      <%= link_to "Métiers", jobs_path, class: "btn-prk text-decoration-none" %>
+    </div>
   </div>
 
   <div id="fav-formations" class="d-none tab-content d-none">
-    <% @formations.each do |formation| %>
-      <div class="card-product">
-        <img id="card-formation-img"  src=<%= formation.logo %> />
-        <div class="card-product-infos">
-          <h2><%= formation.title %> (<%= formation.field %>)</h2>
-          <p><%= formation.description %></p>
+    <div class="d-flex flex-wrap">
+      <% @formations.each do |formation|%>
+        <div class="m-5" data-toggle="modal" data-target="#school-modal-<%= formation.id %>">
+          <img id="formation-logo" class= "rounded-logo" src=<%= formation.logo %>>
         </div>
-      </div>
-    <% end %>
+        <div class="modal fade" id="school-modal-<%= formation.id %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <div id="header-modal-formation">
+                  <img id="modal-logo-formation" class= "rounded-logo" src= <%= formation.logo %>>
+                  <h3 class="modal-title" id="exampleModalLongTitle" class="text-center"><%= formation.title%></h3>
+                </div>
+              </div>
+              <div class="modal-body">
+                <p><%= formation.description %></p>
+                <p><strong> Lieux : </strong><%= formation.location%></p>
+                <p><strong> Durée : </strong><%= formation.duration%></p>
+                <p> Pour en savoir plus sur cette formation : <a href=" <%=formation.website_url%>" class="tooltip-test" title="LinkSchool" target="_blank"> Le lien </a></p>
+                <p class="text-center mt-5"><%= link_to 'Enlever des favoris', '#' %></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      <%end%>
+    </div>
+    <div class="d-flex justify-content-center" data-aos="zoom-in">
+      <%= link_to "Métiers", jobs_path, class: "btn-prk text-decoration-none" %>
+    </div>
   </div>
 </div>
-
 
