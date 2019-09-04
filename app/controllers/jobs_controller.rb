@@ -3,19 +3,6 @@ class JobsController < ApplicationController
   def index
     @user = current_user
     @jobs = Job.all
-    # @green_skills = []
-    # @green_skills << @user.skills[0]
-    # @green_skills << @user.skills[1]
-    # @green_skills << @user.skills[2]
-    # @yellow_skills = []
-
-    # while @yellow_skills != @user_skills && @yellow_skills.size <= 3
-    #   @jobs.each do |job|
-    #     job.skills.each do |skill|
-    #       @yellow_skills << skill
-    #     end
-    #   end
-    # end
     if params[:query].present?
       @jobs = Job.global_search(params[:query])
     end
