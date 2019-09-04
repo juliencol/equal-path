@@ -1,5 +1,6 @@
 class JobsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
+
   def index
     @user = current_user
     @jobs = Job.all
@@ -46,9 +47,10 @@ class JobsController < ApplicationController
      end
   end
 
-  def remove_from_fav
+  def remove_job_from_fav
     job = Job.find(params[:job_id])
     job.update(bookmarked: false)
     redirect_to users_path
   end
+
 end
