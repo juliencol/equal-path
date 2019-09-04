@@ -49,19 +49,19 @@
               <h2><%= job.title %> (<%= job.field %>)</h2>
               <p><%= job.short_description %></p>
               <div class="d-flex align-items-center">
-                <p><strong>Skills required:</strong></p>
+                <p><strong>Compétences demandées:</strong></p>
                 <% if job.skills == [] %>
                   <p class="ml-3">Aucune compétence requise</p>
                 <% else %>
                   <% job.skills.each do |job_skill| %>
-                    <p class="ml-3 skill-name" data-toggle="modal" data-target=<%="#exampleModal-#{job_skill.id}"%>>
+                    <h5 class="ml-3 skill-name" data-toggle="modal" data-target=<%="#exampleModal-#{job_skill.id}"%>>
                       <%= job_skill.name %>
-                    </p>
+                    </h5>
                     <div class="modal fade skill-modal" id=<%="exampleModal-#{job_skill.id}"%> tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                       <div class="modal-dialog" role="document">
                         <div class="modal-content">
                           <h2 class="modal-title text-center mt-5" id="exampleModalLabel"><%= job_skill.name %></h2>
-                          <p class="m-5"><%= job_skill.description %></p>
+                          <h5 class="m-5"><%= job_skill.description %></h5>
                         </div>
                       </div>
                     </div>
@@ -76,6 +76,7 @@
     <% end %>
   </div>
 
+
   <div id="fav-formations" class="d-none tab-content d-none">
     <% @formations.each do |formation| %>
       <div class="card-product">
@@ -87,6 +88,8 @@
       </div>
     <% end %>
   </div>
+
+</div>
 </div>
 
 
