@@ -95,9 +95,8 @@
     <div id="Formations" class="d-none tab-content">
       <div class="border-card">
       <div class="container d-flex flex-column mt-5">
-        <div class="d-flex align-items-center">
-          <h2 class = "mb-3 d-flex justify-content-center">🎓 Formations recommandées</h2>
-        </div>
+
+         <div class = "text-center pb-2"> <h2>🎓 Formations recommandées</h2></div>
         <div id="logo-container" class="container">
           <% @job.formations.each do |formation|%>
             <div class="container d-flex align-items-center" data-toggle="modal" data-target="#school-modal-<%= formation.id %>">
@@ -139,33 +138,34 @@
         </div>
       </div>
     </div>
+</div>
+  <div id="Mentors" class="d-none tab-content">
+    <div class="border-card">
+       <div class = "text-center pb-2"> <h2> 🔆 Rencontrez des mentors</h2> </div>
+        <% @mentors.each do |mentor| %>
+          <div class="d-flex justify-content-around">
+            <div class= "m-3 p-3 text-center">
+              <div> <%= cl_image_tag mentor.profile_picture, class: "avatar-mentor"%> </div>
+              <p class= "pt-1"> <a href="<%= mentor.Linkedin %>"  target= "_blank" style = "text-decoration: none; color: black"> <strong><%= mentor.first_name %> </strong></a> </br>
+              <%= mentor.Company %> </br>
+               <a href="<%= mentor.Linkedin %>" target= "_blank"><i class="fab fa-linkedin fa-2x"></i> </a> </p>
 
-
-            <div id="Mentors" class="d-none tab-content">
-              <div class="container mt-5">
-                <h2>Rencontrez des mentors</h2>
-                    <% @mentors.each do |mentor| %>
-                      <div>
-                        <%= mentor.first_name %>
-                        <%= mentor.profile_picture %>
-                        <%= mentor.Company %>
-                        <%= mentor.temoignage %>
-                      </div>
-                    <% end %>
-                <p>Disponible très prochainement, nos meilleurs développeurs travaillent dessus...</p>
-              </div>
             </div>
 
+            <div class="pt-2 pb-2">
+              <p> <em>"<%= mentor.temoignage %>" </em></p>
+              <div class = "text-center">
+                <p>  Son témoignage vous plait ? </br>
+                 <i class="far fa-arrow-alt-circle-right"></i> <a href="<%= mentor.Linkedin %>" target= "_blank"> Contatez le sur Linkedin ! </a> </p>
+              </div>
+            </div>
+          </div>
+        <% end %>
+    </div>
+    <div class="mt-5 text-center">
+      <%= link_to "Revenir à ma recherche", jobs_path, class: "btn-prk text-decoration-none" %>
+    </div>
   </div>
-
-   <div class="mt-5 text-center">
-         <%= link_to "Revenir à ma recherche", jobs_path, class: "btn-prk text-decoration-none" %>
-    </div>
-</div>
-
-
-
-    </div>
 
 
 
