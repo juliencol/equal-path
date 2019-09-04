@@ -40,11 +40,11 @@
 
           <% if job.bookmarked %>
             <%= link_to job_bookmark_job_path(job), method: :post, remote: true do  %>
-              <i class="fas fa-star stars" id="star<%= job.id %>"></i>
+              <i class="fas fa-bookmark stars" id="star<%= job.id %>"></i>
             <% end %>
           <% else %>
             <%= link_to job_bookmark_job_path(job), method: :post, remote: true  do %>
-              <i class="far fa-star stars" id="star<%= job.id %>"></i>
+              <i class="far fa-bookmark stars" id="star<%= job.id %>"></i>
             <% end %>
           <% end %>
           <%= link_to "", job_path(job), class: "transparent-link" %>
