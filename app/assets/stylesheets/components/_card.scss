@@ -7,8 +7,8 @@
   grid-gap: 20px;
   justify-content: center;
   margin-top: 50px;
-  margin-left: 4rem;
-  margin-right: 4rem;
+  margin-left: 3rem;
+  margin-right: 3rem;
 }
 
 
@@ -73,7 +73,8 @@
 .card-product .card-product-infos {
   display: flex;
   flex-direction: column;
-  padding: 16px;
+  padding: 16px 16px 13px 16px;
+  margin-bottom: 0;
 }
 
 .skill-name {
@@ -118,18 +119,35 @@
   text-align: left;
   padding-top: 15px;
   padding-left: 2px;
+
   .job-skills-user li {
     font-size: 12px;
-    list-style-type: none;
     color: #00C310;
+    list-style-type: none;
+  }
+  .job-skills-user ul {
+    padding-inline-start: 10px !important;
+  }
+  .job-skills-user-check {
+    flex: 0 0 20%;
+
+  }
+  .job-skills-user {
+    flex: 0 0 40%;
+  }
+  .job-skills-user-red-check {
+    flex: 0 0 20%;
   }
   .job-skills-not-user {
-    flex: 0 0 50%;
+    flex: 0 0 40%;
   }
   .job-skills-not-user li {
     font-size: 12px;
-    list-style-type: none;
     color: #EE0505;
+    list-style-type: none;
+  }
+  .job-skills-not-user ul {
+    padding-inline-start: 10px !important;
   }
 }
 
