@@ -1,9 +1,9 @@
 <section class="search">
   <div class="search-container">
-    <h2>Bienvenue Jacques-Martin 👋 </h2>
+    <h2>Trouver le métier de tes rêves ! </h2>
     <form action="/jobs" method="get" novalidate="novalidate">
-      <input type="text" id="keyword" name="query" placeholder=" Recherchez ici ✍️ ">
-      <select class="select2-skill" name="skill" multiple>
+      <input type="text" id="keyword" name="query" placeholder=" Recherche ici ✍️ ">
+      <select class="select2-skill " name="skill" multiple>
         <% Skill.all.each do |skill| %>
           <option value=<%=skill.name%>>
             <%= skill.name %>
