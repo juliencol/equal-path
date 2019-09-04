@@ -15,5 +15,11 @@ class PagesController < ApplicationController
       @path_one = jobs_path(@user)
     end
 
+    if @user.nil?
+      @path_two = new_user_session_path
+    else
+      @path_two = user_path(@user)
+    end
+
   end
 end
