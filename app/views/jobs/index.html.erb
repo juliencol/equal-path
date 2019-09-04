@@ -29,41 +29,13 @@
         <div class="card-product" data-aos="flip-left">
           <img src=<%= job.job_photo %> />
           <div class="card-product-infos">
-            <h2><%= job.title %> (<%= job.field %>)</h2>
+            <h2><strong>  <%= job.title %> (<%= job.field %>)</strong></h2>
             <h5><%= job.short_description %></h5>
               <% job_skills_user = job.skills.select{|skill| @user.skills.include? skill}.first(3) %>
-            <% if job_skills_user.count == 0 %>
-              <h5> <strong> Vous n'avez pas les compétences nécessaires pour ce job !</strong> </h5>
-            <% else %>
-              <h5><strong>Vous avez déja <%= (job_skills_user.count.to_f / job.skills.count.to_f * 100).round %> % des compétences pour atteindre le job de vos rêves ! </strong> Voici quelques exemples: </h5>
-              <div class="job-skills">
-                <div class="job-skill-user-check">
-                  ✅
-                </div>
-
-                <div class="job-skills-user">
-                  <ul>
-                    <% job_skills_user.each do |user_skill| %>
-                      <li><%= user_skill.name.capitalize%></li>
-                    <% end %>
-                  </ul>
-                </div>
-
-                <div class="job-skill-user-red-check">
-                  ❌
-                </div>
-
-                <div class="job-skills-not-user">
-                  <% job_skills_not_user = job.skills.select{|skill| @user.skills.exclude? skill}.first(3) %>
-                  <ul>
-                    <% job_skills_not_user.each do |user_not_skill| %>
-                      <li> <%= user_not_skill.name.capitalize%></li>
-                    <% end %>
-                  </ul>
-                </div>
-
-              </div>
-            <% end  %>
+              <% skill_ratio = (job_skills_user.count.to_f / job.skills.count.to_f * 100).round %>
+            <div class="progress">
+              <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: <%= skill_ratio %>%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><%= skill_ratio %>%</div>
+            </div>
           </div>
 
           <% if job.bookmarked %>
@@ -76,7 +48,6 @@
             <% end %>
           <% end %>
           <%= link_to "", job_path(job), class: "transparent-link" %>
-        <i class="fas fa-ellipsis-h" id="three-dot"></i>
         </div>
       <% end  %>
     </div>

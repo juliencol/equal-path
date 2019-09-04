@@ -49,15 +49,15 @@
 
 
 .card-product h2 {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: bold;
   margin: 0;
-  text-align: center;
+  text-align: left;
   margin-bottom: 3px;
 }
 
 .card-product h5 {
-  font-size: 13px;
+  font-size: 16px;
   line-height: 1.4;
   opacity: .7;
   margin-bottom: 0;
@@ -66,15 +66,18 @@
   text-align: justify;
   overflow: hidden;
   display: -webkit-box;
-  -webkit-line-clamp: 4;
+  -webkit-line-clamp: 7;
   -webkit-box-orient: vertical;
 }
 
 .card-product .card-product-infos {
   display: flex;
   flex-direction: column;
-  padding: 16px 16px 13px 16px;
+  padding: 30px 16px 13px 16px;
   margin-bottom: 0;
+  height: 280px;
+  margin-bottom: 2px;
+  margin-top: 2px;
 }
 
 .skill-name {
