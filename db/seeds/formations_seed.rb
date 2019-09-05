@@ -4,11 +4,12 @@ Formation.destroy_all
 puts "Creating formations..."
 
 EPITA = Formation.new(
-  title: "EPITA - Ecole pour l'informatique et les techniques avancées",
+  title: "EPITA",
   duration: "3 ans",
   location: "14-16 rue Voltaire 94270 Le Kremlin-Bicètre",
   website_url: "https://www.epita.fr",
-  description: "Le cycle ingénieur en 3 ans de l’école de l’intelligence informatique
+  description: " Ecole pour l'informatique et les techniques avancées -
+  Le cycle ingénieur en 3 ans de l’école de l’intelligence informatique
     EPITA fait suite au cycle préparatoire. Les étudiants acquièrent les
     fondements théoriques de l’informatique en 1re année, puis personnalisent
     leur parcours à travers le choix de Majeures et de Mineures en 2nde année et
