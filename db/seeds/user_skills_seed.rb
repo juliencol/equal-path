@@ -18,6 +18,9 @@ UserSkill.create!(user: JACQUES_MARTIN, skill: PACK_OFFICE)
 UserSkill.create!(user: JACQUES_MARTIN, skill: PROJECT_MANAGEMENT)
 UserSkill.create!(user: JACQUES_MARTIN, skill: RELATION_CLIENT)
 UserSkill.create!(user: JACQUES_MARTIN, skill: SALESFORCE)
-
-
+UserSkill.create!(user: JACQUES_MARTIN, skill: INBOUND_MARKETING)
+UserSkill.create!(user: JACQUES_MARTIN, skill: OUTBOUND_MARKETING)
+UserSkill.create!(user: JACQUES_MARTIN, skill: SEO)
+UserSkill.create!(user: JACQUES_MARTIN, skill: MATHEMATIQUES)
+UserSkill.create!(user: JACQUES_MARTIN, skill: HTML)
 

@@ -94,7 +94,7 @@
             <div class="modal-content">
               <% if formation.bookmarked %>
                 <%= link_to job_bookmark_formation_path(@job, formation_id: formation.id), method: :post, remote: true do %>
-                  <i class="fas fa-bookmark star-user-formation" id="star-user-formation-<%= formation.id %>"><strong> Enlever des favoris</strong></i>
+                  <i class="fas fa-bookmark star-user-formation" id="star-user-formation-<%= formation.id %>"></i>
                 <% end %>
               <% else %>
                 <%= link_to job_bookmark_formation_path(@job, formation_id: formation.id), method: :post, remote: true do %>
