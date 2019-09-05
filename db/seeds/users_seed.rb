@@ -17,10 +17,10 @@ JEAN_MICHEL.remote_profile_picture_url = "https://res.cloudinary.com/dovu27lye/i
 JEAN_MICHEL.save!
 
 JACQUES_MARTIN = User.new(
-  first_name: 'Jacques - Martin',
-  last_name: 'Du Lac',
-  age: 32,
-  email: "jacques@martin.com",
+  first_name: 'Lucas',
+  last_name: 'Martin',
+  age: 22,
+  email: "lucas@martin.com",
   password: "password",
 )
 
@@ -74,9 +74,3 @@ J’aime aussi car c’est un poste stratégique, il faut savoir prendre des dé
 
 JULIEN.remote_profile_picture_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567526500/0-2_wv9mby.jpg"
 JULIEN.save!
-
-
-
-
-
-
