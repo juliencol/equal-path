@@ -27,14 +27,6 @@
       </li>
     </ul>
 
-
-
-
-
-
-
-
-
     <div class="tab-content" id="Fiche">
         <h4 class = "mb-4  mt-2 text-center" style="font-size: 25px">  Quel est le métier de <%= @job.title %> ? </h4>
         <p class="text-justify mb-5 pl-4 pr-4" style="font-size: 17px"><%= @job.long_description %></p>
@@ -91,15 +83,15 @@
                 </div>
             </div>
           </div>
+
  <div id="Formations" class="d-none tab-content">
          <h4 class = "mb-4  mt-2 text-center" style="font-size: 25px"> Les formations pour devenir <%= @job.title %></h4>
           <% @job.formations.each do |formation|%>
             <div  data-toggle="modal" data-target="#school-modal-<%= formation.id %>">
 
-              <img id="formation-logo" class= "rounded-logo" src=<%= formation.logo %>>
-             <span class="pl-4"> <%= formation.title  %> </span>
-            </div>
+
             <!-- MODAL -->
+
             <div class="modal fade" id="school-modal-<%= formation.id %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
               <div class="modal-dialog" role="document">
                 <div class="modal-content">
@@ -114,8 +106,8 @@
                       <% end %>
                   <div class="modal-header">
                     <div id="header-modal-formation">
-                      <img class= "rounded-logo" src= <%= formation.logo %>>
-                      <h3 class="modal-title" id="exampleModalLongTitle" class="text-center"><%= formation.title%></h3>
+                      <img class= "rounded-logo-modal" src= <%= formation.logo %>>
+                      <h3 class="modal-title modal-title-modal" id="exampleModalLongTitle" class="text-center"> <strong> <%= formation.title%> </strong></h3>
                     </div>
                   </div>
                   <div class="modal-body">
@@ -123,9 +115,7 @@
                     <p><%= formation.description %></p>
                     <p><strong> Lieux : </strong><%= formation.location%></p>
                     <p><strong> Durée : </strong><%= formation.duration%></p>
-                    <p> Pour en savoir plus sur cette formation : <a href=" <%=formation.website_url%>" class="tooltip-test" title="LinkSchool" target="_blank"> Le lien </a></p>
-
-
+                    <p> <a href=" <%=formation.website_url%>" class="tooltip-test tooltip-test-prk" title="LinkSchool" target="_blank"> En savoir plus sur cette formation </a></p>
                     <div class="d-flex justify-content-center" data-aos="zoom-in">
 
                     </div>
@@ -133,9 +123,12 @@
                 </div>
               </div>
             </div>
+
             <!-- MODAL -->
+
           <%end%>
       </div>
+
 <div id="Mentors" class="d-none tab-content">
        <h4 class = "mb-4  mt-2 text-center" style="font-size: 25px"> Rencontrez des mentors </h4>
         <% @mentors.each do |mentor| %>
