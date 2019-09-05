@@ -84,82 +84,78 @@
             </div>
           </div>
 
- <div id="Formations" class="d-none tab-content">
-         <h4 class = "mb-4  mt-2 text-center" style="font-size: 25px"> Les formations pour devenir <%= @job.title %></h4>
-          <% @job.formations.each do |formation|%>
-            <div  data-toggle="modal" data-target="#school-modal-<%= formation.id %>">
+    <div id="Formations" class="d-none tab-content">
+      <h4 class = "mb-4  mt-2 text-center" style="font-size: 25px"> Les formations pour devenir <%= @job.title %></h4>
+      <% @job.formations.each do |formation|%>
+        <div class="modal-pointer" data-toggle="modal" data-target="#school-modal-<%= formation.id %>">
+        <img id="formation-logo" class= "rounded-logo" src=<%= formation.logo %>>
+        <span class="pl-4"> <%= formation.title  %> </span>
+        </div>
 
+        <!-- MODAL -->
 
-            <!-- MODAL -->
+        <div class="modal fade" id="school-modal-<%= formation.id %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+        <div class="modal-content">
+        <% if formation.bookmarked %>
+              <%= link_to job_bookmark_formation_path(@job, formation_id: formation.id), method: :post, remote: true do %>
+                <i class="fas fa-bookmark star-user-formation" id="star-user-formation-<%= formation.id %>"><strong> Enlever des favoris</strong></i>
+              <% end %>
+            <% else %>
+              <%= link_to job_bookmark_formation_path(@job, formation_id: formation.id), method: :post, remote: true do %>
+                <i class="far fa-bookmark star-user-formation" id="star-user-formation-<%= formation.id %>"></i>
+              <% end %>
+            <% end %>
+        <div class="modal-header">
+          <div id="header-modal-formation">
+            <img class= "rounded-logo-modal" src= <%= formation.logo %>>
+            <h3 class="modal-title modal-title-modal" id="exampleModalLongTitle" class="text-center"> <strong> <%= formation.title%> </strong></h3>
+          </div>
+        </div>
+        <div class="modal-body">
 
-            <div class="modal fade" id="school-modal-<%= formation.id %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-              <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                  <% if formation.bookmarked %>
-                        <%= link_to job_bookmark_formation_path(@job, formation_id: formation.id), method: :post, remote: true do %>
-                          <i class="fas fa-bookmark star-user-formation" id="star-user-formation-<%= formation.id %>"><strong> Enlever des favoris</strong></i>
-                        <% end %>
-                      <% else %>
-                        <%= link_to job_bookmark_formation_path(@job, formation_id: formation.id), method: :post, remote: true do %>
-                          <i class="far fa-bookmark star-user-formation" id="star-user-formation-<%= formation.id %>"></i>
-                        <% end %>
-                      <% end %>
-                  <div class="modal-header">
-                    <div id="header-modal-formation">
-                      <img class= "rounded-logo-modal" src= <%= formation.logo %>>
-                      <h3 class="modal-title modal-title-modal" id="exampleModalLongTitle" class="text-center"> <strong> <%= formation.title%> </strong></h3>
-                    </div>
-                  </div>
-                  <div class="modal-body">
+          <p><%= formation.description %></p>
+          <p><strong> Lieux : </strong><%= formation.location%></p>
+          <p><strong> Durée : </strong><%= formation.duration%></p>
+          <p> <a href=" <%=formation.website_url%>" class="tooltip-test tooltip-test-prk" title="LinkSchool" target="_blank"> En savoir plus sur cette formation </a></p>
+          <div class="d-flex justify-content-center" data-aos="zoom-in">
 
-                    <p><%= formation.description %></p>
-                    <p><strong> Lieux : </strong><%= formation.location%></p>
-                    <p><strong> Durée : </strong><%= formation.duration%></p>
-                    <p> <a href=" <%=formation.website_url%>" class="tooltip-test tooltip-test-prk" title="LinkSchool" target="_blank"> En savoir plus sur cette formation </a></p>
-                    <div class="d-flex justify-content-center" data-aos="zoom-in">
+          </div>
+        </div>
+        </div>
+        </div>
+        </div>
 
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+        <!-- MODAL -->
 
-            <!-- MODAL -->
+      <%end%>
 
-          <%end%>
-      </div>
+    </div>
 
-<div id="Mentors" class="d-none tab-content">
-       <h4 class = "mb-4  mt-2 text-center" style="font-size: 25px"> Rencontrez des mentors </h4>
-        <% @mentors.each do |mentor| %>
-          <div class="d-flex justify-content-around">
-            <div class= "m-3 p-3 text-center">
-              <div> <%= cl_image_tag mentor.profile_picture, class: "avatar-mentor"%> </div>
-              <p class= "pt-1"> <a href="<%= mentor.Linkedin %>"  target= "_blank" style = "text-decoration: none; color: black"> <strong><%= mentor.first_name %> </strong></a> </br>
+  <div id="Mentors" class="d-none tab-content">
+    <h4 class = "mb-4  mt-2 text-center" style="font-size: 25px"> Rencontrez des mentors </h4>
+    <% @mentors.each do |mentor| %>
+      <div class="d-flex justify-content-around">
+        <div class= "m-3 p-3 text-center">
+          <div> <%= cl_image_tag mentor.profile_picture, class: "avatar-mentor"%> </div>
+            <p class= "pt-1"> <a href="<%= mentor.Linkedin %>"  target= "_blank" style = "text-decoration: none; color: black"> <strong><%= mentor.first_name %> </strong></a> </br>
               <%= mentor.Company %> </br>
-               <a href="<%= mentor.Linkedin %>" target= "_blank"><i class="fab fa-linkedin fa-2x"></i> </a> </p>
-
-              </div>
-
-                    <div class="pt-2 pb-2">
-                      <p> <em>"<%= mentor.temoignage %>" </em></p>
-                      <div class = "text-center">
-                        <p>  Son témoignage vous plait ? </br>
-                         <i class="far fa-arrow-alt-circle-right"></i> <a href="<%= mentor.Linkedin %>" target= "_blank"> Contatez le sur Linkedin ! </a> </p>
-                      </div>
-                    </div>
-              </div>
-        <% end %>
+            <a href="<%= mentor.Linkedin %>" target= "_blank"><i class="fab fa-linkedin fa-2x"></i> </a> </p>
+          </div>
+          <div class="pt-2 pb-2">
+            <p> <em>"<%= mentor.temoignage %>" </em></p>
+          <div class = "text-center">
+            <p>  Son témoignage vous plait ? </br>
+              <i class="far fa-arrow-alt-circle-right"></i> <a href="<%= mentor.Linkedin %>" target= "_blank"> Contatez le sur Linkedin ! </a> </p>
+          </div>
+        </div>
+      </div>
+    <% end %>
   </div>
+
     <div class="mt-5 pt-5 mb-5 pb-5 text-center">
               <%= link_to "Revenir à ma recherche", jobs_path, class: "btn-julien" %>
     </div>
-        </div>
-
-    </div>
-
-  </div>
-
 
 </div>
 
