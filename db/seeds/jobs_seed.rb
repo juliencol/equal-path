@@ -5,7 +5,7 @@ Job.destroy_all
 puts "Creating jobs..."
 
 DEVELOPPEUR = Job.new(
-  title: "Développeur/euse informatique",
+  title: "Développeur informatique",
   short_description: "Expert des langages informatiques, le développeur informatique traduit
     la demande d'un client en lignes de code informatique.",
   long_description: "Le développeur informatique est le pro des langages informatiques,
