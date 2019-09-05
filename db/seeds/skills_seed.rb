@@ -90,7 +90,6 @@ JAVA.save!
 SQL = Skill.new(
   name: "SQL",
   description: "SQL (Structured Query Langage) est un langage de base de données relationnelle",
-  category: "programmation"
 )
 
 SQL.remote_logo_url = "https://res.cloudinary.com/isep/image/upload/v1567089955/equal-path/skills-logo/7_ksfnv5.png"
@@ -109,42 +108,42 @@ PACK_OFFICE = Skill.create(
 
 # soft skills
 AUTONOME = Skill.new(
-  name: "Autonome",
+  name: "Autonomie",
   category: "soft skill"
 )
 
 LEADERSHIP = Skill.new(
-  name: "leadership",
+  name: "Leadership",
   category: "soft skill"
   )
 
 ANALYTIQUE = Skill.new(
-  name: "analytique",
+  name: "Analytique",
   category: "soft skill"
 )
 
 CONCEPTION = Skill.create(
-  name: "conception",
+  name: "Conception",
   category: "soft skill"
 )
 
 ADAPTATION = Skill.create(
-  name: "adaptation",
+  name: "Adaptation",
   category: "soft skill"
 )
 
 DESIGN = Skill.create(
-  name: "design",
+  name: "Design",
   category: "soft skill"
 )
 
 INGENIOSITE = Skill.create(
-  name: "ingéniosité",
+  name: "Ingéniosité",
   category: "soft skill"
 )
 
 COORDINATION = Skill.create(
-  name: "coordination",
+  name: "Coordination",
   category: "soft skill"
 )
 
@@ -155,12 +154,10 @@ CONNAISSANCE_DU_MARCHE = Skill.create(
 
 PEDAGOGIE = Skill.create(
   name: "Pédagogie",
-  category: "soft skill"
 )
 
 SENS_DU_RELATIONNEL = Skill.create(
   name: "Sens du relationnel",
-  category: "soft skill"
 )
 
 
@@ -223,6 +220,35 @@ MARKETING = Skill.create(
   category: "commercial"
 )
 
+MANAGEMENT = Skill.create(
+  name: "Management",
+  category: "commercial"
+)
+
+COMPTA = Skill.create(
+  name: "Comptabilité",
+  category: "commercial"
+)
+
+FINANCE = Skill.create(
+  name: "Finance",
+  category: "commercial"
+)
+
+PUB = Skill.create(
+  name: "Publicité",
+  category: "commercial"
+)
+
+COM = Skill.create(
+  name: "Communication",
+  category: "commercial"
+)
+
+
+
+
+
 
 
 # Technical skills
@@ -232,7 +258,12 @@ MATHEMATIQUES = Skill.create(
 )
 
 STATISTIQUE = Skill.create(
-  name: "STATISTIQUE",
+  name: "Statistique",
+  category: "technique"
+)
+
+ANALYSE_DATA = Skill.create(
+  name: "Analyse de données",
   category: "technique"
 )
 
@@ -254,16 +285,43 @@ INBOUND_MARKETING = Skill.create(
   category: "technique"
 )
 
-OUTBOUND_MARKETING = Skill.create(
-  name: "Outbound Marketing",
-  description: "L'Outbound marketing, c'est-à-dire littéralement le marketing sortant, est la forme la plus traditionnelle de marketing : la communication s'effectue dans le sens de l'annonceur vers le consommateur, par exemple dans le monde physique par voie d'affichage sur les lieux fréquentés par le prospect ou client",
+BIG_DATA = Skill.create(
+  name: "Big Data",
   category: "technique"
 )
 
-FINANCE = Skill.create(
-  name: "Finance",
+
+MATLAB = Skill.create(
+name: "Matlab",
+category: "technique",
+)
+
+SAAS = Skill.create(
+  name: "SaaS",
   category: "technique"
 )
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+OUTBOUND_MARKETING = Skill.create(
+  name: "Outbound Marketing",
+  description: "L'Outbound marketing, c'est-à-dire littéralement le marketing sortant, est la forme la plus traditionnelle de marketing : la communication s'effectue dans le sens de l'annonceur vers le consommateur, par exemple dans le monde physique par voie d'affichage sur les lieux fréquentés par le prospect ou client",
+)
+
 
 
 
@@ -355,19 +413,6 @@ RELATION_CLIENT = Skill.create(
 SALESFORCE = Skill.create(
   name: "Salesforce logiciel",
   description: "Salesforce est une solution de gestion de la relation client qui réunit entreprises et clients. Il s'agit d'une plate-forme CRM intégrée qui offre à tous vos services, y compris le marketing, les ventes, le commerce et les services, une vue unique et partagée de chaque client."
-)
-
-BIG_DATA = Skill.create(
-  name: "Big Data"
-)
-
-
-MATLAB = Skill.create(
-  name: "Matlab"
-)
-
-SAAS = Skill.create(
-  name: "SaaS"
 )
 
 R = Skill.create(

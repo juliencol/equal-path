@@ -12,6 +12,11 @@ class UsersController < ApplicationController
   def edit
     @user = User.find(params[:id])
     @skills = Skill.all
+    @dev_skills = Skill.where(category: "programmation")
+    @soft_skills = Skill.where(category: "soft skill")
+    @language_skills = Skill.where(category: "langue")
+    @sales_skills = Skill.where(category: "commercial")
+    @technical_skills = Skill.where(category: "technique")
   end
 
   def update_skill
