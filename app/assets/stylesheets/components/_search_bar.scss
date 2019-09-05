@@ -1,7 +1,10 @@
 
 .search-container {
-  margin: 10rem 6rem 6rem 6rem;
-  display: grid;
+  // margin: 10rem 6rem 6rem 6rem;
+  // display: grid;
+  margin-top: 60px;
+  padding: 30px 0px;
+  text-align: center;
   .select2 {
     width: 100% !important;
     margin-right: 5px;
@@ -19,11 +22,7 @@
     background-color: #FFAC04;
     border-radius: 20px;
     border-color: rgba(110, 121, 110, 0.5) !important;
-  }
-  h2 {
-    align-content: center;
-    justify-content: center;
-    display: flex;
+    font-weight: bold;
   }
 }
 
@@ -39,7 +38,7 @@
 }
 
 .search-container h2 {
- margin-top: -54px;
+
 }
 
 :focus {
