@@ -87,12 +87,16 @@
     <div id="Formations" class="d-none tab-content">
       <h4 class = "mb-4  mt-2 text-center" style="font-size: 25px"> Les formations pour devenir <%= @job.title %></h4>
       <% @job.formations.each do |formation|%>
-        <div class="modal-pointer" data-toggle="modal" data-target="#school-modal-<%= formation.id %>">
-        <img id="formation-logo" class= "rounded-logo" src=<%= formation.logo %>>
-        <span class="pl-4"> <%= formation.title  %> </span>
-        </div>
 
-        <!-- MODAL -->
+        <div class="formation-cards-container d-flex align-items-center">
+          <div class="modal-pointer " data-toggle="modal" data-target="#school-modal-<%= formation.id %>">
+            <img id="formation-logo" class= "rounded-logo" src=<%= formation.logo %>>
+          </div>
+          <div class="modal-pointer " data-toggle="modal" data-target="#school-modal-<%= formation.id %>">
+            <span class="pl-4"> <%= formation.title  %> </span>
+          </div>
+        </div>
+          <!-- MODAL -->
 
         <div class="modal fade" id="school-modal-<%= formation.id %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
         <div class="modal-dialog" role="document">
