@@ -28,7 +28,7 @@ LE_WAGON = Formation.new(
    qui vous apprend à coder entièrement vos applications web.",
   field: "IT",
 )
-LE_WAGON.remote_logo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567674112/kisspng-le-wagon-berlin-coding-bootcamp-le-wagon-tlv-switc-wagon-5b479053866e64.8547103315314166595506_uaumuz.jpg"
+LE_WAGON.remote_logo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567678814/le-wagon_fd1yoe.png"
 LE_WAGON.save!
 
 ENS = Formation.new(
