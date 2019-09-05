@@ -72,8 +72,6 @@ JobSkill.create!(job: PRODUCT_MANAGER, skill: RELATION_CLIENT)
 JobSkill.create!(job: PRODUCT_MANAGER, skill: PACK_OFFICE)
 
 
-
-
 JobSkill.create!(job: DATA_SCIENTIST, skill: MATHEMATIQUES)
 JobSkill.create!(job: DATA_SCIENTIST, skill: PYTHON)
 JobSkill.create!(job: DATA_SCIENTIST, skill: SQL)

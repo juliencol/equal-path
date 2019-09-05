@@ -17,10 +17,10 @@ JEAN_MICHEL.remote_profile_picture_url = "https://res.cloudinary.com/dovu27lye/i
 JEAN_MICHEL.save!
 
 JACQUES_MARTIN = User.new(
-  first_name: 'Jacques - Martin',
-  last_name: 'Du Lac',
-  age: 32,
-  email: "jacques@martin.com",
+  first_name: 'Lucas',
+  last_name: 'Martin',
+  age: 22,
+  email: "lucas@martin.com",
   password: "password",
 )
 
