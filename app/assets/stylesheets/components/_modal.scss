@@ -6,10 +6,33 @@ text-align: center;
 
 }
 
-.rounded-logo{
-  border-radius: 50%;
-  width: 150px;
-  object-fit: cover;
-  height: 150px;
+.rounded-logo-formation {
 }
 
+#formation-logo {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  max-height: 76px;
+}
+
+.rounded-logo-modal {
+  width: 150px;
+  margin-top: 10px;
+}
+
+.modal-title-modal {
+  margin-top: 20px;
+}
+
+.modal-body {
+  justify-content: center !important;
+}
+
+.tooltip-test-prk {
+  text-decoration: none !important;
+}
+
+.modal-pointer {
+  cursor: pointer !important;
+}
