@@ -3,37 +3,35 @@
   margin: 10rem 6rem 6rem 6rem;
   display: grid;
   .select2 {
-    width: 200px !important;
+    width: 100% !important;
     margin-right: 5px;
     margin-left: 5px;
   }
   input {
-    width: 200px !important;
+    width: 100% !important;
     border-radius: 4px !important;
     margin-right: 5px;
     margin-left: 5px;
-    box-shadow: 0 0 15px rgba(110, 121, 110, 0.5);
     border-color: rgba(110, 121, 110, 0.5) !important;
-        }
+  }
 
   button, #papa {
     background-color: #FFAC04;
     border-radius: 20px;
     border-color: rgba(110, 121, 110, 0.5) !important;
   }
+  h2 {
+    align-content: center;
+    justify-content: center;
+    display: flex;
+  }
 }
 
-.search-container h2 {
-  align-content: center;
-  justify-content: center;
-  display: flex;
-}
 
 
 .select2-container--default .select2-selection--multiple
 {
-box-shadow: 0 0 15px rgba(110, 121, 110, 0.5)
-
+  display: flex;
 }
 
 .form {
@@ -46,5 +44,12 @@ box-shadow: 0 0 15px rgba(110, 121, 110, 0.5)
 
 :focus {
   outline: none!important;
-
+}
+.select2-container .select2-selection--multiple .select2-selection__rendered {
+    margin-bottom: 7px!important;
+  display: flex!important;
+}
+.select2-container--default .select2-selection--multiple .select2-selection__rendered {
+  margin-bottom: 7px;
+  display: flex;
 }
