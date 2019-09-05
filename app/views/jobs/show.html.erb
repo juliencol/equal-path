@@ -14,8 +14,8 @@
   </div>
 
   <div class="user-container text-center">
-    <h1 class="text-center pb-4" style = "letter-spacing: 5px"><%= @job.title %></h1>
-    <ul class="list-inline tabs-underlined justify-content-center mb-4 pb-4" style="font-size: 19px">
+    <h1 class="text-center pb-3" style = "letter-spacing: 1px"><%= @job.title %></h1>
+    <ul class="list-inline tabs-underlined justify-content-center mb-4 pb-4" style="font-size: 16px; text-transform: uppercase;">
       <li>
         <a href="#" class="tab-underlined active" data-target="Fiche">Fiche métier</a>
       </li>
@@ -36,16 +36,16 @@
 
 
     <div class="tab-content" id="Fiche">
-        <h4 class = "mb-4 text-center">  <strong> Quel est le métier de <%= @job.title %> ? </strong></h4>
-        <p class="text-justify mb-5" style="font-size: 19px"><%= @job.long_description %></p>
+        <h4 class = "mb-4  mt-2 text-center" style="font-size: 25px">  Quel est le métier de <%= @job.title %> ? </h4>
+        <p class="text-justify mb-5 pl-4 pr-4" style="font-size: 17px"><%= @job.long_description %></p>
           <div class="mb-3 container d-flex flex-column">
-            <h4 class = "mb-4 text-center">  <strong> Etre <%= @job.title %>, c'est maitriser : </strong></h4>
+            <h4 class = "mb-4 text-center" style="font-size: 25px">  Un(e) <%= @job.title %> maitrise :</h4>
 
             <div class="container d-flex mt-5 justify-content-center flex-wrap">
                   <% @job.skills.each do |skill| %>
                     <div class="d-flex justify-content-around">
                       <% if @user.skills.include? skill %>
-                       <button class="btn btn-outline-success m-2" data-toggle="modal" data-target="#skill-modal-<%= skill.id %>">
+                       <button class="btn btn-success m-2" style="color: white; background: #3f9e40; border: none" data-toggle="modal" data-target="#skill-modal-<%= skill.id %>">
                            <%= skill.name %>
                         </button>
                       <% end  %>
@@ -69,7 +69,7 @@
                 <% @job.skills.each do |skill| %>
                   <div class="d-flex justify-content-around">
                     <% if @user.skills.exclude? skill %>
-                      <button type="button" class="btn btn-outline-warning m-2" data-toggle="modal" data-target="#skill-modal-<%= skill.id %>">
+                      <button type="button" class="btn btn-warning m-2" style="color: white; background: #ff9700; border: none" data-toggle="modal" data-target="#skill-modal-<%= skill.id %>">
                         <%= skill.name %>
                       </button>
                     <% end %>
@@ -82,7 +82,7 @@
                               <h1 class="m-3"><%= skill.name %></h1>
                               <img id="skill-logo" class="m-3" src=<%= skill.logo %>>
                                 <p class="m-3"><%= skill.description %></p>
-                          </div>
+                         </div>
                         </div>
                       </div>
                     </div>
@@ -92,7 +92,7 @@
             </div>
           </div>
  <div id="Formations" class="d-none tab-content">
-         <h4 class = "mb-4 text-center">  <strong>  Les formations pour devenir <%= @job.title %> </strong></h4>
+         <h4 class = "mb-4  mt-2 text-center" style="font-size: 25px"> Les formations pour devenir <%= @job.title %></h4>
           <% @job.formations.each do |formation|%>
             <div  data-toggle="modal" data-target="#school-modal-<%= formation.id %>">
 
@@ -137,7 +137,7 @@
           <%end%>
       </div>
 <div id="Mentors" class="d-none tab-content">
-       <div class = "text-center pb-2"> <h2> 🔆 Rencontrez des mentors</h2> </div>
+       <h4 class = "mb-4  mt-2 text-center" style="font-size: 25px"> Rencontrez des mentors </h4>
         <% @mentors.each do |mentor| %>
           <div class="d-flex justify-content-around">
             <div class= "m-3 p-3 text-center">
@@ -159,8 +159,8 @@
         <% end %>
   </div>
     <div class="mt-5 pt-5 mb-5 pb-5 text-center">
-              <%= link_to "Revenir à ma recherche", jobs_path, class: "btn-prk text-decoration-none" %>
-            </div>
+              <%= link_to "Revenir à ma recherche", jobs_path, class: "btn-julien" %>
+    </div>
         </div>
 
     </div>
