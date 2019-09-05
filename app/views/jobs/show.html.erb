@@ -1,7 +1,6 @@
 <div class="row">
 
   <div class="banner-show-user col-md-4" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= cl_image_path @job.job_photo %>);">
-    <h1 class=""><%= @job.title %></h1>
 
     <% if @job.bookmarked %>
       <%= link_to job_bookmark_job_path(@job), method: :post, remote: true do %>
@@ -14,8 +13,9 @@
     <% end %>
   </div>
 
-  <div class="user-container col-md-6">
-    <ul class="list-inline tabs-underlined justify-content-center mb-5">
+  <div class="user-container text-center">
+    <h1 class="text-center pb-4" style = "letter-spacing: 5px"><%= @job.title %></h1>
+    <ul class="list-inline tabs-underlined justify-content-center mb-4 pb-4" style="font-size: 19px">
       <li>
         <a href="#" class="tab-underlined active" data-target="Fiche">Fiche métier</a>
       </li>
@@ -27,16 +27,20 @@
       </li>
     </ul>
 
-    <div class="tab-content" id="Fiche">
-      <div class="border-card">
-        <h2 class = "mb-3 d-flex justify-content-center"> 📝 Description du métier</h2>
-        <p class="text-justify mb-3"><%= @job.long_description %></p>
 
-        <div class="container d-flex flex-column justify-content-center">
+
+
+
+
+
+
+
+    <div class="tab-content" id="Fiche">
+        <h4 class = "mb-4 text-center">  <strong> Quel est le métier de <%= @job.title %> ? </strong></h4>
+        <p class="text-justify mb-5" style="font-size: 19px"><%= @job.long_description %></p>
           <div class="mb-3 container d-flex flex-column">
-            <div class="d-flex justify-content-center">
-                <h2> Voici les compétences requises : </h2>
-            </div>
+            <h4 class = "mb-4 text-center">  <strong> Etre <%= @job.title %>, c'est maitriser : </strong></h4>
+
             <div class="container d-flex mt-5 justify-content-center flex-wrap">
                   <% @job.skills.each do |skill| %>
                     <div class="d-flex justify-content-around">
@@ -87,25 +91,14 @@
                 </div>
             </div>
           </div>
-        </div>
-      <div class="mt-5 text-center">
-        <%= link_to "Revenir à ma recherche", jobs_path, class: "btn-prk text-decoration-none" %>
-      </div>
-    </div>
-
-
-
-    <div id="Formations" class="d-none tab-content">
-      <div class="border-card">
-      <div class="container d-flex flex-column mt-5">
-
-         <div class = "text-center pb-2"> <h2>🎓 Formations recommandées</h2></div>
-        <div id="logo-container" class="container">
+ <div id="Formations" class="d-none tab-content">
+         <h4 class = "mb-4 text-center">  <strong>  Les formations pour devenir <%= @job.title %> </strong></h4>
           <% @job.formations.each do |formation|%>
-            <div class="container d-flex align-items-center" data-toggle="modal" data-target="#school-modal-<%= formation.id %>">
+            <div  data-toggle="modal" data-target="#school-modal-<%= formation.id %>">
               <img id="formation-logo" class= "rounded-logo" src=<%= formation.logo %>>
              <span class="pl-4"> <%= formation.title  %> </span>
             </div>
+            <!-- MODAL -->
             <div class="modal fade" id="school-modal-<%= formation.id %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
               <div class="modal-dialog" role="document">
                 <div class="modal-content">
@@ -137,16 +130,10 @@
                 </div>
               </div>
             </div>
+            <!-- MODAL -->
           <%end%>
-        </div>
       </div>
-    </div>
-    <div class="mt-5 text-center">
-      <%= link_to "Revenir à ma recherche", jobs_path, class: "btn-prk text-decoration-none" %>
-    </div>
-</div>
-  <div id="Mentors" class="d-none tab-content">
-    <div class="border-card">
+<div id="Mentors" class="d-none tab-content">
        <div class = "text-center pb-2"> <h2> 🔆 Rencontrez des mentors</h2> </div>
         <% @mentors.each do |mentor| %>
           <div class="d-flex justify-content-around">
@@ -156,22 +143,29 @@
               <%= mentor.Company %> </br>
                <a href="<%= mentor.Linkedin %>" target= "_blank"><i class="fab fa-linkedin fa-2x"></i> </a> </p>
 
-            </div>
-
-            <div class="pt-2 pb-2">
-              <p> <em>"<%= mentor.temoignage %>" </em></p>
-              <div class = "text-center">
-                <p>  Son témoignage vous plait ? </br>
-                 <i class="far fa-arrow-alt-circle-right"></i> <a href="<%= mentor.Linkedin %>" target= "_blank"> Contatez le sur Linkedin ! </a> </p>
               </div>
-            </div>
-          </div>
+
+                    <div class="pt-2 pb-2">
+                      <p> <em>"<%= mentor.temoignage %>" </em></p>
+                      <div class = "text-center">
+                        <p>  Son témoignage vous plait ? </br>
+                         <i class="far fa-arrow-alt-circle-right"></i> <a href="<%= mentor.Linkedin %>" target= "_blank"> Contatez le sur Linkedin ! </a> </p>
+                      </div>
+                    </div>
+              </div>
         <% end %>
-    </div>
-    <div class="mt-5 text-center">
-      <%= link_to "Revenir à ma recherche", jobs_path, class: "btn-prk text-decoration-none" %>
-    </div>
   </div>
+    <div class="mt-5 pt-5 mb-5 pb-5 text-center">
+              <%= link_to "Revenir à ma recherche", jobs_path, class: "btn-prk text-decoration-none" %>
+            </div>
+        </div>
+
+    </div>
+
+  </div>
+
+
+</div>
 
 
 
