@@ -22,21 +22,23 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-color:  white;
+  border: solid #f26c00 2px;
   margin: 4rem;
   font-size: 20px;
-  color: rgb(253, 178, 48);
+  color: black;
   border-radius: 7px;
   box-shadow: 20px;
-  padding:  0.5rem 0.75rem;
+  padding:  0.5rem 3rem;
   border-radius: 8%;
-  opacity: 0.6;
+  opacity: 0.4;
+  object-fit: cover;
+  font-size: 16px;
 }
 
 .skill-btn:hover {
   text-decoration: none !important;
   opacity: 1;
-  color: rgb(253, 178, 48) !important;
+  color: black !important;
 }
 
 .user-skill-btn {
@@ -51,7 +53,7 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-color:  rgb(253, 178, 48);
+  background-color:  #3f9e40;
   margin: 4rem;
   font-size: 20px;
   color: white !important;
