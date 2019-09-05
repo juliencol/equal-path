@@ -1,27 +1,34 @@
-<section class="search">
-  <div class="search-container pt-2">
-    <h2 class="">Trouve le métier de tes rêves ! 🌴 </h2>
-    <form action="/jobs" method="get" novalidate="novalidate">
-      <input type="text" id="keyword" name="query" placeholder=" Recherche ici ">
-      <select class="select2-skill " name="skill" multiple>
-        <% Skill.all.each do |skill| %>
-          <option value=<%=skill.name%>>
-            <%= skill.name %>
-          </option>
-        <% end %>
-      </select>
-      <select class="select2-field" name="skill" multiple >
-        <option>IT</option>
-        <option>Architecture</option>
-        <option>Business</option>
-        <option>Droit</option>
-        <option>Médical</option>
-        <option>Bâtiment</option>
-      </select>
-      <%= submit_tag :"Découvrir", id: "papa"%>
-    </form>
+
+<div class="wrapper-black">
+  <div class="container">
+    <section class="search">
+      <div class="search-container">
+        <h2 class=""><strong>Trouve le métier de tes rêves ! 🌴 </strong></h2>
+        <form action="/jobs" method="get" novalidate="novalidate">
+          <input type="text" id="keyword" name="query" placeholder=" Recherche ici ">
+          <select class="select2-skill " name="skill" multiple>
+            <% Skill.all.each do |skill| %>
+              <option value=<%=skill.name%>>
+                <%= skill.name %>
+              </option>
+            <% end %>
+          </select>
+          <select class="select2-field" name="skill" multiple >
+            <option>IT</option>
+            <option>Architecture</option>
+            <option>Business</option>
+            <option>Droit</option>
+            <option>Médical</option>
+            <option>Bâtiment</option>
+          </select>
+          <%= submit_tag :"Découvrir", id: "papa"%>
+        </form>
+      </div>
+    </section>
+
   </div>
-</section>
+
+</div>
 
   <div class="cards-container pt-2">
     <div class="card-prod ">
