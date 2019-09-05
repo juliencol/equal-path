@@ -15,22 +15,29 @@
   }
   .select2 {
     width: 250px !important;
+
   }
   input {
     width: 250px !important;
-    border-radius: 4px !important;
+    border-radius: 0px !important;
     border-color: rgba (110, 121, 110, 0.5) !important;
   }
 
   button, #papa {
     background-color: #FFAC04;
-    border-radius: 20px;
+    border-radius: 0px;
     border-color: rgba(110, 121, 110, 0.5) !important;
     font-weight: bold;
   }
 }
 
+.grey{
+  border: red !important;
+}
 
+.margin {
+margin : 2px;
+}
 
 .select2-container--default .select2-selection--multiple
 {
