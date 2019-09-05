@@ -3,30 +3,30 @@
   margin: 10rem 6rem 6rem 6rem;
   display: grid;
   .select2 {
-    width: 290px !important;
+    width: 100% !important;
     margin-right: 5px;
     margin-left: 5px;
   }
   input {
-    width: 290px !important;
+    width: 100% !important;
     border-radius: 4px !important;
     margin-right: 5px;
     margin-left: 5px;
     border-color: rgba(110, 121, 110, 0.5) !important;
-        }
+  }
 
   button, #papa {
     background-color: #FFAC04;
     border-radius: 20px;
     border-color: rgba(110, 121, 110, 0.5) !important;
   }
+  h2 {
+    align-content: center;
+    justify-content: center;
+    display: flex;
+  }
 }
 
-.search-container h2 {
-  align-content: center;
-  justify-content: center;
-  display: flex;
-}
 
 
 .select2-container--default .select2-selection--multiple
