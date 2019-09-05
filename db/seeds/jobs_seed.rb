@@ -190,7 +190,7 @@ DATA_SCIENTIST = Job.new(
   long_description: "Le Data scientist est un spécialiste de la science des données. Il analyse les datas (concernant les clients, les prospects, les employés, etc.) que l’entreprise récupère par différents canaux et la restitue sous forme de prospective, de conseils, d’améliorations du produit, du service, de la formation en interne, de l’efficacité de l’entreprise, de sa performance. Il part généralement d’une problématique et définit les données dont l’entreprise aurait besoin pour la résoudre.",
   field: "IT"
 )
-DATA_SCIENTIST.remote_job_photo_url = "https://res.cloudinary.com/isep/image/upload/v1567495623/datascientist_klyxa4.png"
+DATA_SCIENTIST.remote_job_photo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567704453/adeolu-eletu-unRkg2jH1j0-unsplash_1_ogmhys.jpg"
 DATA_SCIENTIST.save!
 
 

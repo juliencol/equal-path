@@ -74,9 +74,3 @@ J’aime aussi car c’est un poste stratégique, il faut savoir prendre des dé
 
 JULIEN.remote_profile_picture_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567526500/0-2_wv9mby.jpg"
 JULIEN.save!
-
-
-
-
-
-
