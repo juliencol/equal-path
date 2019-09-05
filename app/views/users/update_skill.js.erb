@@ -2,8 +2,8 @@
   skillId = '<%= @skill_destroyed_id %>'
   // console.log('<%= @skill_destroyed_id %>')
   skill = document.querySelector(`.skill-${skillId}`)
-  skill.classList.add("btn-outline-warning")
-  skill.classList.remove("btn-outline-success")
+  skill.classList.add("skill-btn")
+  skill.classList.remove("user-skill-btn")
 <% end %>
 
 <% if @skill_created_id %>
@@ -11,6 +11,6 @@
   // console.log(`.skill-${skillId}`)
   skill = document.querySelector(`.skill-${skillId}`)
   // console.log(skill)
-  skill.classList.remove("btn-outline-warning")
-  skill.classList.add("btn-outline-success")
+  skill.classList.remove("skill-btn")
+  skill.classList.add("user-skill-btn")
 <% end %>
