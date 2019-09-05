@@ -1,7 +1,5 @@
 <div class="row">
-
   <div class="banner-show-user col-md-4" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= cl_image_path @job.job_photo %>);">
-
     <% if @job.bookmarked %>
       <%= link_to job_bookmark_job_path(@job), method: :post, remote: true do %>
         <i class="fas fa-bookmark" id="star-user-show-two"></i>
@@ -28,66 +26,60 @@
     </ul>
 
     <div class="tab-content" id="Fiche">
-        <h4 class = "mb-4  mt-2 text-center" style="font-size: 25px">  Quel est le métier de <%= @job.title %> ? </h4>
-        <p class="text-justify mb-5 pl-4 pr-4" style="font-size: 17px"><%= @job.long_description %></p>
-          <div class="mb-3 container d-flex flex-column">
-            <h4 class = "mb-4 text-center" style="font-size: 25px">  Un(e) <%= @job.title %> maitrise :</h4>
-
-            <div class="container d-flex mt-5 justify-content-center flex-wrap">
-                  <% @job.skills.each do |skill| %>
-                    <div class="d-flex justify-content-around">
-                      <% if @user.skills.include? skill %>
-                       <button class="btn btn-success m-2" style="color: white; background: #3f9e40; border: none" data-toggle="modal" data-target="#skill-modal-<%= skill.id %>">
-                           <%= skill.name %>
-                        </button>
-                      <% end  %>
-                    </div>
-                    <!-- modal -->
-                    <div class="modal fade" id="skill-modal-<%= skill.id %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                      <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                          <div class="modal-body text-center">
-                             <h1 class="m-3"><%= skill.name %></h1>
-                              <img id="skill-logo" class="m-3" src=<%= skill.logo %>>
-                                <p class="m-3"><%= skill.description %></p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- fin modal -->
-                  <% end %>
-
-
-                <% @job.skills.each do |skill| %>
-                  <div class="d-flex justify-content-around">
-                    <% if @user.skills.exclude? skill %>
-                      <button type="button" class="btn btn-warning m-2" style="color: white; background: #ff9700; border: none" data-toggle="modal" data-target="#skill-modal-<%= skill.id %>">
-                        <%= skill.name %>
-                      </button>
-                    <% end %>
-                  </div>
-                <!-- modal -->
-                    <div class="modal fade" id="skill-modal-<%= skill.id %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                      <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                          <div class="modal-body text-center">
-                              <h1 class="m-3"><%= skill.name %></h1>
-                              <img id="skill-logo" class="m-3" src=<%= skill.logo %>>
-                                <p class="m-3"><%= skill.description %></p>
-                         </div>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- fin modal -->
-                  <% end %>
-                </div>
+      <h4 class = "mb-4  mt-2 text-center" style="font-size: 25px">  Quel est le métier de <%= @job.title %> ? </h4>
+      <p class="text-justify mb-5 pl-4 pr-4" style="font-size: 17px"><%= @job.long_description %></p>
+      <div class="mb-3 container d-flex flex-column">
+        <h4 class = "mb-4 text-center" style="font-size: 25px">  Un <%= @job.title %> maitrise :</h4>
+        <div class="container d-flex mt-5 justify-content-center flex-wrap">
+          <% @job.skills.each do |skill| %>
+            <div class="d-flex justify-content-around">
+              <% if @user.skills.include? skill %>
+                <button class="btn btn-success m-2" style="color: white; background: #3f9e40; border: none" data-toggle="modal" data-target="#skill-modal-<%= skill.id %>"><%= skill.name %></button>
+              <% end  %>
             </div>
-          </div>
+            <!-- modal -->
+            <div class="modal fade" id="skill-modal-<%= skill.id %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-body text-center">
+                    <h1 class="m-3"><%= skill.name %></h1>
+                    <img id="skill-logo" class="m-3" src=<%= skill.logo %>>
+                    <p class="m-3"><%= skill.description %></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- fin modal -->
+          <% end %>
+          <% @job.skills.each do |skill| %>
+            <div class="d-flex justify-content-around">
+              <% if @user.skills.exclude? skill %>
+                <button type="button" class="btn btn-warning m-2" style="color: white; background: #ff9700; border: none" data-toggle="modal" data-target="#skill-modal-<%= skill.id %>">
+                  <%= skill.name %>
+                </button>
+              <% end %>
+            </div>
+            <!-- modal -->
+            <div class="modal fade" id="skill-modal-<%= skill.id %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-body text-center">
+                    <h1 class="m-3"><%= skill.name %></h1>
+                    <img id="skill-logo" class="m-3" src=<%= skill.logo %>>
+                    <p class="m-3"><%= skill.description %></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- fin modal -->
+          <% end %>
+        </div>
+      </div>
+    </div>
 
     <div id="Formations" class="d-none tab-content">
       <h4 class = "mb-4  mt-2 text-center" style="font-size: 25px"> Les formations pour devenir <%= @job.title %></h4>
       <% @job.formations.each do |formation|%>
-
         <div class="formation-cards-container d-flex align-items-center">
           <div class="modal-pointer " data-toggle="modal" data-target="#school-modal-<%= formation.id %>">
             <img id="formation-logo" class= "rounded-logo" src=<%= formation.logo %>>
@@ -96,44 +88,38 @@
             <span class="pl-4"> <%= formation.title  %> </span>
           </div>
         </div>
-          <!-- MODAL -->
-
-        <div class="modal fade" id="school-modal-<%= formation.id %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-        <div class="modal-content">
-        <% if formation.bookmarked %>
-              <%= link_to job_bookmark_formation_path(@job, formation_id: formation.id), method: :post, remote: true do %>
-                <i class="fas fa-bookmark star-user-formation" id="star-user-formation-<%= formation.id %>"><strong> Enlever des favoris</strong></i>
-              <% end %>
-            <% else %>
-              <%= link_to job_bookmark_formation_path(@job, formation_id: formation.id), method: :post, remote: true do %>
-                <i class="far fa-bookmark star-user-formation" id="star-user-formation-<%= formation.id %>"></i>
-              <% end %>
-            <% end %>
-        <div class="modal-header">
-          <div id="header-modal-formation">
-            <img class= "rounded-logo-modal" src= <%= formation.logo %>>
-            <h3 class="modal-title modal-title-modal" id="exampleModalLongTitle" class="text-center"> <strong> <%= formation.title%> </strong></h3>
-          </div>
-        </div>
-        <div class="modal-body">
-
-          <p><%= formation.description %></p>
-          <p><strong> Lieux : </strong><%= formation.location%></p>
-          <p><strong> Durée : </strong><%= formation.duration%></p>
-          <p> <a href=" <%=formation.website_url%>" class="tooltip-test tooltip-test-prk" title="LinkSchool" target="_blank"> En savoir plus sur cette formation </a></p>
-          <div class="d-flex justify-content-center" data-aos="zoom-in">
-
-          </div>
-        </div>
-        </div>
-        </div>
-        </div>
-
         <!-- MODAL -->
-
+        <div class="modal fade" id="school-modal-<%= formation.id %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <% if formation.bookmarked %>
+                <%= link_to job_bookmark_formation_path(@job, formation_id: formation.id), method: :post, remote: true do %>
+                  <i class="fas fa-bookmark star-user-formation" id="star-user-formation-<%= formation.id %>"><strong> Enlever des favoris</strong></i>
+                <% end %>
+              <% else %>
+                <%= link_to job_bookmark_formation_path(@job, formation_id: formation.id), method: :post, remote: true do %>
+                  <i class="far fa-bookmark star-user-formation" id="star-user-formation-<%= formation.id %>"></i>
+                <% end %>
+              <% end %>
+              <div class="modal-header">
+                <div id="header-modal-formation">
+                  <img class= "rounded-logo-modal" src= <%= formation.logo %>>
+                  <h3 class="modal-title modal-title-modal" id="exampleModalLongTitle" class="text-center"> <strong> <%= formation.title%> </strong></h3>
+                </div>
+              </div>
+              <div class="modal-body">
+                <p><%= formation.description %></p>
+                <p><strong> Lieux : </strong><%= formation.location%></p>
+                <p><strong> Durée : </strong><%= formation.duration%></p>
+                <p> <a href=" <%=formation.website_url%>" class="tooltip-test tooltip-test-prk" title="LinkSchool" target="_blank"> En savoir plus sur cette formation </a></p>
+                <div class="d-flex justify-content-center" data-aos="zoom-in">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- MODAL -->
       <%end%>
-
     </div>
 
   <div id="Mentors" class="d-none tab-content">
@@ -150,17 +136,15 @@
             <p> <em>"<%= mentor.temoignage %>" </em></p>
           <div class = "text-center">
             <p>  Son témoignage vous plait ? </br>
-              <i class="far fa-arrow-alt-circle-right"></i> <a href="<%= mentor.Linkedin %>" target= "_blank"> Contatez le sur Linkedin ! </a> </p>
+              <i class="far fa-arrow-alt-circle-right"></i> <a href="<%= mentor.Linkedin %>" target= "_blank"> Contatez le sur Linkedin !</a></p>
           </div>
         </div>
       </div>
     <% end %>
   </div>
-
     <div class="mt-5 pt-5 mb-5 pb-5 text-center">
-              <%= link_to "Revenir à ma recherche", jobs_path, class: "btn-julien" %>
+      <%= link_to "Revenir à ma recherche", jobs_path, class: "btn-julien" %>
     </div>
-
 </div>
 
 
