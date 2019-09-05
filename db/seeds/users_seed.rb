@@ -24,7 +24,7 @@ JACQUES_MARTIN = User.new(
   password: "password",
 )
 
-JACQUES_MARTIN.remote_profile_picture_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567075488/jacques_martin_ifi7rz.jpg"
+JACQUES_MARTIN.remote_profile_picture_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567705562/tamarcus-brown-29pFbI_D1Sc-unsplash_qplehk.jpg"
 
 
 #Mentors
