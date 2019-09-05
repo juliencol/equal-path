@@ -15,19 +15,19 @@
 <div class="cards start-container">
   <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://res.cloudinary.com/dovu27lye/image/upload/v1567585036/yj87xqpwivwb49wjfqgk.jpg)"data-aos="fade-down">
       1. Crées ton profil
-    <%= link_to "", @path_two, class: "transparent-link" %>
+    <%= link_to "",  @user ? user_path(@user) : new_user_registration_path, class: "transparent-link" %>
   </div>
   <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://res.cloudinary.com/dovu27lye/image/upload/v1567586061/stanley-dai-73OZYNjVoNI-unsplash_d3y7jk.jpg)" data-aos="fade-down">
     2. Liste tes compétences
-    <%= link_to "", @path_start, class: "transparent-link" %>
+    <%= link_to "", @user ? edit_user_path(@user) : new_user_registration_path, class: "transparent-link" %>
     </div>
     <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://res.cloudinary.com/dovu27lye/image/upload/v1566836640/developer_lgdkpz.jpg)" data-aos="fade-down">
       3. Trouve le Job de tes rêves
-      <%= link_to "", @path_one, class: "transparent-link" %>
+      <%= link_to "", @user ? jobs_path(@user) : new_user_registration_path, class: "transparent-link" %>
     </div>
   </div>
   <div class="d-flex justify-content-center" data-aos="zoom-in">
-    <%= link_to "C'est parti !", @path_start, class: "btn-julien" %>
+    <%= link_to "C'est parti !", @user ? edit_user_path(@user) : new_user_registration_path, class: "btn-julien" %>
   </div>
 </div>
 
