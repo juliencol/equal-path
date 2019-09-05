@@ -1,5 +1,5 @@
 meta_product_name: "Equal Path"
 meta_title: "Equal Path - Discover new opportunities"
 meta_description: "Equal Path is a platform for students helping you to find your dream job depending on your current interests and skills."
-meta_image: "cover.jpeg" # should exist in `app/assets/images/`
+meta_image: "cover.png" # should exist in `app/assets/images/`
 twitter_account: "@product_twitter_account"   # required for Twitter Cards
