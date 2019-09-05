@@ -1,0 +1,17 @@
+Searching 226 files for "start-container"
+
+/Users/gaetan/code/juliencol/equal-path/app/assets/stylesheets/components/_main_container.scss:
+    3  }
+    4
+    5: .start-container {
+    6    margin: 5rem 5rem 0rem 5rem ;
+    7  }
+
+/Users/gaetan/code/juliencol/equal-path/app/views/pages/home.html.erb:
+   13  </div>
+   14
+   15: <div class="cards start-container">
+   16    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://res.cloudinary.com/dovu27lye/image/upload/v1567585036/yj87xqpwivwb49wjfqgk.jpg)"data-aos="fade-down">
+   17        1. Crées ton profil
+
+2 matches across 2 files
