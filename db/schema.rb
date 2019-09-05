@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_03_151228) do
+ActiveRecord::Schema.define(version: 2019_09_05_081002) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -73,6 +73,7 @@ ActiveRecord::Schema.define(version: 2019_09_03_151228) do
     t.text "description"
     t.string "logo"
     t.boolean "soft"
+    t.string "category"
   end
 
   create_table "user_jobs", force: :cascade do |t|
