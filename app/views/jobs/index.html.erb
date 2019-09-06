@@ -6,7 +6,7 @@
       <div class="search-container">
         <h2 class="h2-search-bar"><strong>Trouve le métier de tes rêves ! 🌴 </strong></h2>
         <form class="research-bar"action="/jobs" method="get" novalidate="novalidate">
-          <input type="text" id="keyword" name="query" placeholder=" Recherche ici ">
+          <input type="text" id="keyword" class = "pl" name="query" placeholder=" 🔍 Recherche ici ">
             <select class="select2-skill" name="skill" multiple>
               <% Skill.all.each do |skill| %>
                 <option value=<%=skill.name%>>
