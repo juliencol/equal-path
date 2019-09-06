@@ -28,13 +28,13 @@
     <div class="tab-content" id="Fiche">
       <h4 class = "mb-4  mt-2 text-center" style="font-size: 25px">  Quel est le métier de <%= @job.title %> ? </h4>
       <p class="text-justify mb-5 pl-4 pr-4" style="font-size: 17px"><%= @job.long_description %></p>
-      <div class="mb-3 container d-flex flex-column">
+      <div class="mb-3 container fiche-skills-container d-flex flex-column">
         <h4 class = "mb-4 text-center" style="font-size: 25px">  Un <%= @job.title %> maitrise :</h4>
         <div class="container d-flex mt-5 justify-content-center flex-wrap">
           <% @job.skills.each do |skill| %>
             <div class="d-flex justify-content-around">
               <% if @user.skills.include? skill %>
-                <button class="btn btn-success m-2" style="color: white; background: #3f9e40; border: none" data-toggle="modal" data-target="#skill-modal-<%= skill.id %>"><%= skill.name %></button>
+                <button class="btn btn-success m-2" style="color: white; background: #3f9e40; border: none; border-radius: 10px" data-toggle="modal" data-target="#skill-modal-<%= skill.id %>"><%= skill.name %></button>
               <% end  %>
             </div>
             <!-- modal -->
@@ -54,7 +54,7 @@
           <% @job.skills.each do |skill| %>
             <div class="d-flex justify-content-around">
               <% if @user.skills.exclude? skill %>
-                <button type="button" class="btn btn-warning m-2" style="color: white; background: #ff9700; border: none" data-toggle="modal" data-target="#skill-modal-<%= skill.id %>">
+                <button type="button" class="btn btn-warning m-2" style="color: white; background: #ff9700; border: none; border-radius: 10px" data-toggle="modal" data-target="#skill-modal-<%= skill.id %>">
                   <%= skill.name %>
                 </button>
               <% end %>
