@@ -1,10 +1,10 @@
 <div class="main-container d-flex flex-column align-items-center justify-content-center">
   <div class="container d-flex flex-column align-items-center">
-    <h1 class="mt-3">Sélectionnez vos compétences</h1>
+    <h1 class="mt-3 mb-5" style= "color: #F86162"> 🔍 SELECTIONNE TES COMPETENCES </h1>
     <div class="container d-flex">
       <div class="container d-flex flex-column align-items-center">
-        <h2 class="mt-3 mb-3">Informatiques</h2>
-        <div class="container d-flex flex-wrap justify-content-center">
+        <h2 class="mt-3 mb-3" style="font-weight: 100">Informatiques</h2>
+        <div class="container d-flex flex-wrap justify-content-center mb-3">
           <% @dev_skills.each do |skill| %>
             <% if current_user.skills.include? skill %>
               <%= link_to skill.name.capitalize, skill_update_skill_path(skill), method: :post, remote: true, class: "user-skill-btn m-2 skill-#{skill.id}" %>
@@ -14,8 +14,8 @@
           <% end %>
         </div>
       </div>
-      <div class="container d-flex flex-column align-items-center">
-        <h2 class="mt-3 mb-3">Commerciales</h2>
+      <div class="container d-flex flex-column align-items-center" >
+        <h2 class="mt-3 mb-3" style="font-weight: 100; color: #F86162">Commerciales</h2>
         <div class="container d-flex flex-wrap justify-content-center">
           <% @sales_skills.each do |skill| %>
             <% if current_user.skills.include? skill %>
@@ -26,10 +26,10 @@
           <% end %>
         </div>
       </div>
-    </div>
+
     <div class="container d-flex">
-      <div class="container d-flex flex-column align-items-center">
-        <h2 class="mt-3 mb-3">Techniques</h2>
+      <div class="container d-flex flex-column align-items-center" >
+        <h2 class="mt-3 mb-3" style="font-weight: 100; color: #F86162">Techniques</h2>
         <div class="container d-flex flex-wrap justify-content-center">
           <% @technical_skills.each do |skill| %>
             <% if current_user.skills.include? skill %>
@@ -41,7 +41,7 @@
         </div>
       </div>
       <div class="container d-flex flex-column align-items-center">
-        <h2 class="mt-3 mb-3">Autres</h2>
+        <h2 class="mt-3 mb-3" style="font-weight: 100; color: #F86162">Autres</h2>
         <div class="container d-flex flex-wrap justify-content-center">
           <% @soft_skills.each do |skill| %>
             <% if current_user.skills.include? skill %>
@@ -52,6 +52,7 @@
           <% end %>
         </div>
       </div>
+    </div>
     </div>
   </div>
   <%= link_to "Découvrir les métiers", jobs_path, class: "btn-julien" %>
