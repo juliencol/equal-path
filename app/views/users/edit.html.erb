@@ -1,12 +1,12 @@
 <div class="main-container d-flex flex-column align-items-center justify-content-center">
-  <div class="container d-flex flex-column align-items-center bt-10">
+  <div class="container d-flex flex-column justify-content-center align-items-center bt-10">
     <div id="skill-search-bar-container" class="mb-3">
       <section class="">
         <div class="skill-search-container">
           <form class="skill-research-bar"action="/jobs" method="get" novalidate="novalidate">
             <input type="text" id="skill-keyword" name="query" placeholder=" 🔍 Recherche ici ">
             <%= submit_tag :"Découvrir", id: "skill-decouvrir"%>
-          </form>      
+          </form>
         </div>
       </section>
     </div>
@@ -68,7 +68,6 @@
           <% end %>
         <% end %>
       </div>
-    </div>
     </div>
   </div>
   <%= link_to "Découvrir les métiers", jobs_path, class: "btn-julien" %>
