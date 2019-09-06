@@ -11,7 +11,8 @@
   .research-bar {
     position: absolute;
     top: 147.5px;
-    left: 72px;
+    left: 50%;
+    transform: translateX(-50%);
   }
   .select2 {
     width: 250px !important;
@@ -26,7 +27,6 @@
   button, #papa {
     background-color: #FFAC04;
     border-radius: 0px;
-    border-color: rgba(110, 121, 110, 0.5) !important;
     font-weight: bold;
   }
 }
@@ -39,10 +39,7 @@
 margin : 2px;
 }
 
-.select2-container--default .select2-selection--multiple
-{
-  display: flex;
-}
+
 .form {
   margin-top: 6px;
   position: absolute;
@@ -71,3 +68,33 @@ margin : 2px;
   margin-bottom: 7px;
   display: flex;
 }
+
+
+
+.research-bar input[type='text'],
+.research-bar input[type='submit']
+ {
+  border: 1px solid rgba(0,0,0,0.1) !important;
+  border-radius: 0px;
+  &:first-child {
+    border-top-left-radius: 4px !important;
+    border-bottom-left-radius: 4px !important;
+    border-right: 0px !important;
+  }
+  &:last-child {
+    border-top-right-radius: 5px !important;
+    border-bottom-right-radius: 5px !important;
+    border-left: 0px !important;
+  }
+}
+
+.research-bar .select2-container--default .select2-selection--multiple {
+  border: 1px solid rgba(0,0,0,0.1) !important;
+  border-radius: 0px;
+  &:last-child {
+    border-right: 0px !important;
+  }
+}
+
+
+
