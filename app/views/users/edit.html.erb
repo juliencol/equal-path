@@ -1,56 +1,72 @@
 <div class="main-container d-flex flex-column align-items-center justify-content-center">
-  <div class="container d-flex flex-column align-items-center">
-    <h1 class="mt-3 mb-5" style= "color: #F86162"> 🔍 SELECTIONNE TES COMPETENCES </h1>
-    <div class="container d-flex">
-      <div class="container d-flex flex-column align-items-center">
-        <h2 class="mt-3 mb-3" style="font-weight: 100">Informatiques</h2>
-        <div class="container d-flex flex-wrap justify-content-center mb-3">
-          <% @dev_skills.each do |skill| %>
-            <% if current_user.skills.include? skill %>
-              <%= link_to skill.name.capitalize, skill_update_skill_path(skill), method: :post, remote: true, class: "user-skill-btn m-2 skill-#{skill.id}" %>
-              <% else %>
-              <%= link_to skill.name.capitalize, skill_update_skill_path(skill), method: :post, remote: true, class: "skill-btn m-2 skill-#{skill.id}" %>
-            <% end %>
-          <% end %>
+  <div class="container d-flex flex-column align-items-center bt-10">
+    <div id="skill-search-bar-container" class="mb-3">
+      <section class="">
+        <div class="skill-search-container">
+          <form class="skill-research-bar"action="/jobs" method="get" novalidate="novalidate">
+            <input type="text" id="skill-keyword" name="query" placeholder=" 🔍 Recherche ici ">
+            <%= submit_tag :"Découvrir", id: "skill-decouvrir"%>
+          </form>      
         </div>
+      </section>
+    </div>
+    <h1 class="text-center mt-3">Compétences suggérées selon votre profil</h1>
+    <ul id="skill-tabs" class="list-inline tabs-underlined mt-3">
+      <li>
+        <a class="tab-underlined active" data-target="informatique">Informatique</a>
+      </li>
+      <li>
+        <a class="tab-underlined" data-target="commerce">Commerce</a>
+      </li>
+      <li>
+        <a class="tab-underlined" data-target="technique">Technique</a>
+      </li>
+      <li>
+        <a class="tab-underlined" data-target="autres">Autres</a>
+      </li>
+    </ul>
+    <div class="container d-flex flex-column align-items-center tab-content" id="informatique">
+      <div class="container d-flex flex-wrap justify-content-center">
+        <% @dev_skills.each do |skill| %>
+          <% if current_user.skills.include? skill %>
+            <%= link_to skill.name.capitalize, skill_update_skill_path(skill), method: :post, remote: true, class: "user-skill-btn m-2 skill-#{skill.id}" %>
+            <% else %>
+            <%= link_to skill.name.capitalize, skill_update_skill_path(skill), method: :post, remote: true, class: "skill-btn m-2 skill-#{skill.id}" %>
+          <% end %>
+        <% end %>
       </div>
-      <div class="container d-flex flex-column align-items-center" >
-        <h2 class="mt-3 mb-3" style="font-weight: 100; color: #F86162">Commerciales</h2>
-        <div class="container d-flex flex-wrap justify-content-center">
-          <% @sales_skills.each do |skill| %>
-            <% if current_user.skills.include? skill %>
-              <%= link_to skill.name.capitalize, skill_update_skill_path(skill), method: :post, remote: true, class: "user-skill-btn m-2 skill-#{skill.id}" %>
-              <% else %>
-              <%= link_to skill.name.capitalize, skill_update_skill_path(skill), method: :post, remote: true, class: "skill-btn m-2 skill-#{skill.id}" %>
-            <% end %>
+    </div>
+    <div class="container d-flex flex-column align-items-center tab-content d-none" id="commerce">
+      <div class="container d-flex flex-wrap justify-content-center">
+        <% @sales_skills.each do |skill| %>
+          <% if current_user.skills.include? skill %>
+            <%= link_to skill.name.capitalize, skill_update_skill_path(skill), method: :post, remote: true, class: "user-skill-btn m-2 skill-#{skill.id}" %>
+            <% else %>
+            <%= link_to skill.name.capitalize, skill_update_skill_path(skill), method: :post, remote: true, class: "skill-btn m-2 skill-#{skill.id}" %>
           <% end %>
-        </div>
+        <% end %>
       </div>
-
-    <div class="container d-flex">
-      <div class="container d-flex flex-column align-items-center" >
-        <h2 class="mt-3 mb-3" style="font-weight: 100; color: #F86162">Techniques</h2>
-        <div class="container d-flex flex-wrap justify-content-center">
-          <% @technical_skills.each do |skill| %>
-            <% if current_user.skills.include? skill %>
-              <%= link_to skill.name.capitalize, skill_update_skill_path(skill), method: :post, remote: true, class: "user-skill-btn m-2 skill-#{skill.id}" %>
-              <% else %>
-              <%= link_to skill.name.capitalize, skill_update_skill_path(skill), method: :post, remote: true, class: "skill-btn m-2 skill-#{skill.id}" %>
-            <% end %>
+    </div>
+    <div class="container d-flex flex-column align-items-center tab-content d-none" id="technique">
+      <div class="container d-flex flex-wrap justify-content-center">
+        <% @technical_skills.each do |skill| %>
+          <% if current_user.skills.include? skill %>
+            <%= link_to skill.name.capitalize, skill_update_skill_path(skill), method: :post, remote: true, class: "user-skill-btn m-2 skill-#{skill.id}" %>
+            <% else %>
+            <%= link_to skill.name.capitalize, skill_update_skill_path(skill), method: :post, remote: true, class: "skill-btn m-2 skill-#{skill.id}" %>
           <% end %>
-        </div>
+        <% end %>
       </div>
-      <div class="container d-flex flex-column align-items-center">
-        <h2 class="mt-3 mb-3" style="font-weight: 100; color: #F86162">Autres</h2>
-        <div class="container d-flex flex-wrap justify-content-center">
-          <% @soft_skills.each do |skill| %>
-            <% if current_user.skills.include? skill %>
-              <%= link_to skill.name.capitalize, skill_update_skill_path(skill), method: :post, remote: true, class: "user-skill-btn m-2 skill-#{skill.id}" %>
-              <% else %>
-              <%= link_to skill.name.capitalize, skill_update_skill_path(skill), method: :post, remote: true, class: "skill-btn m-2 skill-#{skill.id}" %>
-            <% end %>
+    </div>
+    <div class="container d-flex flex-column align-items-center tab-content d-none" id="autres">
+      <div class="container d-flex flex-wrap justify-content-center">
+        <% @soft_skills.each do |skill| %>
+          <% if current_user.skills.include? skill %>
+            <%= link_to skill.name.capitalize, skill_update_skill_path(skill), method: :post, remote: true, class: "user-skill-btn m-2 skill-#{skill.id}" %>
+            <% else %>
+            <%= link_to skill.name.capitalize, skill_update_skill_path(skill), method: :post, remote: true, class: "skill-btn m-2 skill-#{skill.id}" %>
           <% end %>
-        </div>
+        <% end %>
       </div>
     </div>
     </div>
