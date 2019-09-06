@@ -15,7 +15,7 @@
     transform: translateX(-50%);
   }
   .select2 {
-    width: 250px !important;
+    width: 180px !important;
 
   }
   input {
@@ -77,13 +77,13 @@ margin : 2px;
   border: 1px solid rgba(0,0,0,0.1) !important;
   border-radius: 0px;
   &:first-child {
-    border-top-left-radius: 4px !important;
-    border-bottom-left-radius: 4px !important;
+    border-top-left-radius: 6px !important;
+    border-bottom-left-radius: 6px !important;
     border-right: 0px !important;
   }
   &:last-child {
-    border-top-right-radius: 5px !important;
-    border-bottom-right-radius: 5px !important;
+    border-top-right-radius: 6px !important;
+    border-bottom-right-radius: 6px !important;
     border-left: 0px !important;
   }
 }
@@ -96,5 +96,7 @@ margin : 2px;
   }
 }
 
-
+.research-bar input[type='submit'] {
+  width: 150px !important;
+}
 
