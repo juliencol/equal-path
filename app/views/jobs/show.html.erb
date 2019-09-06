@@ -85,9 +85,10 @@
             <img id="formation-logo" class= "rounded-logo" src=<%= formation.logo %>>
           </div>
           <div class="modal-pointer " data-toggle="modal" data-target="#school-modal-<%= formation.id %>">
-            <span class="pl-4"> <%= formation.title  %> </span>
+            <span class="pl-4"> <strong> <%= formation.title  %> </strong> </span>
           </div>
         </div>
+
         <!-- MODAL -->
         <div class="modal fade" id="school-modal-<%= formation.id %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
           <div class="modal-dialog" role="document">
@@ -119,6 +120,7 @@
           </div>
         </div>
         <!-- MODAL -->
+
       <%end%>
     </div>
 
