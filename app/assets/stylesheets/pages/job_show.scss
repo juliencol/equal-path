@@ -23,5 +23,14 @@ logo-container {
 
 
 .formation-cards-container {
-  margin-left: 200px;
+  margin-left: 210px;
+  margin-bottom: 20px;
+  height: 56px;
+  .modal-pointer img {
+    border-right: 1px solid;
+    padding-right: 30px;
+  }
+  .modal-pointer span {
+    margin-left: 10px;
+  }
 }
