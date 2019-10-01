@@ -20,7 +20,7 @@ DEVELOPPEUR = Job.new(
     la maintenance ou faire évoluer les programmes.",
   field: "IT",
 )
-DEVELOPPEUR.remote_job_photo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1566990467/tim-van-der-kuip-CPs2X8JYmS8-unsplash_1_zggwdi.jpg"
+DEVELOPPEUR.remote_job_photo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567757495/qhbokhztbqsom7b5to19.jpg"
 DEVELOPPEUR.save!
 
 RESPONSABLE_MICRO = Job.new(
@@ -42,7 +42,7 @@ RESPONSABLE_MICRO = Job.new(
   field: "IT",
 )
 
-RESPONSABLE_MICRO.remote_job_photo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1566895944/responsable_micro_dkylqi.jpg"
+RESPONSABLE_MICRO.remote_job_photo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567704749/m2u2opowo4wpeizzosai.jpg"
 RESPONSABLE_MICRO.save!
 
 EXPERT_SECURITE = Job.new(
@@ -62,7 +62,7 @@ EXPERT_SECURITE = Job.new(
   field: "IT",
 )
 
-EXPERT_SECURITE.remote_job_photo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1566896566/expert_securite_fngvcq.jpg"
+EXPERT_SECURITE.remote_job_photo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1566836640/developer_lgdkpz.jpg"
 EXPERT_SECURITE.save!
 
 ARCHITECTE = Job.new(
@@ -87,7 +87,7 @@ ARCHITECTE = Job.new(
   field: "Architecture",
 )
 
-ARCHITECTE.remote_job_photo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567002463/architect_jdldwl.jpg"
+ARCHITECTE.remote_job_photo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567714945/okhkohahfshegoo1sf2p.jpg"
 ARCHITECTE.save!
 
 ARCHITECTE_D_INTERIEUR = Job.new(
@@ -113,7 +113,7 @@ ARCHITECTE_D_INTERIEUR = Job.new(
   field: "Architecture",
 )
 
-ARCHITECTE_D_INTERIEUR.remote_job_photo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567004706/interior_design_ueppdd.jpg"
+ARCHITECTE_D_INTERIEUR.remote_job_photo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567757498/odfxtbqaxavkzphsdg7m.jpg"
 ARCHITECTE_D_INTERIEUR.save!
 
 PRODUCT_MANAGER = Job.new(
@@ -134,7 +134,7 @@ PRODUCT_MANAGER = Job.new(
     promotion sur lieu de vente ou pub on-line, etc.",
   field: "IT"
   )
-PRODUCT_MANAGER.remote_job_photo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567070392/Product-Manager_lcscao.jpg"
+PRODUCT_MANAGER.remote_job_photo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567757498/vcriugxchfltk0zmi4t3.jpg"
 PRODUCT_MANAGER.save!
 
 
@@ -149,7 +149,7 @@ BUSINESS_DEV = Job.new(
     En lien avec les équipes commerciales, marketing, financière, juridique, il doit coordonner les idées et équipes afin de créer de nouvelles activités au sein d'une entreprise.",
   field: "Business"
 )
-BUSINESS_DEV.remote_job_photo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567070393/cowomen-pd5FVvQ9-aY-unsplash_yrbbg5.jpg"
+BUSINESS_DEV.remote_job_photo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567704749/m2u2opowo4wpeizzosai.jpg"
 BUSINESS_DEV.save!
 
 
@@ -160,7 +160,7 @@ PILOTE_DE_LIGNE = Job.new(
     D'abord copilote pendant plusieurs années, le pilote de ligne peut accéder, avec l'expérience, au titre de commandant de bord. Il subit régulièrement des contrôles portant sur ses capacités physiques et psychomotrices. Il doit impérativement maîtriser l'anglais.",
   field: "Aviation"
 )
-PILOTE_DE_LIGNE.remote_job_photo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567252854/jon-flobrant-Cg9QlLuX120-unsplash_uttugy.jpg"
+PILOTE_DE_LIGNE.remote_job_photo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567757500/vdm23yzc2b510ge8wuju.jpg"
 PILOTE_DE_LIGNE.save!
 
 CHIRURGIEN_DENTISTE = Job.new(
@@ -170,7 +170,7 @@ CHIRURGIEN_DENTISTE = Job.new(
     Chirurgien de formation, le dentiste réalise certaines opérations qui nécessitent une anesthésie, comme l'extraction de dents de sagesse ou la pose de pivots implantés dans l'os de la mâchoire. La prévention et le conseil en hygiène bucco-dentaire font aussi partie de son quotidien.",
   field: "Medical"
 )
-CHIRURGIEN_DENTISTE.remote_job_photo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567253809/ani-kolleshi-7jjnJ-QA9fY-unsplash_tvthkh.jpg"
+CHIRURGIEN_DENTISTE.remote_job_photo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567757501/bbzrmv8wqmjzcj3490lb.jpg"
 CHIRURGIEN_DENTISTE.save!
 
 
@@ -181,7 +181,7 @@ COMEDIEN = Job.new(
     Les conditions de travail sont difficiles : horaires décalés, déplacements fréquents (tournées, festivals, promotions...) et revenus aléatoires. Le plus souvent, des périodes de chômage alternent avec des phases d'activité. Dans ce métier, les places sont chères, il faut sans arrêt être à la recherche d'un contrat, courir les castings et les auditions, développer des contacts professionnels... C'est pourquoi motivation et persévérance sont des qualités primordiales pour réussir.",
   field: "Art"
 )
-COMEDIEN.remote_job_photo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567254658/avel-chuklanov-Hn3S90f6aak-unsplash_v6vh7g.jpg"
+COMEDIEN.remote_job_photo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567704752/jsplf749ueuokuqairqo.jpg"
 COMEDIEN.save!
 
 DATA_SCIENTIST = Job.new(
@@ -201,7 +201,7 @@ RESSOURCES_HUMAINES = Job.new(
   La rémunération du personnel la GRH englobe tant le service paie que la motivation par le salaire. Il doit être le juste équilibre entre le coût engendré pour l’entreprise et la motivation nécessaire au salarié et L’amélioration des conditions de travail La fonction Ressources Humaines va au delà de la simple prévention de l’absentéisme due aux accidents et maladies pour améliorer la productivité et la performance de l’entreprise en prenant en compte la psychologie, de par la prise en compte de la motivation et du stress de son Capital Humain.",
   field: "Business"
 )
-RESSOURCES_HUMAINES.remote_job_photo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567500361/directeur-ressources-humaines_ittl7g.jpg"
+RESSOURCES_HUMAINES.remote_job_photo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567757503/fxl43vcfglqz9hmcrded.jpg"
 RESSOURCES_HUMAINES.save!
 
 
@@ -211,7 +211,7 @@ WEB_DESIGNER = Job.new(
   long_description: "  Le Web Designer choisit la place des photos, la taille des caractères et les couleurs qui rendront la consultation agréable pour l'utilisateur. Il crée aussi les pictogrammes qui facilitent la lecture et la navigation dans le site. Dans certains cas, il sera amené à établir la charte graphique et à créer l'identité visuelle du site. C'est un exercice délicat car il faut respecter à la fois la demande du client, les impératifs de marketing et de communication, et ceux du public visé... De plus, Internet comporte des contraintes spécifiques à prendre en compte : par exemple, les temps de téléchargement trop lents qui peuvent décourager les internautes",
   field: "Art"
 )
-WEB_DESIGNER.remote_job_photo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567500361/webdesigner-portage-salarial_vygdk4.jpg"
+WEB_DESIGNER.remote_job_photo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1566896566/expert_securite_fngvcq.jpg"
 WEB_DESIGNER.save!
 
 

@@ -13,7 +13,7 @@ JEAN_MICHEL = User.new(
 )
 
 
-JEAN_MICHEL.remote_profile_picture_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1566899585/l2a8gm0csgv1yin1pyb2.jpg"
+JEAN_MICHEL.remote_profile_picture_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1566228419/Palm_Logo_3_rmsnrn.png"
 JEAN_MICHEL.save!
 
 JACQUES_MARTIN = User.new(
@@ -24,7 +24,7 @@ JACQUES_MARTIN = User.new(
   password: "password",
 )
 
-JACQUES_MARTIN.remote_profile_picture_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567705562/tamarcus-brown-29pFbI_D1Sc-unsplash_qplehk.jpg"
+JACQUES_MARTIN.remote_profile_picture_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567757519/ph2tpwniwjgjwucihjth.jpg"
 
 
 #Mentors
@@ -41,7 +41,7 @@ EDOUARD = User.new(
   Le Product Manager est le garant de la culture produit. Il doit communiquer en interne et en externe sur la stratégie produit. Il s’assure par exemple que les clients identifient bien les nouveautés, sans quoi ils considèrent vite le produit comme obsolète."
 )
 
-EDOUARD.remote_profile_picture_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567526499/0-1_jpsowz.jpg"
+EDOUARD.remote_profile_picture_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567757517/b9ahqnjlzrjvdnvf10ca.jpg"
 EDOUARD.save!
 
 
@@ -56,7 +56,7 @@ ANOUK = User.new(
   temoignage: "L'un des aspects de mon job dont je suis le plus fière, c’est d’avoir réussi à créer une équipe produit en rassemblant les “bonnes personnes” : des profils compétents et complémentaires (développeurs et designers notamment). Une équipe capable de bosser ensemble pour mettre en place un projet agile. Mon job implique aussi de savoir écouter, rassembler et analyser les retours utilisateurs mais aussi ceux de mes collaborateurs (tant du côté des commerciaux que du CRM - Customer relationship management). Il faut repérer les remarques récurrentes et décider comment faire évoluer la plateforme, en priorisant ce qui est le plus urgent. Le tout sans perdre de vue l’essentiel : répondre aux besoins de nos utilisateurs."
 )
 
-ANOUK.remote_profile_picture_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567526500/0_aasbbm.jpg"
+ANOUK.remote_profile_picture_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567704766/y6snydesby97vyzqvdt6.jpg"
 ANOUK.save!
 
 
@@ -72,5 +72,5 @@ JULIEN = User.new(
 J’aime aussi car c’est un poste stratégique, il faut savoir prendre des décisions, on porte pas mal de responsabilités. Et enfin, le côté relationnel où il faut savoir adapter sa communication et parler à un grand nombre de personnes et de profils différents."
   )
 
-JULIEN.remote_profile_picture_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567526500/0-2_wv9mby.jpg"
+JULIEN.remote_profile_picture_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567757518/dpxnfnkhpnwqkbsczwpo.jpg"
 JULIEN.save!
