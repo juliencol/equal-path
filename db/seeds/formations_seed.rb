@@ -245,7 +245,7 @@ PRODUCT_MANAGERS_SCHOOL = Formation.new(
   description: "Concevoir des produits qui répondent aux besoins du marché dans le respect de l’environnement et des hommes",
 )
 
-PRODUCT_MANAGERS_SCHOOL.remote_logo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567714908/judls9e6envpbzfivdbt.png"
+PRODUCT_MANAGERS_SCHOOL.remote_logo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1569974155/product_manager_i5nqcc.png"
 PRODUCT_MANAGERS_SCHOOL.save!
 
 
