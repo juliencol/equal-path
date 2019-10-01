@@ -8,7 +8,7 @@ PHP = Skill.new(
   category: "programmation"
 )
 
-PHP.remote_logo_url = "https://res.cloudinary.com/isep/image/upload/v1567089954/equal-path/skills-logo/php-logo-png-transparent_yxwxvu.png"
+PHP.remote_logo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567757477/rfdf28ziz2ecknswnl8g.png"
 PHP.save!
 
 PEARL = Skill.new(
@@ -17,7 +17,7 @@ PEARL = Skill.new(
   category: "programmation"
 )
 
-PEARL.remote_logo_url = "https://res.cloudinary.com/isep/image/upload/v1567089954/equal-path/skills-logo/kisspng-perl-dynamic-programming-language-scripting-langua-perl-5b2e371360eb61.549598641529755411397_qleari.jpg"
+PEARL.remote_logo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567757478/uqoyquvjcn5bjybf4wih.jpg"
 PEARL.save!
 
 RUBY = Skill.new(
@@ -26,7 +26,7 @@ RUBY = Skill.new(
   category: "programmation"
 )
 
-RUBY.remote_logo_url = "https://res.cloudinary.com/isep/image/upload/v1567089955/equal-path/skills-logo/kisscc0-ruby-on-rails-computer-icons-gemstone-rubygems-ruby-5b4eb896781980.6494373715318857184919_q52vdp.jpg"
+RUBY.remote_logo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567757479/v600vh2zdouidkthxdlk.jpg"
 RUBY.save!
 
 PYTHON = Skill.new(
@@ -35,7 +35,7 @@ PYTHON = Skill.new(
   category: "programmation"
 )
 
-PYTHON.remote_logo_url = "https://res.cloudinary.com/isep/image/upload/v1567089954/equal-path/skills-logo/kisspng-python-programming-language-computer-programming-language-5acfdc3636bac7.8891188615235717662242_wxorpq.jpg"
+PYTHON.remote_logo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567757480/w7vf2d59yjrhlopnskdd.jpg"
 PYTHON.save!
 
 HTML = Skill.new(
@@ -46,7 +46,7 @@ L'origine du HTML remonte au début du Web. En effet, il a été inventé vers l
   category: "programmation",
 )
 
-HTML.remote_logo_url = "https://res.cloudinary.com/isep/image/upload/v1567089955/equal-path/skills-logo/imgbin-icon-design-computer-icons-html-programming-language-computer-software-symbol-0Pcn1X8YECFkzK4MXCQeWYRHc_zc0jkc.jpg"
+HTML.remote_logo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567757480/qggm6qgdwzcqysuw8x2n.jpg"
 HTML.save!
 
 CSS = Skill.new(
@@ -55,7 +55,7 @@ CSS = Skill.new(
   category: "programmation"
 )
 
-CSS.remote_logo_url = "https://res.cloudinary.com/isep/image/upload/v1567089955/equal-path/skills-logo/CSS3_logo_and_wordmark.svg_atqval.png"
+CSS.remote_logo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567757481/nbrnw2k1vlryrrh1alvc.png"
 CSS.save!
 
 LANGAGE_C = Skill.new(
@@ -64,7 +64,7 @@ LANGAGE_C = Skill.new(
   category: "programmation"
 )
 
-LANGAGE_C.remote_logo_url = "https://res.cloudinary.com/isep/image/upload/v1567089954/equal-path/skills-logo/letter-c-png-5a36954d474e54.1991877715135266052921_sfuf7t.jpg"
+LANGAGE_C.remote_logo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567714933/rcqaqcybn3qmncu9j9ax.jpg"
 LANGAGE_C.save!
 
 JAVASCRIPT = Skill.new(
@@ -75,7 +75,7 @@ JAVASCRIPT = Skill.new(
   category: "programmation"
 )
 
-JAVASCRIPT.remote_logo_url = "https://res.cloudinary.com/isep/image/upload/v1567089955/equal-path/skills-logo/javascript-logo_s5q0xt.png"
+JAVASCRIPT.remote_logo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567714934/pppiyw1zah0nshkity4u.png"
 JAVASCRIPT.save!
 
 JAVA = Skill.new(
@@ -84,7 +84,7 @@ JAVA = Skill.new(
   category: "programmation"
 )
 
-JAVA.remote_logo_url = "https://res.cloudinary.com/isep/image/upload/v1567089954/equal-path/skills-logo/kisspng-logo-java-runtime-environment-programming-language-java-util-concurrentmodificationexception-%C3%96mer-5b6766ab2d98b8.1809687115335031471868_dy0akj.jpg"
+JAVA.remote_logo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567757483/znuqbcstwbky9hxmv3mu.jpg"
 JAVA.save!
 
 SQL = Skill.new(
@@ -92,7 +92,7 @@ SQL = Skill.new(
   description: "SQL (Structured Query Langage) est un langage de base de données relationnelle",
 )
 
-SQL.remote_logo_url = "https://res.cloudinary.com/isep/image/upload/v1567089955/equal-path/skills-logo/7_ksfnv5.png"
+SQL.remote_logo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567757484/idj91mar04cnjnpudlir.png"
 SQL.save!
 
 EXCEL = Skill.create(

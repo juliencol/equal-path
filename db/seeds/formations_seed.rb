@@ -17,7 +17,7 @@ EPITA = Formation.new(
   field: "IT",
 )
 
-EPITA.remote_logo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567674112/Epita_1_q94mrf.png"
+EPITA.remote_logo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567005003/epita_logo_ili1xc.jpg"
 EPITA.save!
 
 LE_WAGON = Formation.new(
@@ -29,7 +29,7 @@ LE_WAGON = Formation.new(
    qui vous apprend à coder entièrement vos applications web.",
   field: "IT",
 )
-LE_WAGON.remote_logo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567678814/le-wagon_fd1yoe.png"
+LE_WAGON.remote_logo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567674112/kisspng-le-wagon-berlin-coding-bootcamp-le-wagon-tlv-switc-wagon-5b479053866e64.8547103315314166595506_uaumuz.jpg"
 LE_WAGON.save!
 
 ENS = Formation.new(
@@ -45,7 +45,7 @@ ENS = Formation.new(
   field: "IT"
 )
 
-ENS.remote_logo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567674113/ens_logo_qo7sgi.jpg"
+ENS.remote_logo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567157159/ENS_Logo_j9k5qv.png"
 ENS.save!
 
 ECOLE_42 = Formation.new(
@@ -58,7 +58,7 @@ ECOLE_42 = Formation.new(
   field: " IT "
   )
 
-ECOLE_42.remote_logo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567674112/e%CC%81cole-42-logo_wihmo2.jpg"
+ECOLE_42.remote_logo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567704690/gytkvl9rzw8d5zrl1wig.jpg"
 ECOLE_42.save!
 
 ECOLE_BOULLE = Formation.new(
@@ -70,7 +70,7 @@ ECOLE_BOULLE = Formation.new(
   field: "Architecture d'intérieure"
   )
 
-ECOLE_BOULLE.remote_logo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567674276/ecole_boulle_u61i35.png"
+ECOLE_BOULLE.remote_logo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567157159/Ecole-Boulle-logo-transp-300x191_qppth6.png"
 ECOLE_BOULLE.save!
 
 ECOLE_D_ARCHI = Formation.new(
@@ -83,7 +83,7 @@ ECOLE_D_ARCHI = Formation.new(
   field: "Architecture"
   )
 
-ECOLE_D_ARCHI.remote_logo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567674113/Logo_ENSAPB_jlhsrn.png"
+ECOLE_D_ARCHI.remote_logo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567757437/zddl290evgtkw7u3h6uy.png"
 ECOLE_D_ARCHI.save!
 
 ROCKET_SCHOOl = Formation.new(
@@ -99,7 +99,7 @@ sont les formations qui y préparent vraiment.
 La Rocket School appuie sur l’innovation pédagogique et sur un processus de recrutement spécifique pour donner toutes les chances à ses
 étudiants d’exceller dans ces nouveaux métiers du numérique."
   )
-ROCKET_SCHOOl.remote_logo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567674353/Logo-RocketSchool-Original-HD_ts8rco.png"
+ROCKET_SCHOOl.remote_logo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567757438/szhap9akxf3fqv2jfwbr.png"
 ROCKET_SCHOOl.save!
 
 ICONOCLASS = Formation.new(
@@ -109,7 +109,7 @@ ICONOCLASS = Formation.new(
   website_url: "https://www.iconoclass.eu",
   description: " Pas besoin de passer par Parcoursup, IconoClass une école privée que tu peux rejoindre dès 18 ans et sans limite d'âge"
   )
-ICONOCLASS.remote_logo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567674113/8825d6_7c8d069c292c4728935c65191d9f081d_mv2_d_3000_1506_s_2_cgbobs.jpg"
+ICONOCLASS.remote_logo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567757439/oxoxashhgheczb9yly5f.jpg"
 ICONOCLASS.save!
 
 ESCE = Formation.new(
@@ -123,7 +123,7 @@ ESCE = Formation.new(
   understanding the craft of becoming a solid product manager through its diverse course offerings, sudents should not only attain the necessary
   skills of operations, but should have the opportunity to impress professionals and to broaden their options through networking opportunities.",
   )
-ESCE.remote_logo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567674448/logo_esce_s34rnr.png"
+ESCE.remote_logo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567074413/download-2_ks41tm.png"
 ESCE.save!
 
 THIGA = Formation.new(
@@ -136,7 +136,7 @@ Après une introduction au Design Thinking et au Lean Startup, vous apprendrez �
 à des techniques de tests utilisateurs et de prototypage rapide.
 Dans un second temps, vous déterminerez le périmètre de votre MVP et verrez comment mesurer sa performance grace au framework AARRR.",
 )
-THIGA.remote_logo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567674112/6447652c-a539-4057-9b02-3693644f98bb-1551201986951_yqacg8.png"
+THIGA.remote_logo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567714903/yoxtvtusvihyhcqpan3g.png"
 THIGA.save!
 
 LION =Formation.new(
@@ -148,7 +148,7 @@ LION =Formation.new(
 des startups sont traités : mindset, money, ops, sales, growth, dev, product … À toi de choisir chaque samedi celui que tu veux découvrir ou approfondir.
 La clef : la curiosité et l’envie de se dépasser. C’est en testant que tu sauras le modèle qui est fait pour toi !",
  )
-LION.remote_logo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567074356/images_prvjqj.png"
+LION.remote_logo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567674111/600_456141278_nrc1fj.png"
 LION.save!
 
 OPEN_CLASSROOM = Formation.new(
@@ -173,7 +173,7 @@ ISEP = Formation.new(
   description: "L’ISEP forme les ingénieurs d’aujourd’hui et de demain, dans les domaines clés du numérique : Informatique & Cybersécurité – Électronique & Robotique – Télécommunications & Internet des Objets (IoT) – Imagerie &  Santé – Intelligence Artificielle"
 )
 
-ISEP.remote_logo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567674111/logoisepweb400px-1449224112_1_tf07yf.png"
+ISEP.remote_logo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567704697/wa3b8sqz63k9e08q044c.png"
 ISEP.save!
 
 AVIATION_CIVILE = Formation.new(
@@ -184,7 +184,7 @@ AVIATION_CIVILE = Formation.new(
   description: "Créée en 1949 à Orly, installée à Toulouse depuis 1968, rejointe par le Service d’Exploitation de la Formation Aéronautique depuis le 1er janvier 2011, l’Ecole Nationale de l’Aviation Civile (ENAC) est l’unique exemple d’une seule école proposant un ensemble aussi large et aussi complet de formations et d’activités destinées au domaine aéronautique et en particulier au secteur du transport aérien.)",
 )
 
-AVIATION_CIVILE.remote_logo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567674112/fonds-de-dotation_1_elkzkb.png"
+AVIATION_CIVILE.remote_logo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567704698/abquakudadyhbkhggtxl.png"
 AVIATION_CIVILE.save!
 
 COURS_FLORENT = Formation.new(
@@ -195,7 +195,7 @@ COURS_FLORENT = Formation.new(
   description: "Le Cours Florent forme les Artistes de Demain.",
 )
 
-COURS_FLORENT.remote_logo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567674111/cours_florent_logo_iayysj.png"
+COURS_FLORENT.remote_logo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567714905/cho1qfdc6949ab4qqcpq.png"
 COURS_FLORENT.save!
 
 DE = Formation.new(
@@ -206,7 +206,7 @@ DE = Formation.new(
   description: "L’UFR (Unité de Formation et de Recherche) des Sciences odontologiques est une des 16 UFR d’Odontologie de France, ayant pour mission la formation des futurs chirurgiens-dentistes, la formation continue et la recherche.",
 )
 
-DE.remote_logo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567674112/logobdx_is6aer.png"
+DE.remote_logo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567757446/dzgcpd2hchszwszpk6x5.png"
 DE.save!
 
 
@@ -221,7 +221,7 @@ Si vous avez répondu oui à toutes ces questions alors vous êtes fait pour Dig
 Digital Campus vous donne les moyens d’accélérer la mise en œuvre de vos projets, qu’ils visent l’entreprenariat ou l’intrepreunariat, et de concrétiser vos ambitions.",
 )
 
-DIGITAL_CAMPUS.remote_logo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567674700/download_1_xcwngl.png"
+DIGITAL_CAMPUS.remote_logo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567757447/wvozk2atht9qswukzd0x.png"
 DIGITAL_CAMPUS.save!
 
 HETIC = Formation.new(
@@ -234,7 +234,7 @@ HETIC = Formation.new(
   un niveau BAC+5.",
 )
 
-HETIC.remote_logo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567599970/m1hqkrqzrvgkz7cjsexz.png"
+HETIC.remote_logo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567757448/vf98xvd5quiihhfone5d.png"
 HETIC.save!
 
 PRODUCT_MANAGERS_SCHOOL = Formation.new(
@@ -245,7 +245,7 @@ PRODUCT_MANAGERS_SCHOOL = Formation.new(
   description: "Concevoir des produits qui répondent aux besoins du marché dans le respect de l’environnement et des hommes",
 )
 
-PRODUCT_MANAGERS_SCHOOL.remote_logo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567599970/ra3kot4y0aaptixaryhu.png"
+PRODUCT_MANAGERS_SCHOOL.remote_logo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1567714908/judls9e6envpbzfivdbt.png"
 PRODUCT_MANAGERS_SCHOOL.save!
 
 
